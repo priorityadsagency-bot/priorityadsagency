@@ -1,0 +1,578 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<script>/* muted when shown inside the Priority Ads Agency portfolio */(function(){try{if(window.top===window)return}catch(e){}var P=HTMLMediaElement.prototype,pl=P.play;P.play=function(){try{this.muted=true;this.volume=0}catch(e){}return pl.apply(this,arguments)};try{var d=Object.getOwnPropertyDescriptor(P,'muted');Object.defineProperty(P,'muted',{configurable:true,get:function(){return d.get.call(this)},set:function(){d.set.call(this,true)}})}catch(e){}['AudioContext','webkitAudioContext'].forEach(function(n){var A=window[n];if(!A)return;var M=function(){var c=new (Function.prototype.bind.apply(A,[null].concat([].slice.call(arguments))))();try{c.suspend()}catch(e){}c.resume=function(){return Promise.resolve()};return c};M.prototype=A.prototype;window[n]=M});document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('audio,video').forEach(function(m){m.muted=true})})})();</script>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>VenturePulse - Explore the World</title>
+<!-- Google Fonts: Inter & Caveat for cursive script -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 CDN with forms & container queries -->
+<link rel="stylesheet" href="tw.css">
+<!-- Tailwind Configuration -->
+
+<!-- Custom Styles for Decorative Flights & Mountain Silhouette -->
+<style data-purpose="custom-decorations">
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .font-handwritten {
+      font-family: 'Caveat', cursive;
+    }
+    
+    /* Dotted path curve styling */
+    .flight-path {
+      stroke-dasharray: 4, 6;
+    }
+
+    /* Soft shadow presets */
+    .card-shadow {
+      box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08);
+    }
+    
+    .floating-bar-shadow {
+      box-shadow: 0 15px 40px -10px rgba(2, 132, 199, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-brand-blue selection:text-white">
+<!-- BEGIN: NavigationBar -->
+<header class="w-full bg-white/95 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100 transition-all">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logo -->
+
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-7 lg:gap-8" data-purpose="main-navigation">
+<a class="text-sm font-semibold text-slate-700 hover:text-brand-blue transition-colors" href="#destinations">Destinations</a>
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors" href="#why-us">Experiences</a>
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors" href="#packages">Packages</a>
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors" href="#special-offers">Special Offers</a>
+<a class="text-sm font-medium text-slate-600 hover:text-brand-blue transition-colors" href="#newsletter">Newsletter</a>
+</nav>
+<!-- CTA Button -->
+<div class="flex items-center">
+<a class="inline-flex items-center gap-2 bg-brand-navy hover:bg-slate-900 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5" href="#packages">
+<span>Plan Your Trip</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+</div>
+</div>
+</header>
+<!-- END: NavigationBar -->
+<main>
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-6 pb-28 md:pb-36 bg-gradient-to-b from-sky-50/60 via-white to-white overflow-hidden" id="home">
+<!-- Background elements -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[580px]">
+<!-- Hero Text Left (5 cols) -->
+<div class="lg:col-span-5 z-10 flex flex-col items-start pt-4 lg:pt-0">
+<!-- Pill Tag -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50/90 border border-blue-100 text-brand-blue text-xs font-semibold mb-6">
+<svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+</svg>
+<span>Dream • Explore • Discover</span>
+</div>
+<!-- Big Title -->
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-navy tracking-tight leading-[1.08] mb-1">
+              Explore The<br>World
+            </h1>
+<!-- Handwritten Subtitle -->
+<div class="text-3xl sm:text-4xl text-brand-blue font-handwritten font-bold mb-4 transform -rotate-1">
+              One Journey at a Time
+            </div>
+<p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-md mb-8">
+              Discover breathtaking destinations, unforgettable experiences and create memories for a lifetime.
+            </p>
+<!-- Buttons -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2.5 bg-brand-navy hover:bg-slate-900 text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5" href="#destinations">
+<span>Explore Destinations</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+<a class="inline-flex items-center gap-3 text-slate-800 hover:text-brand-blue font-semibold text-sm group px-3 py-2 transition-colors" href="#packages">
+<span class="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-brand-blue group-hover:scale-105 group-hover:border-brand-blue transition-all bg-white shadow-sm">
+<svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</span>
+<span>View Packages</span>
+</a>
+</div>
+</div>
+<!-- Hero Image Visual Right (7 cols) -->
+<div class="lg:col-span-7 relative h-full flex items-center justify-center">
+<div class="relative w-full h-[400px] sm:h-[480px] lg:h-[530px] rounded-3xl overflow-hidden shadow-2xl border border-slate-100 group">
+<!-- Real Hero Image: ./images/2.webp -->
+<img alt="Adventurer on cliff overlooking majestic alpine lake and snow capped mountains" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" src="./images/2.webp">
+<!-- Subtle inner top & bottom gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/50 via-transparent to-black/20 pointer-events-none"></div>
+<!-- Floating Little Airplane Icon in sky -->
+<div class="absolute top-8 left-8 text-white/90 rotate-12 drop-shadow-md">
+<svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+<path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path>
+</svg>
+</div>
+<!-- Floating Active Destination Badge -->
+
+</div>
+</div>
+</div>
+<!-- Floating Value Proposition Bar -->
+<div class="relative -mt-10 sm:-mt-14 z-20 max-w-5xl mx-auto" data-purpose="value-proposition-card">
+<div class="bg-white rounded-2xl floating-bar-shadow border border-slate-100 p-4 sm:p-6 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+<!-- Value Prop 1 -->
+<div class="flex flex-col items-center text-center px-4 py-2">
+<div class="w-10 h-10 rounded-full text-brand-blue flex items-center justify-center mb-2">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+</svg>
+</div>
+<h4 class="font-bold text-xs sm:text-sm text-slate-800 leading-tight">Best Destinations<br>Worldwide</h4>
+</div>
+<!-- Value Prop 2 -->
+<div class="flex flex-col items-center text-center px-4 py-2">
+<div class="w-10 h-10 rounded-full text-brand-blue flex items-center justify-center mb-2">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+<path d="m9 12 2 2 4-4"></path>
+</svg>
+</div>
+<h4 class="font-bold text-xs sm:text-sm text-slate-800 leading-tight">Safe &amp; Secure<br>Travel</h4>
+</div>
+<!-- Value Prop 3 -->
+<div class="flex flex-col items-center text-center px-4 py-2">
+<div class="w-10 h-10 rounded-full text-brand-blue flex items-center justify-center mb-2">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+<path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+</svg>
+</div>
+<h4 class="font-bold text-xs sm:text-sm text-slate-800 leading-tight">24/7 Travel<br>Support</h4>
+</div>
+<!-- Value Prop 4 -->
+<div class="flex flex-col items-center text-center px-4 py-2">
+<div class="w-10 h-10 rounded-full text-brand-blue flex items-center justify-center mb-2">
+<svg class="w-6 h-6 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+</svg>
+</div>
+<h4 class="font-bold text-xs sm:text-sm text-slate-800 leading-tight">Unforgettable<br>Experiences</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: PopularDestinationsSection -->
+<section class="py-20 bg-white relative" id="destinations">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Header with Flight Path Curve & View All Button -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 relative">
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="w-6 h-0.5 bg-brand-blue"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500">POPULAR DESTINATIONS</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight leading-tight">
+              Discover Amazing<br>Places <span class="text-brand-blue">Around the World</span>
+</h2>
+<p class="text-slate-500 text-sm mt-3 max-w-md">
+              From serene beaches to majestic mountains, find your next adventure with us.
+            </p>
+</div>
+<!-- Decorative Flight Arc & Button -->
+<div class="flex items-center justify-end relative self-end w-full lg:w-auto">
+<!-- Curved SVG dotted path with airplane -->
+<div class="hidden md:block absolute right-44 bottom-3 w-64 h-16 pointer-events-none">
+<svg class="w-full h-full overflow-visible" fill="none" viewBox="0 0 220 60">
+<path d="M 10 50 Q 110 -20 210 20" fill="none" stroke="#94a3b8" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- Airplane on trail -->
+<g transform="translate(65, 12) rotate(-15)">
+<path d="M12 2L2 9l2 1 6-2-1 8-3 2v1l5-1 5 1v-1l-3-2-1-8 6 2 2-1z" fill="#0b1d3a" transform="scale(0.8)"></path>
+</g>
+</svg>
+</div>
+<a class="inline-flex items-center gap-2 bg-brand-blue hover:bg-brand-accent text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all shadow-md hover:shadow-lg" href="#packages">
+<span>View All Destinations</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- 4 Destination Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Destination 1: Paris -->
+<div class="group relative rounded-2xl overflow-hidden card-shadow bg-slate-100 aspect-[3/4] cursor-pointer">
+<img alt="Eiffel Tower, Paris, France" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./images/2.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+<!-- Bottom Info -->
+<div class="absolute bottom-0 inset-x-0 p-4 flex items-center justify-between text-white">
+<div class="flex items-center gap-1.5 text-xs font-semibold">
+<svg class="w-3.5 h-3.5 fill-current text-white/90" viewBox="0 0 24 24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+</svg>
+<span>Paris, France</span>
+</div>
+<div class="flex items-center gap-1 text-xs font-bold text-amber-400">
+<span>★</span>
+<span class="text-white">4.8</span>
+</div>
+</div>
+</div>
+<!-- Destination 2: Santorini -->
+<div class="group relative rounded-2xl overflow-hidden card-shadow bg-slate-100 aspect-[3/4] cursor-pointer">
+<img alt="Santorini, Greece with white houses and blue domes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./images/2.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-0 inset-x-0 p-4 flex items-center justify-between text-white">
+<div class="flex items-center gap-1.5 text-xs font-semibold">
+<svg class="w-3.5 h-3.5 fill-current text-white/90" viewBox="0 0 24 24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+</svg>
+<span>Santorini, Greece</span>
+</div>
+<div class="flex items-center gap-1 text-xs font-bold text-amber-400">
+<span>★</span>
+<span class="text-white">4.8</span>
+</div>
+</div>
+</div>
+<!-- Destination 3: Maldives -->
+<div class="group relative rounded-2xl overflow-hidden card-shadow bg-slate-100 aspect-[3/4] cursor-pointer">
+<img alt="Maldives overwater villas with clear turquoise ocean" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./images/2.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-0 inset-x-0 p-4 flex items-center justify-between text-white">
+<div class="flex items-center gap-1.5 text-xs font-semibold">
+<svg class="w-3.5 h-3.5 fill-current text-white/90" viewBox="0 0 24 24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+</svg>
+<span>Maldives</span>
+</div>
+<div class="flex items-center gap-1 text-xs font-bold text-amber-400">
+<span>★</span>
+<span class="text-white">4.9</span>
+</div>
+</div>
+</div>
+<!-- Destination 4: Tokyo -->
+<div class="group relative rounded-2xl overflow-hidden card-shadow bg-slate-100 aspect-[3/4] cursor-pointer">
+<img alt="Tokyo, Japan night street with illuminated Tokyo tower" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./images/2.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-0 inset-x-0 p-4 flex items-center justify-between text-white">
+<div class="flex items-center gap-1.5 text-xs font-semibold">
+<svg class="w-3.5 h-3.5 fill-current text-white/90" viewBox="0 0 24 24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+</svg>
+<span>Tokyo, Japan</span>
+</div>
+<div class="flex items-center gap-1 text-xs font-bold text-amber-400">
+<span>★</span>
+<span class="text-white">4.8</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PopularDestinationsSection -->
+<!-- BEGIN: WhyChooseUsSection -->
+<section class="py-16 bg-[#f8fafc]" id="why-us">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left Visual: Tropical Resort Lagoon (6 cols) -->
+<div class="lg:col-span-6">
+<div class="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3] group">
+<img alt="Luxury tropical water villas with crystal clear lagoon and palm trees" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="./images/2.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+</div>
+</div>
+<!-- Right Content: Why Choose Us (6 cols) -->
+<div class="lg:col-span-6">
+<!-- Tagline -->
+<div class="flex items-center gap-2 mb-2">
+<span class="w-6 h-0.5 bg-brand-blue"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500">WHY CHOOSE US</span>
+</div>
+<!-- Title -->
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight leading-tight mb-4">
+              Your Perfect<br>Travel Partner
+            </h2>
+<p class="text-slate-600 text-sm sm:text-base leading-relaxed mb-6">
+              We make travel easy, safe and memorable with exclusive deals, expert guidance and 24/7 support.
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 mb-8">
+<!-- Feature 1 -->
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-blue-100/70 text-brand-blue flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 fill-current rotate-45" viewBox="0 0 24 24">
+<path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"></path>
+</svg>
+</div>
+<div class="font-bold text-xs sm:text-sm text-slate-800">
+                  Exclusive Deals<br>&amp; Offers
+                </div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-blue-100/70 text-brand-blue flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+</svg>
+</div>
+<div class="font-bold text-xs sm:text-sm text-slate-800">
+                  Expert Travel<br>Guidance
+                </div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-blue-100/70 text-brand-blue flex items-center justify-center shrink-0">
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2" viewBox="0 0 24 24">
+<path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+<path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+</svg>
+</div>
+<div class="font-bold text-xs sm:text-sm text-slate-800">
+                  24/7 Customer<br>Support
+                </div>
+</div>
+<!-- Feature 4 -->
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-full bg-blue-100/70 text-brand-blue flex items-center justify-center shrink-0">
+<!-- Diamond/gem -->
+<svg class="w-5 h-5 fill-none stroke-current" stroke-width="2" viewBox="0 0 24 24">
+<path d="M6 3h12l4 6-10 12L2 9l4-6z"></path>
+<path d="M2 9h20M10 3l-2 6 4 12 4-12-2-6"></path>
+</svg>
+</div>
+<div class="font-bold text-xs sm:text-sm text-slate-800">
+                  Unforgettable<br>Experiences
+                </div>
+</div>
+</div>
+<!-- Learn More Button -->
+<a class="inline-flex items-center gap-2 bg-brand-navy hover:bg-slate-900 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all shadow-md hover:shadow-lg" href="#packages">
+<span>Learn More</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhyChooseUsSection -->
+<!-- BEGIN: TravelPackagesSection -->
+<section class="py-20 bg-white" id="packages"><div id="special-offers" class="relative -top-24"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Description (3.5 cols) -->
+<div class="lg:col-span-4 flex flex-col justify-center pt-2">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-6 h-0.5 bg-brand-blue"></span>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500">TRAVEL PACKAGES</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-brand-navy tracking-tight leading-tight mb-4">
+              Explore Our Special<br><span class="text-brand-blue">Travel Packages</span>
+</h2>
+<p class="text-slate-600 text-sm leading-relaxed mb-8 max-w-sm">
+              Handpicked travel packages for every budget and travel style.
+            </p>
+<div>
+<a class="inline-flex items-center gap-2 bg-brand-navy hover:bg-slate-900 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-all shadow-md hover:shadow-lg" href="#newsletter">
+<span>View All Packages</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Right Cards (8 cols: 3 cards) -->
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-5"><!-- Package 1: Adventure Trip -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-100 card-shadow group hover:-translate-y-1 transition-all duration-300 relative flex flex-col">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img alt="Mountain Adventure Trip" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./images/2.webp">
+<span class="absolute top-3 right-3 bg-rose-500 text-white font-bold text-xs px-2.5 py-1 rounded-full shadow-md tracking-wide">SAVE 25%</span>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1 group-hover:text-brand-blue transition-colors">
+Adventure Trip
+</h3>
+</div>
+<div class="flex items-end justify-between text-xs mt-3">
+<div>
+<div class="text-slate-400 line-through text-[11px]">$665</div>
+<div class="text-slate-500 font-medium">
+From <span class="font-extrabold text-brand-navy text-sm sm:text-base">$499</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-semibold text-slate-700 bg-slate-50 px-2 py-1 rounded-md border border-slate-100">
+<span class="text-amber-400">★</span>
+<span>4.8</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Package 2: Beach Getaway -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-100 card-shadow group hover:-translate-y-1 transition-all duration-300 relative flex flex-col">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img alt="Tropical Beach Getaway" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./images/2.webp">
+<span class="absolute top-3 right-3 bg-rose-500 text-white font-bold text-xs px-2.5 py-1 rounded-full shadow-md tracking-wide">SAVE 25%</span>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1 group-hover:text-brand-blue transition-colors">
+Beach Getaway
+</h3>
+</div>
+<div class="flex items-end justify-between text-xs mt-3">
+<div>
+<div class="text-slate-400 line-through text-[11px]">$532</div>
+<div class="text-slate-500 font-medium">
+From <span class="font-extrabold text-brand-navy text-sm sm:text-base">$399</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-semibold text-slate-700 bg-slate-50 px-2 py-1 rounded-md border border-slate-100">
+<span class="text-amber-400">★</span>
+<span>4.7</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Package 3: Europe Tour -->
+<div class="bg-white rounded-2xl overflow-hidden border border-slate-100 card-shadow group hover:-translate-y-1 transition-all duration-300 relative flex flex-col">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img alt="Historic Colosseum in Europe Tour" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="./images/2.webp">
+<span class="absolute top-3 right-3 bg-rose-500 text-white font-bold text-xs px-2.5 py-1 rounded-full shadow-md tracking-wide">SAVE 25%</span>
+</div>
+<div class="p-4 flex flex-col flex-1 justify-between">
+<div>
+<h3 class="font-bold text-slate-800 text-sm sm:text-base mb-1 group-hover:text-brand-blue transition-colors">
+Europe Tour
+</h3>
+</div>
+<div class="flex items-end justify-between text-xs mt-3">
+<div>
+<div class="text-slate-400 line-through text-[11px]">$1,332</div>
+<div class="text-slate-500 font-medium">
+From <span class="font-extrabold text-brand-navy text-sm sm:text-base">$999</span>
+</div>
+</div>
+<div class="flex items-center gap-1 font-semibold text-slate-700 bg-slate-50 px-2 py-1 rounded-md border border-slate-100">
+<span class="text-amber-400">★</span>
+<span>4.9</span>
+</div>
+</div>
+</div>
+</div></div>
+</div>
+</div>
+</section>
+<!-- END: TravelPackagesSection -->
+<!-- BEGIN: NewsletterCTA -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mb-16 relative z-30" data-purpose="newsletter-subscription" id="newsletter">
+<div class="bg-brand-navy rounded-3xl p-6 sm:p-10 md:p-12 text-white shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8 border border-white/10">
+<!-- Decorative curved airplane background line -->
+<div class="absolute -left-10 top-0 w-80 h-full pointer-events-none opacity-20">
+<svg class="w-full h-full" fill="none" viewBox="0 0 200 120">
+<path d="M 0 100 C 60 120 120 40 180 30" stroke="white" stroke-dasharray="5 5" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Left Message -->
+<div class="flex items-center gap-5 z-10 w-full md:w-auto">
+<!-- Big stylized compass icon -->
+<div class="hidden sm:flex shrink-0 w-12 h-12 rounded-full border border-white/20 items-center justify-center bg-white/5">
+<svg class="w-6 h-6 text-white fill-none stroke-current" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<polygon fill="currentColor" points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+</svg>
+</div>
+<div>
+<h3 class="text-xl sm:text-2xl font-bold tracking-tight text-white mb-1">
+              Ready to Explore the World?
+            </h3>
+<p class="text-slate-300 text-xs sm:text-sm">
+              Start your journey today and explore new horizons.
+            </p>
+</div>
+</div>
+<!-- Right Form -->
+<div class="w-full md:w-auto z-10">
+<form class="flex flex-col sm:flex-row items-center gap-3 w-full md:min-w-[420px]" onsubmit="event.preventDefault();">
+<input class="w-full px-5 py-3 rounded-full text-slate-800 placeholder-slate-400 bg-white text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-brand-blue border-none shadow-inner" placeholder="Enter your email address" required="" type="email">
+<button class="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 bg-brand-blue hover:bg-sky-500 text-white font-semibold text-xs sm:text-sm px-6 py-3 rounded-full transition-colors shadow-md hover:shadow-lg" type="submit">
+<span>Subscribe</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- END: NewsletterCTA -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-gradient-to-b from-sky-50 to-[#dceefb] relative overflow-hidden text-slate-600 py-20">
+<!-- Mountain Silhouette Illustration (SVG) at bottom of footer -->
+<div class="absolute bottom-0 inset-x-0 w-full pointer-events-none opacity-60">
+<svg class="w-full h-24 sm:h-36 object-cover" fill="none" preserveAspectRatio="none" viewBox="0 0 1440 180">
+<!-- Background mountains -->
+<path d="M0 180L120 110L240 150L400 70L550 140L720 50L880 130L1020 80L1200 150L1350 90L1440 120V180H0Z" fill="#bae6fd" fill-opacity="0.5"></path>
+<!-- Foreground mountain layer with pines -->
+<path d="M0 180L80 140L180 165L320 110L460 160L600 100L750 150L900 110L1050 155L1180 115L1320 150L1440 130V180H0Z" fill="#7dd3fc" fill-opacity="0.4"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Top Row: Logo, Navigation, Social Icons -->
+<div class="flex flex-col md:flex-row items-center gap-6 border-slate-200/60 justify-center">
+<!-- Logo -->
+
+<!-- Footer Links -->
+
+<!-- Social Media Icons -->
+<div class="flex items-center gap-4 text-slate-700">
+<!-- Facebook -->
+<a aria-label="Facebook" class="hover:text-brand-blue transition-colors" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+</svg>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" class="hover:text-brand-blue transition-colors" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+</svg>
+</a>
+<!-- YouTube -->
+<a aria-label="YouTube" class="hover:text-brand-blue transition-colors" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+</svg>
+</a>
+<!-- Pinterest -->
+<a aria-label="Pinterest" class="hover:text-brand-blue transition-colors" href="#">
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+<path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.056.231-.188.28-.434.168-1.62-.754-2.634-3.123-2.634-5.029 0-4.095 2.975-7.857 8.58-7.857 4.505 0 8.006 3.21 8.006 7.502 0 4.477-2.822 8.08-6.739 8.08-1.316 0-2.553-.684-2.977-1.493l-.81 3.092c-.294 1.127-1.088 2.54-1.621 3.406A11.96 11.96 0 0 0 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"></path>
+</svg>
+</a>
+</div>
+</div>
+<!-- Bottom Copyright -->
+<div class="text-center text-xs text-slate-500 font-medium pt-4">
+        © 2024 VenturePulse. All rights reserved.
+      </div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+</body></html>

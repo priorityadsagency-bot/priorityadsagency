@@ -1,0 +1,1307 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_tab" name="shell-type">
+<title>Reserve Luxury Hospitality</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&amp;family=Outfit:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link rel="stylesheet" href="tw.css">
+
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #050507;
+        font-family: 'Geist', sans-serif;
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 47px);
+      }
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-[#050507] text-on-surface antialiased flex flex-col justify-center items-center min-h-screen sm:p-4 md:py-8 selection:bg-primary-container selection:text-on-primary-container">
+<!-- Apple iPhone Device Mockup Wrapper for Standalone / Desktop Viewing -->
+<div class="relative w-full max-w-[420px] min-h-screen sm:min-h-[880px] sm:max-h-[920px] bg-[#0a0a0c] sm:rounded-[52px] sm:border-[8px] sm:border-[#26282e] sm:ring-1 sm:ring-white/20 sm:shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_0_1px_rgba(255,255,255,0.06)] overflow-hidden flex flex-col">
+<!-- Status Bar with iOS Dynamic Island & Ticking Clock -->
+<header class="absolute top-0 inset-x-0 z-50 bg-[#08080a]/90 backdrop-blur-2xl">
+<div class="pt-2 sm:pt-3 pb-1 px-4">
+<div class="h-7 flex items-center justify-between text-on-surface">
+<!-- Live Clock in Top-Left Status Bar -->
+<div class="w-24 pl-1">
+<span class="font-mono text-[12px] font-semibold tracking-tight text-white/95" id="ist-live-clock">21:08:41</span>
+</div>
+<!-- Realistic Dynamic Island Pill -->
+<div class="h-[30px] w-[116px] bg-[#000000] rounded-full flex items-center justify-between px-3 shadow-[0_4px_16px_rgba(0,0,0,0.9)] border-[0.5px] border-white/10 shrink-0">
+<div class="w-2.5 h-2.5 rounded-full bg-surface-container-highest flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-2 h-2 rounded-full bg-[#1c1c1e]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#0a0a0c] border border-outline-variant/30"></div>
+</div>
+</div>
+<!-- Right Status Icons -->
+<div class="w-24 flex items-center justify-end gap-1.5 pr-1 text-on-surface">
+<span class="material-symbols-outlined text-[15px] leading-none text-on-surface">signal_cellular_4_bar</span>
+<span class="material-symbols-outlined text-[15px] leading-none text-on-surface">wifi</span>
+<div class="flex items-center gap-0.5">
+<div class="w-5 h-2.5 rounded-[4px] border border-on-surface/60 p-[1px] flex items-center">
+<div class="h-full w-full bg-secondary rounded-[2px]"></div>
+</div>
+<div class="w-[1px] h-1 bg-on-surface/60 rounded-r-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Scrollable Application Content -->
+<main class="flex flex-col relative w-full h-full flex-1 pt-[64px] pb-[88px] overflow-y-auto no-scrollbar bg-surface text-on-surface">
+<!-- 1. HOME VIEW (Active by default) -->
+<div class="tab-view flex-col w-full pb-8 hidden" id="view-home">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-44 bg-gradient-to-b from-primary-container/20 to-transparent blur-3xl pointer-events-none rounded-full"></div>
+<!-- Search Bar at the very top under status bar -->
+<div class="px-margin pt-3">
+<div class="relative flex items-center w-full h-12 rounded-full bg-surface-container-high px-4 shadow-md transition-all duration-200 focus-within:bg-surface-container-highest focus-within:ring-1 focus-within:ring-primary/40">
+<span class="material-symbols-outlined text-primary-fixed-dim mr-2.5 text-[22px]">search</span>
+<input class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none" id="search-input" placeholder="Search luxury villas, heritage resorts..." type="text">
+<button aria-label="Open filter settings" class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container text-on-surface-variant hover:text-white active:scale-95 transition-all" id="filter-modal-trigger">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Category Filter Pills (Scrollable & Interactive) -->
+<div class="mt-4 overflow-x-auto no-scrollbar scroll-smooth flex items-center gap-2 px-margin">
+<button class="category-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md shrink-0 shadow-sm active:scale-95 transition-all" data-cat="all">
+<span class="material-symbols-outlined text-[16px]">stars</span>
+<span>All</span>
+</button>
+<button class="category-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all hover:text-on-surface" data-cat="villas">
+<span class="material-symbols-outlined text-[16px]">villa</span>
+<span>Luxury Villas</span>
+</button>
+<button class="category-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all hover:text-on-surface" data-cat="heritage">
+<span class="material-symbols-outlined text-[16px]">castle</span>
+<span>Heritage Haveli</span>
+</button>
+<button class="category-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all hover:text-on-surface" data-cat="beach">
+<span class="material-symbols-outlined text-[16px]">water</span>
+<span>Beachfront</span>
+</button>
+<button class="category-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all hover:text-on-surface" data-cat="hill">
+<span class="material-symbols-outlined text-[16px]">landscape</span>
+<span>Hill Retreats</span>
+</button>
+<button class="category-pill flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md shrink-0 active:scale-95 transition-all hover:text-on-surface" data-cat="wellness">
+<span class="material-symbols-outlined text-[16px]">spa</span>
+<span>Wellness Spa</span>
+</button>
+</div>
+<!-- Featured Privilege Card -->
+<div class="px-margin mt-5">
+<div class="relative overflow-hidden rounded-lg bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-lowest p-4 shadow-md border border-white/5">
+<div class="absolute -right-10 -bottom-10 w-44 h-44 rounded-full bg-primary-container/15 blur-2xl pointer-events-none"></div>
+<div class="flex items-start justify-between relative z-10">
+<div class="flex-1 pr-2">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold tracking-wide uppercase mb-2">
+<span class="material-symbols-outlined text-[12px]">electric_bolt</span>
+<span>Exclusive Privilege</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight leading-snug">Monsoon Escape · 25% Off</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Complimentary breakfast &amp; butler service with Axis Bank &amp; HDFC Reserve Cards.</p>
+</div>
+<div class="flex flex-col items-end shrink-0">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[32px]">credit_card</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium mt-1">Auto-applied</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Trending Destinations Strip -->
+<div class="mt-6 px-margin">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[19px]">trending_up</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Trending Getaways</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Curated for you</span>
+</div>
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar scroll-smooth py-1">
+<!-- Destination 1: Udaipur -->
+<button class="trending-chip flex items-center gap-2.5 pl-1.5 pr-3 py-1.5 rounded-full bg-surface-container text-on-surface shrink-0 active:scale-95 transition-all border border-white/5 hover:border-primary/40" data-city="Udaipur">
+<div class="w-7 h-7 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+<img alt="Udaipur" class="w-full h-full object-cover" src="img/8.webp">
+</div>
+<span class="font-label-md text-label-md font-medium">Udaipur</span>
+<span class="font-label-sm text-label-sm text-secondary">₹34k+</span>
+</button>
+<!-- Destination 2: Goa -->
+<button class="trending-chip flex items-center gap-2.5 pl-1.5 pr-3 py-1.5 rounded-full bg-surface-container text-on-surface shrink-0 active:scale-95 transition-all border border-white/5 hover:border-primary/40" data-city="Goa">
+<div class="w-7 h-7 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+<img alt="Goa" class="w-full h-full object-cover" src="img/3.webp">
+</div>
+<span class="font-label-md text-label-md font-medium">Goa</span>
+<span class="font-label-sm text-label-sm text-secondary">₹22k+</span>
+</button>
+<!-- Destination 3: Munnar / Kerala -->
+<button class="trending-chip flex items-center gap-2.5 pl-1.5 pr-3 py-1.5 rounded-full bg-surface-container text-on-surface shrink-0 active:scale-95 transition-all border border-white/5 hover:border-primary/40" data-city="Munnar">
+<div class="w-7 h-7 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+<img alt="Munnar" class="w-full h-full object-cover" src="img/9.webp">
+</div>
+<span class="font-label-md text-label-md font-medium">Kerala</span>
+<span class="font-label-sm text-label-sm text-secondary">₹18k+</span>
+</button>
+<!-- Destination 4: Jaipur -->
+<button class="trending-chip flex items-center gap-2.5 pl-1.5 pr-3 py-1.5 rounded-full bg-surface-container text-on-surface shrink-0 active:scale-95 transition-all border border-white/5 hover:border-primary/40" data-city="Jaipur">
+<div class="w-7 h-7 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+<img alt="Jaipur" class="w-full h-full object-cover" src="img/1.webp">
+</div>
+<span class="font-label-md text-label-md font-medium">Jaipur</span>
+<span class="font-label-sm text-label-sm text-secondary">₹29k+</span>
+</button>
+<!-- Destination 5: Ladakh / Manali -->
+<button class="trending-chip flex items-center gap-2.5 pl-1.5 pr-3 py-1.5 rounded-full bg-surface-container text-on-surface shrink-0 active:scale-95 transition-all border border-white/5 hover:border-primary/40" data-city="Ladakh">
+<div class="w-7 h-7 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+<img alt="Ladakh" class="w-full h-full object-cover" src="img/7.webp">
+</div>
+<span class="font-label-md text-label-md font-medium">Manali</span>
+<span class="font-label-sm text-label-sm text-secondary">₹42k+</span>
+</button>
+</div>
+</div>
+<!-- Section: Top Rated Stays -->
+<div class="mt-7">
+<div class="flex items-baseline justify-between mb-4 px-margin">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-semibold tracking-tight">Top Rated Stays</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">India's most coveted heritage sanctums &amp; villas</p>
+</div>
+<button class="font-label-md text-label-md text-primary font-semibold active:opacity-75" id="view-all-stays-btn">View All</button>
+</div>
+<!-- Stays List Container (Horizontal Scroll with Snap) -->
+<div class="flex flex-row gap-4 overflow-x-auto no-scrollbar scroll-smooth snap-x snap-mandatory px-margin pb-3 pt-1" id="stays-list">
+<!-- Card 1: The Oberoi Udaivilas (Heritage & Villas) -->
+<div class="luxury-card w-[310px] shrink-0 snap-center flex flex-col rounded-lg bg-surface-container overflow-hidden shadow-lg transition-transform border border-white/5" data-category="all heritage villas" data-city="Udaipur Rajasthan">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img alt="The Oberoi Udaivilas" class="w-full h-full object-cover" src="img/10.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-[#08080a]/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">waves</span> Lake Pichola View
+</span>
+</div>
+<button aria-label="Add to favorites" class="fav-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-[#08080a]/70 backdrop-blur-md flex items-center justify-center text-on-surface transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-semibold text-white">4.9</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(1,240)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-primary-fixed-dim">Private Boat Access</span>
+</div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight card-title">The Oberoi Udaivilas</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span> Udaipur, Rajasthan
+</p>
+</div>
+<div class="text-right shrink-0">
+<div class="font-currency-display text-currency-display text-on-surface font-bold">₹48,500</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block -mt-1">/ night + taxes</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low rounded-DEFAULT px-3 py-2.5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">room_service</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Bespoke Perks</span>
+<span class="font-label-sm text-label-sm text-secondary">High Tea included</span>
+</div>
+</div>
+<button class="book-now-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-95 transition-all shadow-sm" data-location="Udaipur, Rajasthan" data-price="48500" data-title="The Oberoi Udaivilas">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2: Amanbagh Sanctuary (Wellness & Heritage) -->
+<div class="luxury-card w-[310px] shrink-0 snap-center flex flex-col rounded-lg bg-surface-container overflow-hidden shadow-lg transition-transform border border-white/5" data-category="all wellness heritage" data-city="Alwar Rajasthan">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img alt="Amanbagh Sanctuary" class="w-full h-full object-cover" src="img/4.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-[#08080a]/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary">spa</span> Royal Haveli Suite
+</span>
+</div>
+<button aria-label="Add to favorites" class="fav-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-[#08080a]/70 backdrop-blur-md flex items-center justify-center text-on-surface transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-semibold text-white">4.95</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(842)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-primary-fixed-dim">Ayurvedic Sanctuary</span>
+</div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight card-title">Amanbagh Sanctuary</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span> Alwar, Rajasthan
+</p>
+</div>
+<div class="text-right shrink-0">
+<div class="font-currency-display text-currency-display text-on-surface font-bold">₹62,000</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block -mt-1">/ night + taxes</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low rounded-DEFAULT px-3 py-2.5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">self_improvement</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Holistic Wellness</span>
+<span class="font-label-sm text-label-sm text-secondary">Private Pavilion</span>
+</div>
+</div>
+<button class="book-now-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-95 transition-all shadow-sm" data-location="Alwar, Rajasthan" data-price="62000" data-title="Amanbagh Sanctuary">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3: Susegado Beach Villa (Beachfront & Villas) -->
+<div class="luxury-card w-[310px] shrink-0 snap-center flex flex-col rounded-lg bg-surface-container overflow-hidden shadow-lg transition-transform border border-white/5" data-category="all beach beachfront villas" data-city="Goa Morjim">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img alt="Susegado Beach Villa" class="w-full h-full object-cover" src="img/5.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-[#08080a]/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">pool</span> Private Plunge Pool
+</span>
+</div>
+<button aria-label="Add to favorites" class="fav-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-[#08080a]/70 backdrop-blur-md flex items-center justify-center text-on-surface transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-semibold text-white">4.80</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(612)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-primary-fixed-dim">Direct Beach Path</span>
+</div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight card-title">Susegado Beach Villa</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span> Morjim Beach, Goa
+</p>
+</div>
+<div class="text-right shrink-0">
+<div class="font-currency-display text-currency-display text-on-surface font-bold">₹28,000</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block -mt-1">/ night + taxes</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low rounded-DEFAULT px-3 py-2.5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">deck</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Full Private Staff</span>
+<span class="font-label-sm text-label-sm text-secondary">Sunset BBQ &amp; Bar</span>
+</div>
+</div>
+<button class="book-now-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-95 transition-all shadow-sm" data-location="Morjim Beach, Goa" data-price="28000" data-title="Susegado Beach Villa">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- Card 4: Wildflower Hall (Hill Retreats) -->
+<div class="luxury-card w-[310px] shrink-0 snap-center flex flex-col rounded-lg bg-surface-container overflow-hidden shadow-lg transition-transform border border-white/5" data-category="all hill wellness" data-city="Shimla Himachal">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img alt="Wildflower Hall Shimla" class="w-full h-full object-cover" src="img/7.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-[#08080a]/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">landscape</span> Cedar Forest Sanctuary
+</span>
+</div>
+<button aria-label="Add to favorites" class="fav-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-[#08080a]/70 backdrop-blur-md flex items-center justify-center text-on-surface transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-semibold text-white">4.92</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(730)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-primary-fixed-dim">Heated Infinity Pool</span>
+</div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight card-title">Wildflower Hall Oberoi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span> Shimla, Himalayas
+</p>
+</div>
+<div class="text-right shrink-0">
+<div class="font-currency-display text-currency-display text-on-surface font-bold">₹42,000</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block -mt-1">/ night + taxes</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low rounded-DEFAULT px-3 py-2.5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">nature_people</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">Mountain Trails</span>
+<span class="font-label-sm text-label-sm text-secondary">Forest Breakfast</span>
+</div>
+</div>
+<button class="book-now-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-95 transition-all shadow-sm" data-location="Shimla, Himalayas" data-price="42000" data-title="Wildflower Hall Oberoi">
+Book Now
+</button>
+</div>
+</div>
+</div>
+<!-- Card 5: Taj Falaknuma Palace (Heritage) -->
+<div class="luxury-card w-[310px] shrink-0 snap-center flex flex-col rounded-lg bg-surface-container overflow-hidden shadow-lg transition-transform border border-white/5" data-category="all heritage" data-city="Hyderabad Telangana">
+<div class="relative w-full h-56 bg-surface-container-highest overflow-hidden">
+<img alt="Taj Falaknuma Palace" class="w-full h-full object-cover" src="img/2.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-black/40"></div>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-[#08080a]/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm font-semibold tracking-wide flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-amber-300">crown</span> Palace Heritage
+</span>
+</div>
+<button aria-label="Add to favorites" class="fav-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-[#08080a]/70 backdrop-blur-md flex items-center justify-center text-on-surface transition-transform active:scale-75 shadow-sm">
+<span class="material-symbols-outlined text-[20px] transition-colors">favorite_border</span>
+</button>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-surface">
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm font-semibold text-white">4.88</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-normal">(995)</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-highest/90 text-primary-fixed-dim">Nizam's Royal Suite</span>
+</div>
+</div>
+<div class="p-4 flex flex-col">
+<div class="flex items-start justify-between gap-2">
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold tracking-tight card-title">Taj Falaknuma Palace</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-outline">location_on</span> Hyderabad, Telangana
+</p>
+</div>
+<div class="text-right shrink-0">
+<div class="font-currency-display text-currency-display text-on-surface font-bold">₹55,000</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block -mt-1">/ night + taxes</span>
+</div>
+</div>
+<div class="mt-4 pt-3 flex items-center justify-between bg-surface-container-low rounded-DEFAULT px-3 py-2.5">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">dinner_dining</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium">101 Dining Table Tour</span>
+<span class="font-label-sm text-label-sm text-secondary">Carriage arrival</span>
+</div>
+</div>
+<button class="book-now-btn px-4 py-2 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-95 transition-all shadow-sm" data-location="Hyderabad, Telangana" data-price="55000" data-title="Taj Falaknuma Palace">
+Book Now
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. EXPLORE VIEW -->
+<div class="tab-view hidden flex-col w-full px-margin pb-10" id="view-explore">
+<div class="pt-3 pb-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-on-surface">Explore Curations</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Handpicked sanctuaries across royal frontiers</p>
+</div>
+<div class="grid grid-cols-2 gap-3 mb-6">
+<div class="relative h-40 rounded-xl overflow-hidden bg-surface-container group cursor-pointer active:scale-98 transition-transform border border-white/5">
+<img alt="Hillside" class="w-full h-full object-cover" src="img/9.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<span class="font-title-md text-title-md font-semibold text-white block">Misty Heights</span>
+<span class="font-label-sm text-label-sm text-primary">18 Properties</span>
+</div>
+</div>
+<div class="relative h-40 rounded-xl overflow-hidden bg-surface-container group cursor-pointer active:scale-98 transition-transform border border-white/5">
+<img alt="Royal Palaces" class="w-full h-full object-cover" src="img/8.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<span class="font-title-md text-title-md font-semibold text-white block">Palace Haveli</span>
+<span class="font-label-sm text-label-sm text-primary">24 Properties</span>
+</div>
+</div>
+<div class="relative h-40 rounded-xl overflow-hidden bg-surface-container group cursor-pointer active:scale-98 transition-transform border border-white/5">
+<img alt="Oasis" class="w-full h-full object-cover" src="img/3.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<span class="font-title-md text-title-md font-semibold text-white block">Coastal Serenity</span>
+<span class="font-label-sm text-label-sm text-primary">31 Properties</span>
+</div>
+</div>
+<div class="relative h-40 rounded-xl overflow-hidden bg-surface-container group cursor-pointer active:scale-98 transition-transform border border-white/5">
+<img alt="Himalayan" class="w-full h-full object-cover" src="img/7.webp">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<span class="font-title-md text-title-md font-semibold text-white block">Wild Horizons</span>
+<span class="font-label-sm text-label-sm text-primary">12 Properties</span>
+</div>
+</div>
+</div>
+<!-- Experience Collections -->
+<div class="p-4 rounded-xl bg-surface-container-high border border-white/5">
+<div class="flex items-center gap-3 mb-3">
+<div class="w-10 h-10 rounded-full bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">concierge</span>
+</div>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface font-semibold">Reserve Concierge Elite</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Charter private helicopters, yacht charters &amp; dining</p>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-98 transition-all" onclick="showQuickAlert('Reserve Concierge', 'Your personal relationship manager will call you shortly.')">
+          Request Bespoke Itinerary
+        </button>
+</div>
+</div>
+<!-- 3. BOOKINGS VIEW -->
+<div class="tab-view hidden flex-col w-full px-margin pb-10" id="view-bookings"><div class="pt-3 pb-4 flex items-center justify-between"><div><h1 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-on-surface">Your Stays</h1><p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Upcoming, confirmed &amp; past itineraries</p></div><span class="px-2.5 py-1 rounded-full bg-surface-container-high text-secondary font-label-sm text-label-sm font-semibold" id="booking-count-badge">2 Active</span></div><div class="flex border-b border-surface-container-highest mb-4" id="booking-filter-tabs"><button class="booking-filter-btn pb-2.5 px-3 border-b-2 border-primary text-primary font-label-md text-label-md font-semibold transition-all" data-filter="upcoming">Upcoming</button><button class="booking-filter-btn pb-2.5 px-3 border-b-2 border-transparent text-on-surface-variant hover:text-white font-label-md text-label-md transition-all" data-filter="completed">Completed</button><button class="booking-filter-btn pb-2.5 px-3 border-b-2 border-transparent text-on-surface-variant hover:text-white font-label-md text-label-md transition-all" data-filter="cancelled">Cancelled</button></div><div id="booking-panel-upcoming" class="booking-panel flex flex-col"><div class="rounded-xl bg-surface-container p-4 border border-white/5 mb-4 shadow-md"><div class="flex items-center justify-between mb-3"><span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Confirmed</span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">RES-8829-UD</span></div><div class="flex gap-3"><img alt="Stay" class="w-20 h-20 rounded-lg object-cover shrink-0" src="img/10.webp"><div class="flex flex-col justify-between flex-1"><div><h3 class="font-title-md text-title-md font-semibold text-on-surface">The Oberoi Udaivilas</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Udaipur · Kohinoor Suite</p></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-white font-medium">18 Oct – 21 Oct (3 Nights)</span><span class="font-label-md text-label-md text-primary font-bold">₹1,45,500</span></div></div></div><div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between"><button class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="showQuickAlert('Digital Room Key', 'Access granted. Bluetooth key synced to your iPhone wallet.')"><span class="material-symbols-outlined text-[16px]">key</span> Digital Key</button><button class="font-label-sm text-label-sm text-on-surface-variant hover:text-white" onclick="showQuickAlert('Support Connected', 'Connecting to 24/7 Butler Desk...')">Contact Butler</button></div></div><div class="rounded-xl bg-surface-container p-4 border border-white/5 mb-4 shadow-md"><div class="flex items-center justify-between mb-3"><span class="px-2.5 py-0.5 rounded-full bg-secondary/15 text-secondary font-label-sm text-label-sm font-semibold flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Confirmed</span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">RES-4011-GA</span></div><div class="flex gap-3"><img alt="Stay" class="w-20 h-20 rounded-lg object-cover shrink-0" src="img/5.webp"><div class="flex flex-col justify-between flex-1"><div><h3 class="font-title-md text-title-md font-semibold text-on-surface">Susegado Beach Villa</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Morjim Beach · Private Villa</p></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-white font-medium">12 Nov – 15 Nov (3 Nights)</span><span class="font-label-md text-label-md text-primary font-bold">₹84,000</span></div></div></div><div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between"><button class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="showQuickAlert('Digital Room Key', 'Villa gates code &amp; WiFi credentials sent via SMS.')"><span class="material-symbols-outlined text-[16px]">key</span> Gate Access Pass</button><button class="font-label-sm text-label-sm text-on-surface-variant hover:text-white" onclick="showQuickAlert('Support Connected', 'Connecting to Goa Villa Manager...')">Contact Butler</button></div></div></div><div id="booking-panel-completed" class="booking-panel hidden flex-col"><div class="rounded-xl bg-surface-container p-4 border border-white/5 mb-4 shadow-md"><div class="flex items-center justify-between mb-3"><span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span> Stay Completed</span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Completed 14 Feb 2024</span></div><div class="flex gap-3"><img alt="Amanbagh" class="w-20 h-20 rounded-lg object-cover shrink-0" src="img/4.webp"><div class="flex flex-col justify-between flex-1"><div><h3 class="font-title-md text-title-md font-semibold text-on-surface">Amanbagh Sanctuary</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Alwar, Rajasthan · Pool Pavilion</p></div><div class="flex items-center justify-between"><span class="font-label-md text-label-md text-white font-medium">11 Feb – 14 Feb (3 Nights)</span><span class="font-label-md text-label-md text-primary font-bold">₹1,26,000</span></div></div></div><div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between"><button class="flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-semibold hover:underline" onclick="showQuickAlert('Invoice Generated', 'Folio #AMAN-8821 downloaded to Files.')"><span class="material-symbols-outlined text-[16px]">receipt</span> Download Folio</button><button class="px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-all" onclick="openBookingModal('Amanbagh Sanctuary', 62000, 'Alwar, Rajasthan')">Book Again</button></div></div></div><div id="booking-panel-cancelled" class="booking-panel hidden flex-col"><div class="rounded-xl bg-surface-container p-4 border border-white/5 mb-4 shadow-md"><div class="flex items-center justify-between mb-3"><span class="px-2.5 py-0.5 rounded-full bg-error-container/20 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">cancel</span> Booking Cancelled</span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Cancelled on 05 Jan 2024</span></div><div class="flex gap-3"><img alt="Susegado" class="w-20 h-20 rounded-lg object-cover shrink-0" src="img/5.webp"><div class="flex flex-col justify-between flex-1"><div><h3 class="font-title-md text-title-md font-semibold text-on-surface">Susegado Luxury Beach Villa</h3><p class="font-body-sm text-body-sm text-on-surface-variant">South Goa · Beach Front</p></div><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-secondary font-medium">Refund Processed (₹64,000 to HDFC Bank)</span></div></div></div><div class="mt-4 pt-3 border-t border-surface-container-highest flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant">Full Refund Completed</span><button class="px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-white font-label-sm text-label-sm font-semibold active:scale-95 transition-all" onclick="openBookingModal('Susegado Beach Villa', 28000, 'Morjim Beach, Goa')">Rebook Villa</button></div></div></div></div>
+<!-- 4. ALERTS VIEW -->
+<div class="tab-view hidden flex-col w-full px-margin pb-10" id="view-alerts">
+<div class="pt-3 pb-4 flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-semibold text-on-surface">Notifications</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Tariff drops &amp; reservation alerts</p>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-semibold" onclick="showQuickAlert('Marked as Read', 'All notifications cleared.')">Mark read</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- Notification 1 -->
+<div class="flex gap-3.5 p-3.5 rounded-xl bg-surface-container border border-white/5 items-start">
+<div class="w-9 h-9 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">loyalty</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-semibold text-white">Axis Reserve 15% Credit</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Your complimentary ₹15,000 dining voucher for The Oberoi has been credited to your folio.</p>
+</div>
+</div>
+<!-- Notification 2 -->
+<div class="flex gap-3.5 p-3.5 rounded-xl bg-surface-container border border-white/5 items-start">
+<div class="w-9 h-9 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">price_check</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-semibold text-white">Rate Drop Alert: Amanbagh</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Alwar Pool Pavilion tariffs dropped by ₹12,000 for mid-week dates in November.</p>
+</div>
+</div>
+<!-- Notification 3 -->
+<div class="flex gap-3.5 p-3.5 rounded-xl bg-surface-container border border-white/5 items-start">
+<div class="w-9 h-9 rounded-full bg-tertiary-container/20 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="font-title-md text-title-md font-semibold text-white">Helicopter Transfer Confirmed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3d ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Jaipur helipad to Amanbagh private charter flight clearance approved by DGCA.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. PROFILE VIEW -->
+<div class="tab-view flex-col w-full px-margin pb-12 flex" id="view-profile">
+<!-- User Card -->
+<div class="pt-4 pb-5 flex items-center gap-4 border-b border-surface-container-highest">
+<div class="relative">
+<img alt="Profile" class="w-16 h-16 rounded-full object-cover ring-2 ring-primary/40 shadow-xl" id="profile-avatar" src="img/6.webp">
+<span class="absolute bottom-0 right-0 w-4 h-4 bg-secondary rounded-full border-2 border-surface" id="profile-online-badge"></span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm font-semibold text-white" id="profile-name">Aditya Singhania</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] font-bold uppercase tracking-wider" id="profile-tier">Black Tier</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="profile-email">aditya.s@reserveclub.in</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium" id="profile-status-label">Logged In · Reserve VIP Member</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="grid grid-cols-2 gap-3 my-4">
+<button class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-surface-container-high border border-white/10 text-white font-label-md text-label-md font-semibold active:scale-95 transition-all" id="auth-state-toggle-btn">
+<span class="material-symbols-outlined text-[18px] text-error" id="auth-btn-icon">logout</span>
+<span id="auth-btn-text">Log Out</span>
+</button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-surface-container-high border border-white/10 text-white font-label-md text-label-md font-semibold active:scale-95 transition-all" id="btn-open-edit-profile"><span class="material-symbols-outlined text-[18px] text-primary">edit</span><span>Edit Profile</span></button>
+</div>
+<!-- Settings / Profile Menu Items -->
+<div class="rounded-2xl bg-surface-container border border-white/5 overflow-hidden flex flex-col divide-y divide-surface-container-highest"><button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left active:bg-surface-container-highest" onclick="switchTab('bookings')"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] text-primary">receipt_long</span><span class="font-body-md text-body-md text-white font-medium">Booking History &amp; Receipts</span></div><div class="flex items-center gap-1.5"><span class="font-label-sm text-label-sm text-secondary">2 Active</span><span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span></div></button><button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left active:bg-surface-container-highest" id="btn-open-cards-modal"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] text-tertiary">credit_card</span><span class="font-body-md text-body-md text-white font-medium">Privilege Cards &amp; Methods</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span></button><button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left active:bg-surface-container-highest" id="btn-open-pref-modal"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] text-secondary">tune</span><span class="font-body-md text-body-md text-white font-medium">Sanctuary &amp; Butler Preferences</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span></button><button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left active:bg-surface-container-highest" id="btn-open-security-modal"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">lock</span><span class="font-body-md text-body-md text-white font-medium">Security &amp; Biometrics</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span></button><button class="w-full flex items-center justify-between p-4 hover:bg-surface-container-high transition-colors text-left active:bg-surface-container-highest" id="btn-open-concierge-modal"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-[20px] text-on-surface-variant">help_center</span><span class="font-body-md text-body-md text-white font-medium">24/7 Concierge Support</span></div><span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span></button></div>
+<!-- Version watermark -->
+<div class="text-center mt-6">
+<span class="font-label-sm text-label-sm text-outline">Reserve Luxury Hospitality · iOS v4.2.1</span>
+</div>
+</div>
+</main>
+<!-- Interactive iOS Booking Modal Bottom Sheet -->
+<div class="absolute inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="booking-modal-backdrop">
+<div class="absolute bottom-0 inset-x-0 bg-surface-container-low border-t border-white/10 rounded-t-3xl p-5 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto no-scrollbar" id="booking-modal-sheet">
+<!-- Drag handle -->
+<div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-4"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Reserve Experience</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-white" id="modal-stay-title">The Oberoi Udaivilas</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="modal-stay-location">Udaipur, Rajasthan</p>
+</div>
+<button aria-label="Close booking modal" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:text-white" id="close-booking-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Date selector -->
+<div class="mt-5 p-3.5 rounded-xl bg-surface-container border border-white/5">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_month</span> Check-In / Check-Out
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium" id="nights-display">2 Nights</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-high p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Arrival Date</span>
+<input class="w-full bg-transparent text-white font-label-md text-label-md focus:outline-none mt-0.5" id="checkin-date" type="date" value="2025-05-10">
+</div>
+<div class="bg-surface-container-high p-2.5 rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Departure Date</span>
+<input class="w-full bg-transparent text-white font-label-md text-label-md focus:outline-none mt-0.5" id="checkout-date" type="date" value="2025-05-12">
+</div>
+</div>
+</div>
+<!-- Guest Counter -->
+<div class="mt-3 p-3.5 rounded-xl bg-surface-container border border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">group</span>
+<div>
+<span class="font-label-md text-label-md text-on-surface font-semibold block">Luxury Guests</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Max 4 Guests per Sanctuary</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-white active:scale-90" id="guest-minus">-</button>
+<span class="font-label-md text-label-md text-white font-bold w-5 text-center" id="guest-count">2</span>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-white active:scale-90" id="guest-plus">+</button>
+</div>
+</div>
+<!-- Tariff Summary Breakdown -->
+<div class="mt-4 p-3.5 rounded-xl bg-surface-container-lowest border border-white/5">
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant" id="modal-tariff-calc">₹48,500 × 2 nights</span>
+<span class="font-body-sm text-body-sm text-white" id="modal-subtotal">₹97,000</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Luxury Taxes &amp; GST (18%)</span>
+<span class="font-body-sm text-body-sm text-white" id="modal-tax">₹17,460</span>
+</div>
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-body-sm text-secondary">Privilege Card Discount (25%)</span>
+<span class="font-body-sm text-body-sm text-secondary" id="modal-discount">-₹24,250</span>
+</div>
+<div class="border-t border-surface-container-highest mt-2 pt-2 flex justify-between items-baseline">
+<span class="font-title-md text-title-md font-semibold text-white">Estimated Payable</span>
+<span class="font-currency-display text-currency-display font-bold text-white" id="modal-total-price">₹90,210</span>
+</div>
+</div>
+<!-- Confirm Booking Button -->
+<div class="mt-5 pb-safe">
+<button class="w-full py-3.5 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-lg shadow-primary-container/20 active:scale-98 transition-all flex items-center justify-center gap-2" id="confirm-reservation-btn">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+<span>Confirm &amp; Hold Sanctuary</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Filter Modal Bottom Sheet -->
+<div class="absolute inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="filter-modal-backdrop">
+<div class="absolute bottom-0 inset-x-0 bg-surface-container-low border-t border-white/10 rounded-t-3xl p-5 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto no-scrollbar" id="filter-modal-sheet">
+<div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-4"></div>
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-highest">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-white">Filters &amp; Preferences</h3>
+<button aria-label="Close filter modal" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="close-filter-modal-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="mt-4">
+<span class="font-label-md text-label-md text-white font-semibold block mb-2">Max Price per night: <span class="text-secondary font-bold" id="price-range-label">₹70,000</span></span>
+<input class="w-full accent-primary bg-surface-container h-2 rounded-lg cursor-pointer" id="price-range-slider" max="100000" min="20000" step="5000" type="range" value="70000">
+<div class="flex justify-between text-[11px] text-on-surface-variant font-mono mt-1">
+<span>₹20,000</span>
+<span>₹60,000</span>
+<span>₹1,00,000+</span>
+</div>
+</div>
+<div class="mt-5">
+<span class="font-label-md text-label-md text-white font-semibold block mb-2">Essential Amenities</span>
+<div class="flex flex-wrap gap-2">
+<button class="amenity-pill px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm">Private Pool</button>
+<button class="amenity-pill px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Butler Service</button>
+<button class="amenity-pill px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Lake / Sea View</button>
+<button class="amenity-pill px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Helipad Access</button>
+<button class="amenity-pill px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Spa Sanctuary</button>
+</div>
+</div>
+<div class="mt-6 flex gap-3 pb-safe">
+<button class="flex-1 py-3 rounded-full bg-surface-container text-white font-label-md text-label-md font-semibold active:scale-98 transition-all" id="reset-filter-btn">Reset</button>
+<button class="flex-1 py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-98 transition-all" id="apply-filter-btn">Apply Filters</button>
+</div>
+</div>
+</div>
+<!-- Universal Toast Alert Overlay -->
+<!-- Edit Profile Modal --><div class="absolute inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="edit-profile-modal-backdrop"><div class="absolute bottom-0 inset-x-0 bg-surface-container-low border-t border-white/10 rounded-t-3xl p-5 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto no-scrollbar" id="edit-profile-modal-sheet"><div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-4"></div><div class="flex items-center justify-between pb-3 border-b border-surface-container-highest"><h3 class="font-headline-sm text-headline-sm font-semibold text-white">Edit Profile</h3><button aria-label="Close modal" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="close-edit-profile-btn"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="mt-4 flex flex-col gap-3.5"><div class="bg-surface-container p-3 rounded-xl border border-white/5"><label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Full Name</label><input class="w-full bg-transparent text-white font-body-md text-body-md focus:outline-none" id="input-profile-name" type="text" value="Aditya Singhania"></div><div class="bg-surface-container p-3 rounded-xl border border-white/5"><label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Email Address</label><input class="w-full bg-transparent text-white font-body-md text-body-md focus:outline-none" id="input-profile-email" type="email" value="aditya.s@reserveclub.in"></div><div class="bg-surface-container p-3 rounded-xl border border-white/5"><label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Phone Number</label><input class="w-full bg-transparent text-white font-body-md text-body-md focus:outline-none" id="input-profile-phone" type="tel" value="+91 98200 48821"></div><div class="bg-surface-container p-3 rounded-xl border border-white/5"><label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">VIP Tier Status</label><div class="flex items-center justify-between"><span class="font-title-md text-title-md text-white font-semibold">Reserve Black Tier</span><span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] font-bold uppercase">Active</span></div></div></div><div class="mt-6 flex gap-3 pb-safe"><button class="flex-1 py-3 rounded-full bg-surface-container text-white font-label-md text-label-md font-semibold active:scale-98 transition-all" id="cancel-edit-profile-btn">Cancel</button><button class="flex-1 py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-98 transition-all" id="save-edit-profile-btn">Save Changes</button></div></div></div><!-- Privilege Cards Modal --><div class="absolute inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="cards-modal-backdrop"><div class="absolute bottom-0 inset-x-0 bg-surface-container-low border-t border-white/10 rounded-t-3xl p-5 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto no-scrollbar" id="cards-modal-sheet"><div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-4"></div><div class="flex items-center justify-between pb-3 border-b border-surface-container-highest"><div><h3 class="font-headline-sm text-headline-sm font-semibold text-white">Privilege Cards</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Reserve partner credit cards &amp; benefits</p></div><button aria-label="Close modal" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="close-cards-modal-btn"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="mt-4 flex flex-col gap-3"><div class="p-4 rounded-xl bg-gradient-to-r from-[#1c1c1e] to-surface-container-high border border-white/10 relative overflow-hidden"><div class="flex justify-between items-start"><div><span class="font-label-sm text-label-sm text-secondary font-semibold uppercase tracking-wider">Primary Privilege</span><h4 class="font-title-md text-title-md font-semibold text-white mt-1">HDFC Infinia Metal</h4></div><span class="material-symbols-outlined text-white text-[28px]">credit_card</span></div><div class="mt-4 flex justify-between items-baseline"><span class="font-mono text-white text-[14px] tracking-widest">•••• 8820</span><span class="font-label-sm text-label-sm text-secondary">25% Off Stays</span></div></div><div class="p-4 rounded-xl bg-gradient-to-r from-surface-container via-[#1f1f1f] to-surface-container-high border border-white/10 relative overflow-hidden"><div class="flex justify-between items-start"><div><span class="font-label-sm text-label-sm text-primary font-semibold uppercase tracking-wider">Secondary Privilege</span><h4 class="font-title-md text-title-md font-semibold text-white mt-1">Axis Reserve Card</h4></div><span class="material-symbols-outlined text-primary text-[28px]">contactless</span></div><div class="mt-4 flex justify-between items-baseline"><span class="font-mono text-white text-[14px] tracking-widest">•••• 1044</span><span class="font-label-sm text-label-sm text-secondary">Complimentary Butler</span></div></div><button class="w-full py-3 rounded-xl border border-dashed border-outline-variant/60 flex items-center justify-center gap-2 text-primary font-label-md text-label-md font-semibold hover:bg-surface-container transition-colors" onclick="showQuickAlert('Add New Card', 'Card link verification gateway initiated.')"><span class="material-symbols-outlined text-[18px]">add</span> Add Privilege Card</button></div><div class="mt-5 pb-safe"><button class="w-full py-3 rounded-full bg-surface-container text-white font-label-md text-label-md font-semibold" id="dismiss-cards-modal-btn">Close</button></div></div></div><!-- Preferences Modal --><div class="absolute inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="pref-modal-backdrop"><div class="absolute bottom-0 inset-x-0 bg-surface-container-low border-t border-white/10 rounded-t-3xl p-5 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto no-scrollbar" id="pref-modal-sheet"><div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-4"></div><div class="flex items-center justify-between pb-3 border-b border-surface-container-highest"><div><h3 class="font-headline-sm text-headline-sm font-semibold text-white">Butler &amp; Stay Preferences</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Personalized defaults for all reservations</p></div><button aria-label="Close preferences modal" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="close-pref-modal-btn"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="mt-4 flex flex-col gap-3 divide-y divide-surface-container-highest"><div class="flex items-center justify-between pt-2 pb-1"><div><span class="font-title-md text-title-md font-medium text-white block">Dedicated 24/7 Butler</span><span class="font-body-sm text-body-sm text-on-surface-variant">Assigned on booking confirmation</span></div><button class="pref-toggle-btn w-12 h-6 rounded-full bg-primary-container p-0.5 transition-colors relative flex items-center" data-active="true"><div class="w-5 h-5 rounded-full bg-white transition-transform translate-x-6"></div></button></div><div class="flex items-center justify-between pt-3 pb-1"><div><span class="font-title-md text-title-md font-medium text-white block">Lake / Panoramic View Suite</span><span class="font-body-sm text-body-sm text-on-surface-variant">Auto-priority room allocation</span></div><button class="pref-toggle-btn w-12 h-6 rounded-full bg-primary-container p-0.5 transition-colors relative flex items-center" data-active="true"><div class="w-5 h-5 rounded-full bg-white transition-transform translate-x-6"></div></button></div><div class="flex items-center justify-between pt-3 pb-1"><div><span class="font-title-md text-title-md font-medium text-white block">Goose Feather Pillows</span><span class="font-body-sm text-body-sm text-on-surface-variant">Hypoallergenic luxury bedding</span></div><button class="pref-toggle-btn w-12 h-6 rounded-full bg-primary-container p-0.5 transition-colors relative flex items-center" data-active="true"><div class="w-5 h-5 rounded-full bg-white transition-transform translate-x-6"></div></button></div><div class="flex items-center justify-between pt-3 pb-1"><div><span class="font-title-md text-title-md font-medium text-white block">Morning Tea in Suite</span><span class="font-body-sm text-body-sm text-on-surface-variant">Darjeeling First Flush at 7:00 AM</span></div><button class="pref-toggle-btn w-12 h-6 rounded-full bg-primary-container p-0.5 transition-colors relative flex items-center" data-active="true"><div class="w-5 h-5 rounded-full bg-white transition-transform translate-x-6"></div></button></div></div><div class="mt-6 pb-safe"><button class="w-full py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-semibold active:scale-98 transition-all" id="save-pref-btn">Save Preferences</button></div></div></div><!-- Security Modal --><div class="absolute inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="security-modal-backdrop"><div class="absolute bottom-0 inset-x-0 bg-surface-container-low border-t border-white/10 rounded-t-3xl p-5 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto no-scrollbar" id="security-modal-sheet"><div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-4"></div><div class="flex items-center justify-between pb-3 border-b border-surface-container-highest"><div><h3 class="font-headline-sm text-headline-sm font-semibold text-white">Security &amp; Biometrics</h3><p class="font-body-sm text-body-sm text-on-surface-variant">Authentication &amp; data privacy</p></div><button aria-label="Close security modal" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="close-security-modal-btn"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="mt-4 flex flex-col gap-3 divide-y divide-surface-container-highest"><div class="flex items-center justify-between pt-2 pb-1"><div><span class="font-title-md text-title-md font-medium text-white block">Apple Face ID Unlock</span><span class="font-body-sm text-body-sm text-on-surface-variant">Required upon launch</span></div><button class="security-toggle-btn w-12 h-6 rounded-full bg-primary-container p-0.5 transition-colors relative flex items-center" data-active="true"><div class="w-5 h-5 rounded-full bg-white transition-transform translate-x-6"></div></button></div><div class="flex items-center justify-between pt-3 pb-1"><div><span class="font-title-md text-title-md font-medium text-white block">Two-Factor Authentication</span><span class="font-body-sm text-body-sm text-on-surface-variant">SMS &amp; Authenticator app</span></div><button class="security-toggle-btn w-12 h-6 rounded-full bg-primary-container p-0.5 transition-colors relative flex items-center" data-active="true"><div class="w-5 h-5 rounded-full bg-white transition-transform translate-x-6"></div></button></div><div class="flex items-center justify-between pt-3 pb-1"><div><span class="font-title-md text-title-md font-medium text-white block">Immediate App Lock</span><span class="font-body-sm text-body-sm text-on-surface-variant">When minimized or switched</span></div><button class="security-toggle-btn w-12 h-6 rounded-full bg-surface-container-highest p-0.5 transition-colors relative flex items-center" data-active="false"><div class="w-5 h-5 rounded-full bg-white transition-transform translate-x-0"></div></button></div></div><div class="mt-6 pb-safe"><button class="w-full py-3 rounded-full bg-surface-container text-white font-label-md text-label-md font-semibold" id="dismiss-security-modal-btn">Done</button></div></div></div><!-- 24/7 Royal Concierge Drawer --><div class="absolute inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="concierge-modal-backdrop"><div class="absolute bottom-0 inset-x-0 bg-surface-container-low border-t border-white/10 rounded-t-3xl p-5 transform translate-y-full transition-transform duration-300 max-h-[85vh] overflow-y-auto no-scrollbar" id="concierge-modal-sheet"><div class="w-12 h-1.5 bg-outline-variant/60 rounded-full mx-auto mb-4"></div><div class="flex items-center justify-between pb-3 border-b border-surface-container-highest"><div><span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Reserve Desk</span><h3 class="font-headline-sm text-headline-sm font-semibold text-white">Royal Concierge Elite</h3></div><button aria-label="Close concierge modal" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface" id="close-concierge-modal-btn"><span class="material-symbols-outlined text-[20px]">close</span></button></div><div class="mt-4 flex flex-col gap-3"><div class="p-4 rounded-xl bg-surface-container border border-white/5 flex items-center gap-3.5"><div class="w-10 h-10 rounded-full bg-secondary/15 text-secondary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[22px]">call</span></div><div class="flex-1"><div><h4 class="font-title-md text-title-md font-semibold text-white">Direct Butler Line</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Toll-free priority line for Black Tier</p></div><button class="mt-2 px-3 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold active:scale-95 transition-all" onclick="showQuickAlert('Calling Concierge', 'Dialing your designated concierge manager...')">Call 1800-RESERVE</button></div></div><div class="p-4 rounded-xl bg-surface-container border border-white/5 flex items-center gap-3.5"><div class="w-10 h-10 rounded-full bg-primary-container/20 text-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[22px]">flight_takeoff</span></div><div class="flex-1"><div><h4 class="font-title-md text-title-md font-semibold text-white">Private Jet &amp; Helicopter Charter</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Fast-track flight permissions across India</p></div><button class="mt-2 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold active:scale-95 transition-all" onclick="showQuickAlert('Charter Desk', 'Jet routing options sent to your email.')">Request Charter</button></div></div><div class="p-4 rounded-xl bg-surface-container border border-white/5 flex items-center gap-3.5"><div class="w-10 h-10 rounded-full bg-tertiary-container/30 text-tertiary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[22px]">chat</span></div><div class="flex-1"><div><h4 class="font-title-md text-title-md font-semibold text-white">Live Concierge Chat</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Instant messaging with relationship team</p></div><button class="mt-2 px-3 py-1 rounded-full bg-surface-container-high hover:bg-surface-container-highest text-white font-label-sm text-label-sm font-semibold active:scale-95 transition-all" onclick="showQuickAlert('Live Chat Active', 'Agent Devika Sharma connected.')">Start Live Chat</button></div></div></div><div class="mt-5 pb-safe"><button class="w-full py-3 rounded-full bg-surface-container text-white font-label-md text-label-md font-semibold" id="dismiss-concierge-modal-btn">Close</button></div></div></div><div class="absolute top-20 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-4 py-3 rounded-full bg-surface-container-highest/95 backdrop-blur-xl text-on-surface shadow-2xl transition-all duration-300 max-w-[90%] border border-white/10 opacity-0 pointer-events-none -translate-y-4" id="universal-toast">
+<div class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary shrink-0" id="toast-icon-wrap"><span class="material-symbols-outlined text-[18px]">check</span></div>
+<div class="flex flex-col min-w-0 pr-1">
+<span class="font-label-md text-label-md font-semibold text-white truncate" id="toast-title">All Stays Displayed</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate" id="toast-subtitle">Viewing full portfolio of luxury residences.</span>
+</div>
+</div>
+<!-- Bottom Navigation Bar with 5 tabs -->
+<nav class="absolute bottom-0 inset-x-0 z-40 bg-[#08080a]/92 backdrop-blur-2xl border-t border-white/5 shadow-[0_-4px_20px_rgba(0,0,0,0.6)]">
+<div class="flex items-center justify-around h-16 px-gutter-mobile">
+<button class="nav-tab-btn flex flex-col items-center justify-center gap-1 w-14 h-11 text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-target="home">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</button>
+<button class="nav-tab-btn flex flex-col items-center justify-center gap-1 w-14 h-11 text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-target="explore">
+<span class="material-symbols-outlined text-[24px]">travel_explore</span>
+<span class="font-label-sm text-label-sm">Explore</span>
+</button>
+<button class="nav-tab-btn flex flex-col items-center justify-center gap-1 w-14 h-11 text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-target="bookings">
+<span class="material-symbols-outlined text-[24px]">confirmation_number</span>
+<span class="font-label-sm text-label-sm">Bookings</span>
+</button>
+<button class="nav-tab-btn flex flex-col items-center justify-center gap-1 w-14 h-11 text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-target="alerts">
+<span class="material-symbols-outlined text-[24px]">notifications_active</span>
+<span class="font-label-sm text-label-sm">Alerts</span>
+</button>
+<button class="nav-tab-btn flex flex-col items-center justify-center gap-1 w-14 h-11 text-primary-container font-semibold drop-shadow-[0_0_12px_rgba(62,144,255,0.45)] transition-all active:scale-95" data-target="profile">
+<span class="material-symbols-outlined text-[24px]">account_circle</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</button>
+</div>
+<!-- iOS Home Bar Indicator -->
+<div class="w-full flex justify-center pb-2 pt-0.5 pointer-events-none">
+<div class="w-32 h-1 bg-white/30 rounded-full"></div>
+</div>
+</nav>
+</div>
+<!-- Complete Standalone JavaScript Controller -->
+<script>
+    // 1. Live Ticking Clock displaying HH:MM:SS every single second
+    function updateLiveClock() {
+      const clockEl = document.getElementById('ist-live-clock');
+      if (!clockEl) return;
+      const now = new Date();
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mm = String(now.getMinutes()).padStart(2, '0');
+      const ss = String(now.getSeconds()).padStart(2, '0');
+      clockEl.textContent = `${hh}:${mm}:${ss}`;
+    }
+    updateLiveClock();
+    setInterval(updateLiveClock, 1000);
+
+    // State store
+    const appState = {
+      isLoggedIn: true,
+      currentTab: 'home',
+      activeCategory: 'all',
+      searchQuery: '',
+      selectedStay: {
+        title: 'The Oberoi Udaivilas',
+        pricePerNight: 48500,
+        location: 'Udaipur, Rajasthan'
+      },
+      guests: 2,
+      nights: 2
+    };
+
+    // Quick Toast Messenger
+    let toastTimer = null;
+    function showQuickAlert(title, message, isSuccess = true) {
+      const toast = document.getElementById('universal-toast');
+      const toastTitle = document.getElementById('toast-title');
+      const toastSub = document.getElementById('toast-subtitle');
+      const iconWrap = document.getElementById('toast-icon-wrap');
+
+      if (!toast) return;
+      toastTitle.textContent = title;
+      toastSub.textContent = message;
+
+      if (isSuccess) {
+        iconWrap.className = 'w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary shrink-0';
+        iconWrap.innerHTML = '<span class="material-symbols-outlined text-[18px]">check</span>';
+      } else {
+        iconWrap.className = 'w-7 h-7 rounded-full bg-primary-container flex items-center justify-center text-on-primary shrink-0';
+        iconWrap.innerHTML = '<span class="material-symbols-outlined text-[18px]">info</span>';
+      }
+
+      toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-4');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-4');
+      }, 3000);
+    }
+
+    // Bottom Navigation Tab Switching
+    function switchTab(tabId) {
+      appState.currentTab = tabId;
+      const views = document.querySelectorAll('.tab-view');
+      views.forEach(v => {
+        v.classList.add('hidden');
+        v.classList.remove('flex');
+      });
+
+      const activeView = document.getElementById(`view-${tabId}`);
+      if (activeView) {
+        activeView.classList.remove('hidden');
+        activeView.classList.add('flex');
+      }
+
+      // Update Nav Buttons
+      const navButtons = document.querySelectorAll('.nav-tab-btn');
+      navButtons.forEach(btn => {
+        const target = btn.getAttribute('data-target');
+        if (target === tabId) {
+          btn.className = 'nav-tab-btn flex flex-col items-center justify-center gap-1 w-14 h-11 text-primary-container font-semibold drop-shadow-[0_0_12px_rgba(62,144,255,0.45)] transition-all active:scale-95';
+        } else {
+          btn.className = 'nav-tab-btn flex flex-col items-center justify-center gap-1 w-14 h-11 text-on-surface-variant hover:text-on-surface transition-all active:scale-95';
+        }
+      });
+
+      const mainContainer = document.querySelector('main');
+      if (mainContainer) {
+        mainContainer.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+
+    // Attach Nav Click Listeners
+    document.querySelectorAll('.nav-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        switchTab(target);
+      });
+    });
+
+    // Favorite Toggle Buttons
+    document.querySelectorAll('.fav-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        const isFav = icon.textContent.trim() === 'favorite';
+
+        if (isFav) {
+          icon.textContent = 'favorite_border';
+          icon.style.fontVariationSettings = "'FILL' 0";
+          icon.classList.remove('text-error');
+          showQuickAlert('Removed from Wishlist', 'Removed from saved sanctums.', false);
+        } else {
+          icon.textContent = 'favorite';
+          icon.style.fontVariationSettings = "'FILL' 1";
+          icon.classList.add('text-error');
+          btn.classList.add('scale-125');
+          setTimeout(() => btn.classList.remove('scale-125'), 180);
+          showQuickAlert('Saved to Wishlist', 'Saved to your private collections.');
+        }
+      });
+    });
+
+    // Category Filter Toggling
+    const categoryPills = document.querySelectorAll('.category-pill');
+    categoryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        categoryPills.forEach(p => {
+          p.classList.remove('bg-primary-container', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        pill.classList.add('bg-primary-container', 'text-on-primary');
+
+        appState.activeCategory = pill.getAttribute('data-cat') || 'all';
+        filterStayCards();
+      });
+    });
+
+    // Trending Chips click filters
+    document.querySelectorAll('.trending-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        const city = chip.getAttribute('data-city');
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+          searchInput.value = city;
+          appState.searchQuery = city.toLowerCase();
+          filterStayCards();
+          showQuickAlert(`Filtering ${city}`, `Showing luxury stays in and around ${city}`);
+        }
+      });
+    });
+
+    // Search Bar Input Filtering
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        appState.searchQuery = e.target.value.toLowerCase().trim();
+        filterStayCards();
+      });
+    }
+
+    function filterStayCards() {
+      const cards = document.querySelectorAll('#stays-list .luxury-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const categories = (card.getAttribute('data-category') || '').toLowerCase();
+        const city = (card.getAttribute('data-city') || '').toLowerCase();
+        const title = (card.querySelector('.card-title')?.textContent || '').toLowerCase();
+
+        const matchesCategory = appState.activeCategory === 'all' || categories.includes(appState.activeCategory);
+        const matchesSearch = !appState.searchQuery || title.includes(appState.searchQuery) || city.includes(appState.searchQuery);
+
+        if (matchesCategory && matchesSearch) {
+          card.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Interactive iOS Booking Modal Sheet
+    const modalBackdrop = document.getElementById('booking-modal-backdrop');
+    const modalSheet = document.getElementById('booking-modal-sheet');
+    const closeBookingBtn = document.getElementById('close-booking-modal-btn');
+    const confirmReservationBtn = document.getElementById('confirm-reservation-btn');
+
+    function openBookingModal(title, price, location) {
+      appState.selectedStay = {
+        title: title || 'Luxury Sanctuary',
+        pricePerNight: parseInt(price, 10) || 45000,
+        location: location || 'India'
+      };
+
+      document.getElementById('modal-stay-title').textContent = appState.selectedStay.title;
+      document.getElementById('modal-stay-location').textContent = appState.selectedStay.location;
+      calculateBookingTariffs();
+
+      modalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      modalBackdrop.classList.add('opacity-100');
+      modalSheet.classList.remove('translate-y-full');
+      modalSheet.classList.add('translate-y-0');
+    }
+
+    function closeBookingModal() {
+      modalSheet.classList.remove('translate-y-0');
+      modalSheet.classList.add('translate-y-full');
+      modalBackdrop.classList.remove('opacity-100');
+      modalBackdrop.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    if (closeBookingBtn) closeBookingBtn.addEventListener('click', closeBookingModal);
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) closeBookingModal();
+      });
+    }
+
+    // Attach to all 'Book Now' buttons
+    document.querySelectorAll('.book-now-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const title = btn.getAttribute('data-title');
+        const price = btn.getAttribute('data-price');
+        const location = btn.getAttribute('data-location');
+        openBookingModal(title, price, location);
+      });
+    });
+
+    // Guest counter & date calculations
+    const guestMinus = document.getElementById('guest-minus');
+    const guestPlus = document.getElementById('guest-plus');
+    const guestCountEl = document.getElementById('guest-count');
+    const checkinInput = document.getElementById('checkin-date');
+    const checkoutInput = document.getElementById('checkout-date');
+
+    if (guestMinus && guestPlus) {
+      guestMinus.addEventListener('click', () => {
+        if (appState.guests > 1) {
+          appState.guests--;
+          guestCountEl.textContent = appState.guests;
+        }
+      });
+      guestPlus.addEventListener('click', () => {
+        if (appState.guests < 4) {
+          appState.guests++;
+          guestCountEl.textContent = appState.guests;
+        }
+      });
+    }
+
+    function calculateBookingTariffs() {
+      const base = appState.selectedStay.pricePerNight;
+      const nights = appState.nights || 2;
+      const subtotal = base * nights;
+      const tax = Math.round(subtotal * 0.18);
+      const discount = Math.round(subtotal * 0.25);
+      const total = subtotal + tax - discount;
+
+      document.getElementById('modal-tariff-calc').textContent = `₹${base.toLocaleString('en-IN')} × ${nights} nights`;
+      document.getElementById('modal-subtotal').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+      document.getElementById('modal-tax').textContent = `₹${tax.toLocaleString('en-IN')}`;
+      document.getElementById('modal-discount').textContent = `-₹${discount.toLocaleString('en-IN')}`;
+      document.getElementById('modal-total-price').textContent = `₹${total.toLocaleString('en-IN')}`;
+    }
+
+    if (checkinInput && checkoutInput) {
+      const updateNights = () => {
+        const d1 = new Date(checkinInput.value);
+        const d2 = new Date(checkoutInput.value);
+        const diff = Math.max(1, Math.round((d2 - d1) / (1000 * 60 * 60 * 24)));
+        appState.nights = diff;
+        document.getElementById('nights-display').textContent = `${diff} Night${diff > 1 ? 's' : ''}`;
+        calculateBookingTariffs();
+      };
+      checkinInput.addEventListener('change', updateNights);
+      checkoutInput.addEventListener('change', updateNights);
+    }
+
+    if (confirmReservationBtn) {
+      confirmReservationBtn.addEventListener('click', () => {
+        closeBookingModal();
+        showQuickAlert('Reservation Confirmed', `${appState.selectedStay.title} reserved with Reserve Black privileges.`);
+        setTimeout(() => switchTab('bookings'), 600);
+      });
+    }
+
+    // Filter Bottom Sheet
+    const filterTrigger = document.getElementById('filter-modal-trigger');
+    const filterModalBackdrop = document.getElementById('filter-modal-backdrop');
+    const filterModalSheet = document.getElementById('filter-modal-sheet');
+    const closeFilterBtn = document.getElementById('close-filter-modal-btn');
+    const applyFilterBtn = document.getElementById('apply-filter-btn');
+    const resetFilterBtn = document.getElementById('reset-filter-btn');
+    const priceRangeSlider = document.getElementById('price-range-slider');
+    const priceRangeLabel = document.getElementById('price-range-label');
+
+    function openFilterModal() {
+      filterModalBackdrop.classList.remove('opacity-0', 'pointer-events-none');
+      filterModalBackdrop.classList.add('opacity-100');
+      filterModalSheet.classList.remove('translate-y-full');
+      filterModalSheet.classList.add('translate-y-0');
+    }
+
+    function closeFilterModal() {
+      filterModalSheet.classList.remove('translate-y-0');
+      filterModalSheet.classList.add('translate-y-full');
+      filterModalBackdrop.classList.remove('opacity-100');
+      filterModalBackdrop.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    if (filterTrigger) filterTrigger.addEventListener('click', openFilterModal);
+    if (closeFilterBtn) closeFilterBtn.addEventListener('click', closeFilterModal);
+    if (filterModalBackdrop) {
+      filterModalBackdrop.addEventListener('click', (e) => {
+        if (e.target === filterModalBackdrop) closeFilterModal();
+      });
+    }
+
+    if (priceRangeSlider && priceRangeLabel) {
+      priceRangeSlider.addEventListener('input', (e) => {
+        priceRangeLabel.textContent = `₹${parseInt(e.target.value, 10).toLocaleString('en-IN')}`;
+      });
+    }
+
+    // Amenity pills interactive toggle in filter modal
+    document.querySelectorAll('.amenity-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        pill.classList.toggle('bg-primary-container');
+        pill.classList.toggle('text-on-primary');
+        pill.classList.toggle('bg-surface-container');
+        pill.classList.toggle('text-on-surface-variant');
+      });
+    });
+
+    if (applyFilterBtn) {
+      applyFilterBtn.addEventListener('click', () => {
+        closeFilterModal();
+        showQuickAlert('Filters Applied', 'Sanctuary list refreshed based on preferences.');
+      });
+    }
+
+    if (resetFilterBtn) {
+      resetFilterBtn.addEventListener('click', () => {
+        if (priceRangeSlider) priceRangeSlider.value = 70000;
+        if (priceRangeLabel) priceRangeLabel.textContent = '₹70,000';
+        closeFilterModal();
+        showQuickAlert('Filters Reset', 'Default view restored.');
+      });
+    }
+
+    // Profile Interactive Log In / Log Out Toggle State
+    const authToggleBtn = document.getElementById('auth-state-toggle-btn');
+    const profileName = document.getElementById('profile-name');
+    const profileEmail = document.getElementById('profile-email');
+    const profileTier = document.getElementById('profile-tier');
+    const profileStatusLabel = document.getElementById('profile-status-label');
+    const profileOnlineBadge = document.getElementById('profile-online-badge');
+    const authBtnText = document.getElementById('auth-btn-text');
+    const authBtnIcon = document.getElementById('auth-btn-icon');
+
+    if (authToggleBtn) {
+      authToggleBtn.addEventListener('click', () => {
+        appState.isLoggedIn = !appState.isLoggedIn;
+        if (appState.isLoggedIn) {
+          profileName.textContent = 'Aditya Singhania';
+          profileEmail.textContent = 'aditya.s@reserveclub.in';
+          profileTier.textContent = 'Black Tier';
+          profileTier.className = 'px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] font-bold uppercase tracking-wider';
+          profileStatusLabel.textContent = 'Logged In · Reserve VIP Member';
+          profileStatusLabel.className = 'font-label-sm text-label-sm text-secondary font-medium';
+          profileOnlineBadge.className = 'absolute bottom-0 right-0 w-4 h-4 bg-secondary rounded-full border-2 border-surface';
+          authBtnText.textContent = 'Log Out';
+          authBtnIcon.textContent = 'logout';
+          authBtnIcon.className = 'material-symbols-outlined text-[18px] text-error';
+          showQuickAlert('Welcome Back', 'Logged in as Aditya Singhania.');
+        } else {
+          profileName.textContent = 'Guest Traveler';
+          profileEmail.textContent = 'guest@reserve.co';
+          profileTier.textContent = 'Guest Tier';
+          profileTier.className = 'px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] font-bold uppercase tracking-wider';
+          profileStatusLabel.textContent = 'Logged Out · Standard Guest Access';
+          profileStatusLabel.className = 'font-label-sm text-label-sm text-on-surface-variant font-medium';
+          profileOnlineBadge.className = 'absolute bottom-0 right-0 w-4 h-4 bg-outline rounded-full border-2 border-surface';
+          authBtnText.textContent = 'Log In';
+          authBtnIcon.textContent = 'login';
+          authBtnIcon.className = 'material-symbols-outlined text-[18px] text-secondary';
+          showQuickAlert('Logged Out', 'You have been logged out of Reserve Club.', false);
+        }
+      });
+    }
+
+    const viewAllStaysBtn = document.getElementById('view-all-stays-btn');
+    if (viewAllStaysBtn) {
+      viewAllStaysBtn.addEventListener('click', () => {
+        const search = document.getElementById('search-input');
+        if (search) search.value = '';
+        appState.activeCategory = 'all';
+        appState.searchQuery = '';
+        filterStayCards();
+        categoryPills.forEach((p, idx) => {
+          if (idx === 0) {
+            p.classList.add('bg-primary-container', 'text-on-primary');
+            p.classList.remove('bg-surface-container', 'text-on-surface-variant');
+          } else {
+            p.classList.remove('bg-primary-container', 'text-on-primary');
+            p.classList.add('bg-surface-container', 'text-on-surface-variant');
+          }
+        });
+        showQuickAlert('All Stays Displayed', 'Viewing full portfolio of luxury residences.');
+      });
+    }
+  </script>
+
+
+<script id="interactive-features-script">// Bookings filter tab logic
+(function(){
+  function setupBookingTabs(){
+    const filterBtns = document.querySelectorAll('.booking-filter-btn');
+    const countBadge = document.getElementById('booking-count-badge');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => {
+          b.classList.remove('border-primary', 'text-primary', 'font-semibold');
+          b.classList.add('border-transparent', 'text-on-surface-variant');
+        });
+        btn.classList.remove('border-transparent', 'text-on-surface-variant');
+        btn.classList.add('border-primary', 'text-primary', 'font-semibold');
+
+        document.querySelectorAll('.booking-panel').forEach(p => p.classList.add('hidden'));
+        const targetPanel = document.getElementById(`booking-panel-${filter}`);
+        if(targetPanel) {
+          targetPanel.classList.remove('hidden');
+          targetPanel.classList.add('flex');
+        }
+
+        if(countBadge){
+          if(filter === 'upcoming') countBadge.textContent = '2 Active';
+          else if(filter === 'completed') countBadge.textContent = '1 Completed';
+          else countBadge.textContent = '1 Cancelled';
+        }
+      });
+    });
+  }
+  setupBookingTabs();
+
+  // Modal helper functions
+  function bindModal(triggerId, backdropId, sheetId, closeBtnIds = []){
+    const trigger = document.getElementById(triggerId);
+    const backdrop = document.getElementById(backdropId);
+    const sheet = document.getElementById(sheetId);
+    if(!backdrop || !sheet) return;
+
+    const openModal = () => {
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100');
+      sheet.classList.remove('translate-y-full');
+      sheet.classList.add('translate-y-0');
+    };
+
+    const closeModal = () => {
+      sheet.classList.remove('translate-y-0');
+      sheet.classList.add('translate-y-full');
+      backdrop.classList.remove('opacity-100');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+    };
+
+    if(trigger) trigger.addEventListener('click', openModal);
+    backdrop.addEventListener('click', (e) => {
+      if(e.target === backdrop) closeModal();
+    });
+    closeBtnIds.forEach(id => {
+      const btn = document.getElementById(id);
+      if(btn) btn.addEventListener('click', closeModal);
+    });
+    return { openModal, closeModal };
+  }
+
+  // 1. Edit Profile Modal
+  const editProf = bindModal('btn-open-edit-profile', 'edit-profile-modal-backdrop', 'edit-profile-modal-sheet', ['close-edit-profile-btn', 'cancel-edit-profile-btn']);
+  const saveEditBtn = document.getElementById('save-edit-profile-btn');
+  if(saveEditBtn && editProf){
+    saveEditBtn.addEventListener('click', () => {
+      const newName = document.getElementById('input-profile-name').value.trim();
+      const newEmail = document.getElementById('input-profile-email').value.trim();
+      if(newName) document.getElementById('profile-name').textContent = newName;
+      if(newEmail) document.getElementById('profile-email').textContent = newEmail;
+      editProf.closeModal();
+      showQuickAlert('Profile Updated', 'Your contact details and VIP tier have been saved.');
+    });
+  }
+
+  // 2. Privilege Cards Modal
+  bindModal('btn-open-cards-modal', 'cards-modal-backdrop', 'cards-modal-sheet', ['close-cards-modal-btn', 'dismiss-cards-modal-btn']);
+
+  // 3. Preferences Modal
+  const prefModal = bindModal('btn-open-pref-modal', 'pref-modal-backdrop', 'pref-modal-sheet', ['close-pref-modal-btn']);
+  document.querySelectorAll('.pref-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isActive = btn.getAttribute('data-active') === 'true';
+      const circle = btn.querySelector('div');
+      if(isActive){
+        btn.setAttribute('data-active', 'false');
+        btn.classList.remove('bg-primary-container');
+        btn.classList.add('bg-surface-container-highest');
+        circle.classList.remove('translate-x-6');
+        circle.classList.add('translate-x-0');
+      } else {
+        btn.setAttribute('data-active', 'true');
+        btn.classList.remove('bg-surface-container-highest');
+        btn.classList.add('bg-primary-container');
+        circle.classList.remove('translate-x-0');
+        circle.classList.add('translate-x-6');
+      }
+    });
+  });
+  const savePrefBtn = document.getElementById('save-pref-btn');
+  if(savePrefBtn && prefModal){
+    savePrefBtn.addEventListener('click', () => {
+      prefModal.closeModal();
+      showQuickAlert('Preferences Saved', 'Sanctuary and Butler custom settings synced.');
+    });
+  }
+
+  // 4. Security Modal
+  bindModal('btn-open-security-modal', 'security-modal-backdrop', 'security-modal-sheet', ['close-security-modal-btn', 'dismiss-security-modal-btn']);
+  document.querySelectorAll('.security-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isActive = btn.getAttribute('data-active') === 'true';
+      const circle = btn.querySelector('div');
+      if(isActive){
+        btn.setAttribute('data-active', 'false');
+        btn.classList.remove('bg-primary-container');
+        btn.classList.add('bg-surface-container-highest');
+        circle.classList.remove('translate-x-6');
+        circle.classList.add('translate-x-0');
+      } else {
+        btn.setAttribute('data-active', 'true');
+        btn.classList.remove('bg-surface-container-highest');
+        btn.classList.add('bg-primary-container');
+        circle.classList.remove('translate-x-0');
+        circle.classList.add('translate-x-6');
+      }
+    });
+  });
+
+  // 5. Concierge Modal
+  bindModal('btn-open-concierge-modal', 'concierge-modal-backdrop', 'concierge-modal-sheet', ['close-concierge-modal-btn', 'dismiss-concierge-modal-btn']);
+})();</script></body></html>

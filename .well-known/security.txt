@@ -1,0 +1,7 @@
+Contact: mailto:ningappa@priorityadsagency.com
+Contact: https://wa.me/917760665912
+Expires: 2027-11-25T00:00:00.000Z
+Preferred-Languages: en, kn, hi
+Canonical: https://priorityadsagency.com/.well-known/security.txt
+Policy: https://priorityadsagency.com/.well-known/security.txt
+# Please report security issues privately. Do not run destructive or automated attack tests against this site.

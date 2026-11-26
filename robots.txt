@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /templates/
+
+Sitemap: https://priorityadsagency.com/sitemap.xml

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script id="pa-ls-fix">try{for(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i),v=localStorage.getItem(k)||"";if(/images\.unsplash\.com|appmifile\.com|gsmarena\.com|framerusercontent\.com/.test(v))localStorage.removeItem(k)}}catch(e){}</script>
+<script>(function(){var d=location.pathname.replace(/[^\/]*$/,'');if(d==='/')return;document.write('<base href="'+d+'">');var O=location.origin;function fix(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)u=u.slice(O.length);if(u[0]==='/'&&u[1]!=='/'&&u.indexOf(d)!==0)return d+u.slice(1);return u}var F=window.fetch;window.fetch=function(i,o){if(typeof i==='string'||i instanceof URL)i=fix(String(i));else if(i&&i.url){var n=fix(i.url);if(n!==i.url)i=new Request(n,i)}return F.call(this,i,o)};var X=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(m,u){arguments[1]=fix(String(u));return X.apply(this,arguments)};try{history.replaceState(history.state,'','/'+location.search+location.hash)}catch(e){}})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SoleStride - India's Premier Online Footwear Store. Shop 30 unique shoes across Running, Casual, Sneakers, Sports, Formal & Walking categories." />
+  <title>SoleStride | India's Premier Online Shoes Store</title>
+
+  <!-- Google Fonts & FontAwesome 6 Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../_vendor/fontawesome/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+
+  <!-- ========================================================================== -->
+  <!-- TOP HEADER (FLIPKART-INSPIRED) -->
+  <!-- ========================================================================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Mobile menu trigger -->
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="SoleStride Home">
+        <div class="brand-main">
+          SoleStride <span>✦</span>
+        </div>
+        <div class="brand-sub">
+          Explore <span>Plus ✨</span>
+        </div>
+      </a>
+
+      <!-- Search Bar with Live Autocomplete -->
+      <div class="header-search">
+        <form class="search-form" id="header-search-form" onsubmit="return false;">
+          <input type="text" class="search-input" id="header-search-input" 
+                 placeholder="Search for shoes, brands, running, sneakers, casual..." 
+                 autocomplete="off" aria-label="Search footwear products" />
+          <button type="submit" class="search-btn" aria-label="Submit search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <!-- Live Search Autocomplete Dropdown -->
+        <div class="search-dropdown" id="search-dropdown"></div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Login Button -->
+        <button class="header-action-btn login-btn" onclick="window.appController.openLoginModal()">
+          Login
+        </button>
+
+        <!-- Wishlist -->
+        <a href="#wishlist" class="header-action-btn wishlist-btn" title="View Wishlist">
+          <i class="fa-solid fa-heart"></i>
+          <span>Wishlist</span>
+          <span class="badge-count" id="header-wishlist-badge" style="display: none;">0</span>
+        </a>
+
+        <!-- Orders -->
+        <a href="#orders" class="header-action-btn" title="My Orders">
+          <i class="fa-solid fa-box"></i>
+          <span>Orders</span>
+        </a>
+
+        <!-- Cart Button -->
+        <a href="#cart" class="header-action-btn cart-btn" title="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Cart</span>
+          <span class="badge-count" id="header-cart-badge" style="display: none;">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================== -->
+  <!-- SUB-NAVIGATION BAR (CATEGORIES & OFFERS) -->
+  <!-- ========================================================================== -->
+  <nav class="sub-nav" aria-label="Shoe Categories">
+    <div class="sub-nav-inner">
+      <a href="#products" class="cat-nav-link" data-cat="all">
+        <i class="fa-solid fa-border-all"></i> All 30 Shoes
+      </a>
+      <a href="#products?category=running" class="cat-nav-link" data-cat="running">
+        <i class="fa-solid fa-person-running"></i> Running Shoes
+      </a>
+      <a href="#products?category=casual" class="cat-nav-link" data-cat="casual">
+        <i class="fa-solid fa-shoe-prints"></i> Casual Shoes
+      </a>
+      <a href="#products?category=sneakers" class="cat-nav-link" data-cat="sneakers">
+        <i class="fa-solid fa-fire"></i> Sneakers
+      </a>
+      <a href="#products?category=sports" class="cat-nav-link" data-cat="sports">
+        <i class="fa-solid fa-trophy"></i> Sports Shoes
+      </a>
+      <a href="#products?category=formal" class="cat-nav-link" data-cat="formal">
+        <i class="fa-solid fa-briefcase"></i> Formal Shoes
+      </a>
+      <a href="#products?category=walking" class="cat-nav-link" data-cat="walking">
+        <i class="fa-solid fa-person-walking"></i> Walking Shoes
+      </a>
+    </div>
+  </nav>
+
+  <!-- ========================================================================== -->
+  <!-- DYNAMIC MAIN CONTENT CONTAINER (ROUTER CONTROLLED) -->
+  <!-- ========================================================================== -->
+  <div class="container" id="main-content">
+    <!-- Router injects views here: Home, Catalog, Product Details, Cart, Checkout, Wishlist, Orders -->
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- ========================================================================== -->
+  <!-- FOOTER SECTION (FLIPKART USABILITY STYLE) -->
+  <!-- ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <div class="footer-col-title">ABOUT SOLESTRIDE</div>
+          <ul class="footer-link-list">
+            <li><a href="#home">Contact Us</a></li>
+            <li><a href="#home">About Us</a></li>
+            <li><a href="#products">Careers</a></li>
+            <li><a href="#home">SoleStride Stories</a></li>
+            <li><a href="#home">Press & Media</a></li>
+            <li><a href="#home">Corporate Information</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">FOOTWEAR HELP</div>
+          <ul class="footer-link-list">
+            <li><a href="#orders">Payments & COD</a></li>
+            <li><a href="#orders">Shipping & Tracking</a></li>
+            <li><a href="#home">Cancellations & Returns</a></li>
+            <li><a href="#home" onclick="window.appController.openSizeGuideModal(); return false;">Shoe Size Conversion Guide</a></li>
+            <li><a href="#home">FAQ & Help Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">CONSUMER POLICY</div>
+          <ul class="footer-link-list">
+            <li><a href="#home">Cancellation & Returns</a></li>
+            <li><a href="#home">Terms Of Use</a></li>
+            <li><a href="#home">Security & Encryption</a></li>
+            <li><a href="#home">Privacy Policy</a></li>
+            <li><a href="#home">Sitemap</a></li>
+            <li><a href="#home">Grievance Redressal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">CONNECT WITH US</div>
+          <ul class="footer-link-list">
+            <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i> Twitter / X</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">REGISTERED OFFICE ADDRESS</div>
+          <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 12px;">
+            SoleStride Footwear Internet Private Limited,<br/>
+            Buildings Alyssa, Begonia & Clove Embassy Tech Village,<br/>
+            Outer Ring Road, Devarabeesanahalli Village,<br/>
+            Bengaluru, 560103, Karnataka, India<br/>
+            CIN : U51109KA2012PTC066107<br/>
+            Telephone: <a href="tel:18002029898" style="color: #60a5fa;">1800 202 9898</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-perks">
+          <div class="footer-perk-item">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Become a Seller</span>
+          </div>
+          <div class="footer-perk-item">
+            <i class="fa-solid fa-star"></i>
+            <span>Advertise Footwear</span>
+          </div>
+          <div class="footer-perk-item">
+            <i class="fa-solid fa-gift"></i>
+            <span>Gift Cards</span>
+          </div>
+          <div class="footer-perk-item">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Help Center</span>
+          </div>
+        </div>
+
+        <div style="font-size: 11.5px; color: #94a3b8;">
+          © 2026 SoleStride.com. All Rights Reserved. Inspired by Flipkart's shopping experience.
+        </div>
+
+        <div>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================== -->
+  <!-- MOBILE STICKY BOTTOM NAVIGATION -->
+  <!-- ========================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <a href="#home" class="mobile-nav-link" id="mobile-nav-home">
+      <i class="fa-solid fa-house"></i>
+      <span>Home</span>
+    </a>
+    <a href="#products" class="mobile-nav-link" id="mobile-nav-shop">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <span>Explore</span>
+    </a>
+    <a href="#wishlist" class="mobile-nav-link" id="mobile-nav-wishlist">
+      <i class="fa-solid fa-heart"></i>
+      <span>Wishlist</span>
+      <span class="badge-count" id="mobile-wishlist-badge" style="display: none; top: 2px; right: 12px;">0</span>
+    </a>
+    <a href="#orders" class="mobile-nav-link" id="mobile-nav-orders">
+      <i class="fa-solid fa-box"></i>
+      <span>Orders</span>
+    </a>
+    <a href="#cart" class="mobile-nav-link" id="mobile-nav-cart">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span>Cart</span>
+      <span class="badge-count" id="mobile-cart-badge" style="display: none; top: 2px; right: 12px;">0</span>
+    </a>
+  </nav>
+
+  <!-- ES Module Application Bootstrapper -->
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>

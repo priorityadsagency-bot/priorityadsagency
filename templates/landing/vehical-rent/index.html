@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<script>/* muted when shown inside the Priority Ads Agency portfolio */(function(){try{if(window.top===window)return}catch(e){}var P=HTMLMediaElement.prototype,pl=P.play;P.play=function(){try{this.muted=true;this.volume=0}catch(e){}return pl.apply(this,arguments)};try{var d=Object.getOwnPropertyDescriptor(P,'muted');Object.defineProperty(P,'muted',{configurable:true,get:function(){return d.get.call(this)},set:function(){d.set.call(this,true)}})}catch(e){}['AudioContext','webkitAudioContext'].forEach(function(n){var A=window[n];if(!A)return;var M=function(){var c=new (Function.prototype.bind.apply(A,[null].concat([].slice.call(arguments))))();try{c.suspend()}catch(e){}c.resume=function(){return Promise.resolve()};return c};M.prototype=A.prototype;window[n]=M});document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('audio,video').forEach(function(m){m.muted=true})})})();</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Journey, Your Car, Your Freedom | Self-Drive &amp; Car Rentals</title>
+<!-- Tailwind CSS v3 CDN with forms & container queries -->
+<link rel="stylesheet" href="tw.css">
+<!-- Tailwind Config -->
+
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Custom CSS for specific styling -->
+<style data-purpose="custom-enhancements">
+    body {
+      background-color: #090B0E;
+      color: #E2E8F0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .orange-gradient-text {
+      background: linear-gradient(90deg, #FF6B00 0%, #FFA844 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .custom-glow-btn {
+      box-shadow: 0 4px 20px -2px rgba(255, 107, 0, 0.45);
+      transition: all 0.2s ease-in-out;
+    }
+    .custom-glow-btn:hover {
+      box-shadow: 0 6px 26px 0px rgba(255, 107, 0, 0.65);
+      transform: translateY(-1px);
+    }
+    .car-card-hover {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .car-card-hover:hover {
+      transform: translateY(-4px);
+      border-color: #FF6B00;
+    }
+    .stroke-brush {
+      position: relative;
+      display: inline-block;
+    }
+    .stroke-brush::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #FF6B00, transparent);
+      border-radius: 9999px;
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0D0F12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #262B35;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF6B00;
+    }
+  </style>
+</head>
+<body class="bg-[#090B0E] text-slate-100 antialiased selection:bg-[#FF6B00] selection:text-white">
+<!-- BEGIN: MainHeader -->
+<header class="w-full border-b border-[#1E232D] bg-[#090B0E]/90 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Logo Branding -->
+<a class="flex items-center space-x-3 group" href="#">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#FF6B00] to-[#FF8C38] flex items-center justify-center text-white shadow-lg shadow-[#FF6B00]/30 font-extrabold text-xl">
+          ⚡
+        </div>
+<div class="flex flex-col">
+<span class="text-xl font-black tracking-tight text-white group-hover:text-[#FF6B00] transition-colors">
+            DRIVE<span class="text-[#FF6B00]">FREEDOM</span>
+</span>
+<span class="text-[10px] text-gray-400 tracking-widest uppercase font-semibold">Self-Drive Rentals</span>
+</div>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+<a class="hover:text-[#FF6B00] transition-colors" href="#vehicles">Vehicles</a>
+<a class="hover:text-[#FF6B00] transition-colors" href="#packages">Rental Plans</a>
+<a class="hover:text-[#FF6B00] transition-colors" href="#why-us">Why Us</a>
+<a class="hover:text-[#FF6B00] transition-colors" href="#how-it-works">How It Works</a>
+<a class="hover:text-[#FF6B00] transition-colors" href="#deals">Special Offers</a>
+<a class="hover:text-[#FF6B00] transition-colors" href="#faq">FAQ</a>
+</nav>
+<!-- Header Contact / Action -->
+<div class="flex items-center space-x-4">
+<a class="hidden sm:flex items-center space-x-2 text-xs font-semibold text-gray-300 bg-[#14171E] border border-[#232832] px-3.5 py-2 rounded-full hover:border-[#FF6B00] transition-all" href="tel:+919876543210">
+<svg class="w-3.5 h-3.5 text-[#FF6B00]" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"></path></svg>
+<span>24/7 Support</span>
+</a>
+<a class="bg-[#FF6B00] hover:bg-[#FF7A00] text-white text-xs sm:text-sm font-bold px-5 py-2.5 rounded-full custom-glow-btn flex items-center space-x-1" href="#booking-form">
+<span>Book Now</span>
+<span>→</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-8 pb-16 lg:pt-14 lg:pb-24 overflow-hidden border-b border-[#1A1F29]" style="background: radial-gradient(circle at 50% 30%, #151922 0%, #090B0E 80%);">
+<!-- Mountain and atmospheric glow overlay background elements -->
+<div class="absolute inset-0 pointer-events-none opacity-25 bg-[radial-gradient(#FF6B00_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left Column: Hero Headline & Bullet Features -->
+<div class="lg:col-span-4 space-y-6 text-left">
+<div class="space-y-1">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none uppercase italic">
+<span class="text-white block">Your Journey,</span>
+<span class="text-[#FF6B00] block mt-1">Your Car,</span>
+<span class="text-white block mt-1 stroke-brush">Your Freedom</span>
+</h1>
+</div>
+<p class="text-gray-300 text-sm sm:text-base leading-relaxed font-normal max-w-md">
+            Rent a car for any trip – business, family, or weekend getaway. Self-drive and flexible rental options at great prices.
+          </p>
+<!-- 3 Bullet Highlights with icons -->
+<div class="space-y-3 pt-2">
+<div class="flex items-center space-x-3 text-sm text-gray-200 font-medium">
+<span class="w-8 h-8 rounded-lg bg-[#FF6B00]/15 border border-[#FF6B00]/30 text-[#FF6B00] flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<span>Self-Drive Rentals</span>
+</div>
+<div class="flex items-center space-x-3 text-sm text-gray-200 font-medium">
+<span class="w-8 h-8 rounded-lg bg-[#FF6B00]/15 border border-[#FF6B00]/30 text-[#FF6B00] flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<span>Safe &amp; Reliable Cars</span>
+</div>
+<div class="flex items-center space-x-3 text-sm text-gray-200 font-medium">
+<span class="w-8 h-8 rounded-lg bg-[#FF6B00]/15 border border-[#FF6B00]/30 text-[#FF6B00] flex items-center justify-center shrink-0">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<span>City &amp; Outstation Trips</span>
+</div>
+</div>
+<!-- Hero Action Pill Button -->
+<div class="pt-3">
+<a class="inline-flex items-center space-x-2 bg-[#FF6B00] hover:bg-[#FF7A00] text-white font-bold text-sm sm:text-base px-8 py-3.5 rounded-full custom-glow-btn tracking-wide transition-all" href="#booking-form">
+<span>Book Your Car Now</span>
+<span class="text-lg">→</span>
+</a>
+</div>
+</div>
+<!-- Center Column: Cinematic Car Hero Visual (clipped from source image) -->
+<div class="lg:col-span-4 flex items-center justify-center relative">
+<div class="relative w-full max-w-md mx-auto group">
+<!-- Ambient Underglow -->
+<div class="absolute -inset-4 bg-[#FF6B00]/20 rounded-3xl filter blur-2xl opacity-60"></div>
+<div class="relative rounded-2xl overflow-hidden border border-[#262B35] shadow-2xl bg-[#14171E]">
+<!-- Using slice of provided snapshot representing the heroic SUV -->
+<img alt="Silver SUV driving on scenic mountain highway" class="w-full h-80 object-cover object-center transform group-hover:scale-105 transition-transform duration-500" src="./images/1.webp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#090B0E] via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-3 left-4 right-4 flex justify-between items-end">
+<span class="text-xs uppercase tracking-wider font-bold bg-black/60 backdrop-blur-md px-3 py-1 rounded-md text-gray-200 border border-white/10">All-Terrain Fleet</span>
+<span class="text-xs text-[#FF6B00] font-semibold flex items-center">
+<span class="w-2 h-2 rounded-full bg-[#FF6B00] animate-ping mr-2"></span> Available Right Now
+                </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Booking Card -->
+<div class="lg:col-span-4">
+<div class="bg-[#12151B] border border-[#232832] rounded-2xl p-6 shadow-2xl shadow-black/80 relative" id="booking-form">
+<h2 class="text-xl font-bold text-white mb-4">
+              Book Your Car <span class="text-[#FF6B00]">in Minutes</span>
+</h2>
+<form class="space-y-3.5" onsubmit="event.preventDefault(); alert('Searching verified available cars in your location...');">
+<!-- Pickup & Drop-off Location -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Pickup Location -->
+<div>
+<label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1">
+                    Pickup Location <span class="text-[#FF6B00]">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+<svg class="w-4 h-4 text-[#FF6B00]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<input class="w-full pl-9 pr-3 py-2 text-xs rounded-lg bg-[#181C24] border border-[#2A313E] text-white placeholder-gray-400 focus:outline-none focus:border-[#FF6B00] transition" placeholder="Enter pickup location" required="" type="text"/>
+</div>
+</div>
+<!-- Drop-off Location -->
+<div>
+<label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1">
+                    Drop-off Location <span class="text-[#FF6B00]">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+<svg class="w-4 h-4 text-[#FF6B00]" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<input class="w-full pl-9 pr-3 py-2 text-xs rounded-lg bg-[#181C24] border border-[#2A313E] text-white placeholder-gray-400 focus:outline-none focus:border-[#FF6B00] transition" placeholder="Enter drop-off location" required="" type="text"/>
+</div>
+</div>
+</div>
+<!-- Pickup Date & Return Date -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<!-- Pickup Date & Time -->
+<div>
+<label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1">
+                    Pickup Date &amp; Time <span class="text-[#FF6B00]">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<input class="w-full pl-9 pr-2 py-2 text-xs rounded-lg bg-[#181C24] border border-[#2A313E] text-gray-200 focus:outline-none focus:border-[#FF6B00] transition" type="datetime-local"/>
+</div>
+</div>
+<!-- Return Date & Time -->
+<div>
+<label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1">
+                    Return Date &amp; Time <span class="text-[#FF6B00]">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<input class="w-full pl-9 pr-2 py-2 text-xs rounded-lg bg-[#181C24] border border-[#2A313E] text-gray-200 focus:outline-none focus:border-[#FF6B00] transition" type="datetime-local"/>
+</div>
+</div>
+</div>
+<!-- Car Type Select -->
+<div>
+<label class="block text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1">
+                  Car Type <span class="text-[#FF6B00]">*</span>
+</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
+<svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+<select class="w-full pl-9 pr-8 py-2 text-xs rounded-lg bg-[#181C24] border border-[#2A313E] text-white focus:outline-none focus:border-[#FF6B00] transition">
+<option disabled="" selected="" value="">Select car type</option>
+<option value="hatchback">Hatchback (Budget Friendly)</option>
+<option value="sedan">Sedan (Comfort &amp; City)</option>
+<option value="suv">SUV (Spacious &amp; Touring)</option>
+<option value="luxury">Luxury (Premium Executive)</option>
+<option value="electric">Electric (Green &amp; Smart)</option>
+</select>
+</div>
+</div>
+<!-- Submit CTA -->
+<div class="pt-2">
+<button class="w-full bg-[#FF6B00] hover:bg-[#FF7A00] text-white font-bold py-3 px-4 rounded-xl custom-glow-btn flex items-center justify-center space-x-2 text-sm" type="submit">
+<span>Search Available Cars</span>
+<span class="text-base">→</span>
+</button>
+</div>
+<!-- Micro-trust Badges -->
+<div class="pt-3 border-t border-[#1F242E] grid grid-cols-3 gap-1 text-[10px] text-gray-300 font-medium text-center">
+<div class="flex items-center justify-center space-x-1">
+<span class="text-[#FF6B00]">⚡</span>
+<span>Instant Booking</span>
+</div>
+<div class="flex items-center justify-center space-x-1 border-x border-[#232832]">
+<span class="text-[#FF6B00]">🛡️</span>
+<span>No Hidden Charges</span>
+</div>
+<div class="flex items-center justify-center space-x-1">
+<span class="text-[#FF6B00]">🎧</span>
+<span>24/7 Support</span>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AvailableCarsCategoryBar -->
+<section class="py-12 bg-[#090B0E] border-b border-[#1A1F29]" id="vehicles">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-left mb-7">
+<h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Available Cars for <span class="text-[#FF6B00]">Every Journey</span>
+</h2>
+</div>
+<!-- 5 Vehicle Category Cards -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+<!-- 1. Hatchback -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 text-center car-card-hover group cursor-pointer">
+<div class="h-24 flex items-center justify-center mb-3">
+<img alt="Hatchback Car" class="max-h-20 object-contain mx-auto filter drop-shadow group-hover:scale-105 transition-transform" src="./images/2.webp"/>
+</div>
+<div class="flex items-center justify-center space-x-1.5 text-white font-bold text-sm mb-1">
+<svg class="w-4 h-4 text-gray-400 group-hover:text-[#FF6B00]" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"></path></svg>
+<span>Hatchback</span>
+</div>
+<p class="text-xs text-gray-400">City rides &amp; short trips</p>
+</div>
+<!-- 2. Sedan -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 text-center car-card-hover group cursor-pointer">
+<div class="h-24 flex items-center justify-center mb-3">
+<img alt="Sedan Car" class="max-h-20 object-contain mx-auto filter drop-shadow group-hover:scale-105 transition-transform" src="./images/3.webp"/>
+</div>
+<div class="flex items-center justify-center space-x-1.5 text-white font-bold text-sm mb-1">
+<svg class="w-4 h-4 text-gray-400 group-hover:text-[#FF6B00]" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"></path></svg>
+<span>Sedan</span>
+</div>
+<p class="text-xs text-gray-400">Comfortable &amp; spacious</p>
+</div>
+<!-- 3. SUV -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 text-center car-card-hover group cursor-pointer">
+<div class="h-24 flex items-center justify-center mb-3">
+<img alt="SUV Car" class="max-h-20 object-contain mx-auto filter drop-shadow group-hover:scale-105 transition-transform" src="./images/4.webp"/>
+</div>
+<div class="flex items-center justify-center space-x-1.5 text-white font-bold text-sm mb-1">
+<svg class="w-4 h-4 text-gray-400 group-hover:text-[#FF6B00]" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"></path></svg>
+<span>SUV</span>
+</div>
+<p class="text-xs text-gray-400">For family &amp; long drives</p>
+</div>
+<!-- 4. Luxury -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 text-center car-card-hover group cursor-pointer">
+<div class="h-24 flex items-center justify-center mb-3">
+<img alt="Luxury Car" class="max-h-20 object-contain mx-auto filter drop-shadow group-hover:scale-105 transition-transform" src="./images/5.webp"/>
+</div>
+<div class="flex items-center justify-center space-x-1.5 text-white font-bold text-sm mb-1">
+<svg class="w-4 h-4 text-gray-400 group-hover:text-[#FF6B00]" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"></path></svg>
+<span>Luxury</span>
+</div>
+<p class="text-xs text-gray-400">Premium travel experience</p>
+</div>
+<!-- 5. Electric -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 text-center car-card-hover group cursor-pointer col-span-2 sm:col-span-1">
+<div class="h-24 flex items-center justify-center mb-3">
+<img alt="Electric Car" class="max-h-20 object-contain mx-auto filter drop-shadow group-hover:scale-105 transition-transform" src="./images/6.webp"/>
+</div>
+<div class="flex items-center justify-center space-x-1.5 text-white font-bold text-sm mb-1">
+<svg class="w-4 h-4 text-[#FF6B00]" fill="currentColor" viewbox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"></path></svg>
+<span>Electric</span>
+</div>
+<p class="text-xs text-gray-400">Eco-friendly &amp; cost-saving</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AvailableCarsCategoryBar -->
+<!-- BEGIN: RentalPackages -->
+<section class="py-14 bg-[#090B0E] border-b border-[#1A1F29]" id="packages">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Section Info Header -->
+<div class="lg:col-span-4">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Rental Packages for<br/>
+<span class="text-[#FF6B00]">Every Plan</span>
+</h2>
+<p class="text-sm text-gray-400 mt-2 max-w-sm">
+            Flexible rental packages that fit your travel needs and budget.
+          </p>
+</div>
+<!-- 3 Packages Cards -->
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+<!-- Daily Rental -->
+<div class="bg-[#12151B] border border-[#232832] hover:border-[#FF6B00]/70 rounded-2xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="w-10 h-10 rounded-xl bg-[#1C212B] text-[#FF6B00] border border-[#2B3342] flex items-center justify-center mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-1">Daily Rental</h3>
+<p class="text-xs text-gray-400 mb-6">Perfect for short trips and city travel.</p>
+</div>
+<div class="pt-3 border-t border-[#1C212B]">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-lg font-black text-[#FF6B00] ml-1">₹1,499</span>
+<span class="text-xs text-gray-400">/ day</span>
+</div>
+</div>
+<!-- Weekly Rental -->
+<div class="bg-[#12151B] border border-[#FF6B00]/40 rounded-2xl p-5 flex flex-col justify-between shadow-lg shadow-[#FF6B00]/5 group">
+<div>
+<div class="w-10 h-10 rounded-xl bg-[#FF6B00]/10 text-[#FF6B00] border border-[#FF6B00]/30 flex items-center justify-center mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-1">Weekly Rental</h3>
+<p class="text-xs text-gray-400 mb-6">Great for longer stays and business trips.</p>
+</div>
+<div class="pt-3 border-t border-[#1C212B]">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-lg font-black text-[#FF6B00] ml-1">₹7,999</span>
+<span class="text-xs text-gray-400">/ week</span>
+</div>
+</div>
+<!-- Monthly Rental -->
+<div class="bg-[#12151B] border border-[#232832] hover:border-[#FF6B00]/70 rounded-2xl p-5 flex flex-col justify-between transition-all group">
+<div>
+<div class="w-10 h-10 rounded-xl bg-[#1C212B] text-[#FF6B00] border border-[#2B3342] flex items-center justify-center mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-1">Monthly Rental</h3>
+<p class="text-xs text-gray-400 mb-6">Best value for extended use and relocation.</p>
+</div>
+<div class="pt-3 border-t border-[#1C212B]">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-lg font-black text-[#FF6B00] ml-1">₹24,999</span>
+<span class="text-xs text-gray-400">/ month</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RentalPackages -->
+<!-- BEGIN: WhyChooseUs -->
+<section class="py-14 bg-[#090B0E] border-b border-[#1A1F29]" id="why-us">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Title & Subtitle -->
+<div class="lg:col-span-4">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Why <span class="text-[#FF6B00]">Chooss Us?</span>
+</h2>
+<p class="text-sm text-gray-400 mt-2 max-w-sm">
+            A reliable and hassle-free car rental experience from start to finish.
+          </p>
+</div>
+<!-- 4 Clean Columns -->
+<div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-6">
+<!-- 1. Flexible Booking -->
+<div class="text-center sm:text-left">
+<div class="w-10 h-10 rounded-xl bg-[#141820] border border-[#232832] text-[#FF6B00] flex items-center justify-center mx-auto sm:mx-0 mb-3">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-white mb-1">Flexible Booking</h4>
+<p class="text-xs text-gray-400 leading-snug">Rent for a day, week or month.</p>
+</div>
+<!-- 2. Well-Maintained Cars -->
+<div class="text-center sm:text-left">
+<div class="w-10 h-10 rounded-xl bg-[#141820] border border-[#232832] text-[#FF6B00] flex items-center justify-center mx-auto sm:mx-0 mb-3">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 16l-2-2m0 0l-2 2m2-2V6a2 2 0 00-2-2H9a2 2 0 00-2 2v8m12 2l-2-2m-8 2l2-2m0 0l2 2m-2-2V6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-white mb-1">Well-Maintained Cars</h4>
+<p class="text-xs text-gray-400 leading-snug">Clean, serviced and trip-ready vehicles.</p>
+</div>
+<!-- 3. Transparent Pricing -->
+<div class="text-center sm:text-left">
+<div class="w-10 h-10 rounded-xl bg-[#141820] border border-[#232832] text-[#FF6B00] flex items-center justify-center mx-auto sm:mx-0 mb-3">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-white mb-1">Transparent Pricing</h4>
+<p class="text-xs text-gray-400 leading-snug">Clear, upfront rates with no hidden charges.</p>
+</div>
+<!-- 4. 24/7 Support -->
+<div class="text-center sm:text-left">
+<div class="w-10 h-10 rounded-xl bg-[#141820] border border-[#232832] text-[#FF6B00] flex items-center justify-center mx-auto sm:mx-0 mb-3">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.657a9 9 0 01-2.121-5.657m0 0l2.828-2.829" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="text-sm font-bold text-white mb-1">24/7 Support</h4>
+<p class="text-xs text-gray-400 leading-snug">Always available to help you anytime.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhyChooseUs -->
+<!-- BEGIN: HowItWorks -->
+<section class="py-14 bg-[#090B0E] border-b border-[#1A1F29]" id="how-it-works">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Title & Subtitle -->
+<div class="lg:col-span-3">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            How <span class="text-[#FF6B00]">It Works?</span>
+</h2>
+<p class="text-sm text-gray-400 mt-2">
+            Book your car in 4 simple steps and hit the road with confidence.
+          </p>
+</div>
+<!-- 4 Step Stepper with Dotted Line -->
+<div class="lg:col-span-9 relative">
+<!-- Desktop Dotted connecting line -->
+<div class="hidden md:block absolute top-7 left-12 right-12 h-0.5 border-t border-dashed border-[#2F3644] z-0"></div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-[#12151B] border-2 border-[#FF6B00] text-[#FF6B00] flex items-center justify-center text-xl mb-3 shadow-lg shadow-[#FF6B00]/10">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.04 3H5.81l1.04-3zM19 17H5v-4.66l.12-.34h13.77l.11.34V17z"></path></svg>
+</div>
+<h4 class="text-xs sm:text-sm font-bold text-white mb-1">1. Choose Your Car</h4>
+<p class="text-xs text-gray-400 leading-snug">Browse and pick from our wide range of vehicles.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-[#12151B] border border-[#2F3644] text-[#FF6B00] flex items-center justify-center text-xl mb-3">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="text-xs sm:text-sm font-bold text-white mb-1">2. Select Dates</h4>
+<p class="text-xs text-gray-400 leading-snug">Choose your pickup and return date &amp; time.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-[#12151B] border border-[#2F3644] text-[#FF6B00] flex items-center justify-center text-xl mb-3">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="text-xs sm:text-sm font-bold text-white mb-1">3. Confirm Booking</h4>
+<p class="text-xs text-gray-400 leading-snug">Review details and confirm your rental.</p>
+</div>
+<!-- Step 4 -->
+<div class="flex flex-col items-center text-center">
+<div class="w-14 h-14 rounded-full bg-[#12151B] border border-[#2F3644] text-[#FF6B00] flex items-center justify-center text-xl mb-3">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 5l7 7-7 7M5 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h4 class="text-xs sm:text-sm font-bold text-white mb-1">4. Enjoy Your Journey</h4>
+<p class="text-xs text-gray-400 leading-snug">Pick up your car and drive with total freedom.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HowItWorks -->
+<!-- BEGIN: FeaturedVehicles -->
+<section class="py-14 bg-[#090B0E] border-b border-[#1A1F29]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header with Right View All Button -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+<div>
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Featured <span class="text-[#FF6B00]">Vehicles</span>
+</h2>
+<p class="text-sm text-gray-400 mt-1">
+            Popular cars with great comfort, performance and rental value.
+          </p>
+</div>
+<a class="inline-flex items-center space-x-2 text-xs font-semibold px-4 py-2 rounded-full border border-[#2E3543] text-gray-300 hover:text-white hover:border-[#FF6B00] transition self-start sm:self-auto" href="#booking-form">
+<span>View All Cars</span>
+<span>→</span>
+</a>
+</div>
+<!-- 4 Vehicle Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1: Hatchback -->
+<div class="bg-[#12151B] border border-[#232832] rounded-2xl p-4 flex flex-col justify-between car-card-hover group">
+<div>
+<div class="h-36 rounded-xl bg-[#0D0F13] flex items-center justify-center p-3 mb-4 overflow-hidden">
+<img alt="Hatchback" class="max-h-28 object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300" src="./images/7.webp"/>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Hatchback</h3>
+<div class="flex items-center space-x-4 text-xs text-gray-400 mb-4 pb-3 border-b border-[#1F2530]">
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>5 Seats</span>
+</span>
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Manual</span>
+</span>
+</div>
+</div>
+<div>
+<div class="mb-3">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-base font-black text-[#FF6B00] ml-1">₹1,499</span>
+<span class="text-xs text-gray-400">/ day</span>
+</div>
+<a class="w-full bg-[#FF6B00] hover:bg-[#FF7A00] text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center space-x-1 custom-glow-btn transition" href="#booking-form">
+<span>Book Now</span>
+<span>→</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Sedan -->
+<div class="bg-[#12151B] border border-[#232832] rounded-2xl p-4 flex flex-col justify-between car-card-hover group">
+<div>
+<div class="h-36 rounded-xl bg-[#0D0F13] flex items-center justify-center p-3 mb-4 overflow-hidden">
+<img alt="Sedan" class="max-h-28 object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300" src="./images/8.webp"/>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Sedan</h3>
+<div class="flex items-center space-x-4 text-xs text-gray-400 mb-4 pb-3 border-b border-[#1F2530]">
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>5 Seats</span>
+</span>
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Automatic</span>
+</span>
+</div>
+</div>
+<div>
+<div class="mb-3">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-base font-black text-[#FF6B00] ml-1">₹2,499</span>
+<span class="text-xs text-gray-400">/ day</span>
+</div>
+<a class="w-full bg-[#FF6B00] hover:bg-[#FF7A00] text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center space-x-1 custom-glow-btn transition" href="#booking-form">
+<span>Book Now</span>
+<span>→</span>
+</a>
+</div>
+</div>
+<!-- Card 3: SUV -->
+<div class="bg-[#12151B] border border-[#232832] rounded-2xl p-4 flex flex-col justify-between car-card-hover group">
+<div>
+<div class="h-36 rounded-xl bg-[#0D0F13] flex items-center justify-center p-3 mb-4 overflow-hidden">
+<img alt="SUV" class="max-h-28 object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300" src="./images/9.webp"/>
+</div>
+<h3 class="text-base font-bold text-white mb-2">SUV</h3>
+<div class="flex items-center space-x-4 text-xs text-gray-400 mb-4 pb-3 border-b border-[#1F2530]">
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>7 Seats</span>
+</span>
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Automatic</span>
+</span>
+</div>
+</div>
+<div>
+<div class="mb-3">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-base font-black text-[#FF6B00] ml-1">₹3,499</span>
+<span class="text-xs text-gray-400">/ day</span>
+</div>
+<a class="w-full bg-[#FF6B00] hover:bg-[#FF7A00] text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center space-x-1 custom-glow-btn transition" href="#booking-form">
+<span>Book Now</span>
+<span>→</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Luxury -->
+<div class="bg-[#12151B] border border-[#232832] rounded-2xl p-4 flex flex-col justify-between car-card-hover group">
+<div>
+<div class="h-36 rounded-xl bg-[#0D0F13] flex items-center justify-center p-3 mb-4 overflow-hidden">
+<img alt="Luxury" class="max-h-28 object-contain filter drop-shadow group-hover:scale-105 transition-transform duration-300" src="./images/10.webp"/>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Luxury</h3>
+<div class="flex items-center space-x-4 text-xs text-gray-400 mb-4 pb-3 border-b border-[#1F2530]">
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>5 Seats</span>
+</span>
+<span class="flex items-center space-x-1">
+<svg class="w-3.5 h-3.5 text-gray-400" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Automatic</span>
+</span>
+</div>
+</div>
+<div>
+<div class="mb-3">
+<span class="text-xs text-gray-400">From</span>
+<span class="text-base font-black text-[#FF6B00] ml-1">₹6,999</span>
+<span class="text-xs text-gray-400">/ day</span>
+</div>
+<a class="w-full bg-[#FF6B00] hover:bg-[#FF7A00] text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center space-x-1 custom-glow-btn transition" href="#booking-form">
+<span>Book Now</span>
+<span>→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FeaturedVehicles -->
+<!-- BEGIN: SpecialRentalOffers -->
+<section class="py-14 bg-[#090B0E] border-b border-[#1A1F29]" id="deals">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Title & Subtitle -->
+<div class="lg:col-span-3">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Special<br/>
+<span class="text-[#FF6B00]">Rental Offers</span>
+</h2>
+<p class="text-sm text-gray-400 mt-2">
+            Save more on your next trip with exclusive rental deals.
+          </p>
+</div>
+<!-- 2 Large Offer Banners -->
+<div class="lg:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Offer 1: Weekend Deal -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#171B23] to-[#1F2533] border border-[#2D3444] p-6 flex items-center justify-between shadow-xl group">
+<div class="relative z-10 space-y-2">
+<div class="inline-flex items-center space-x-1.5 text-[11px] font-bold uppercase tracking-wider text-[#FF6B00] bg-[#FF6B00]/10 px-2.5 py-1 rounded-md border border-[#FF6B00]/20">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Weekend Deal</span>
+</div>
+<p class="text-xs text-gray-300 font-medium">Perfect for a quick getaway!</p>
+<h3 class="text-xl sm:text-2xl font-black text-white leading-tight">
+                Flat <span class="text-[#FF6B00]">20% OFF</span>
+</h3>
+<p class="text-[11px] text-gray-400">on weekend rentals</p>
+</div>
+<div class="w-36 h-28 relative shrink-0">
+<img alt="Car offer" class="w-full h-full object-contain filter drop-shadow group-hover:scale-110 transition-transform" src="./images/11.webp"/>
+</div>
+</div>
+<!-- Offer 2: Long-Term Rental -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#171B23] to-[#1F2533] border border-[#2D3444] p-6 flex items-center justify-between shadow-xl group">
+<div class="relative z-10 space-y-2">
+<div class="inline-flex items-center space-x-1.5 text-[11px] font-bold uppercase tracking-wider text-[#FF6B00] bg-[#FF6B00]/10 px-2.5 py-1 rounded-md border border-[#FF6B00]/20">
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Long-Term Rental</span>
+</div>
+<p class="text-xs text-gray-300 font-medium">More days, bigger savings!</p>
+<h3 class="text-xl sm:text-2xl font-black text-white leading-tight">
+                Up to <span class="text-[#FF6B00]">35% OFF</span>
+</h3>
+<p class="text-[11px] text-gray-400">on weekly &amp; monthly rentals</p>
+</div>
+<div class="w-36 h-28 relative shrink-0">
+<img alt="Car offer" class="w-full h-full object-contain filter drop-shadow group-hover:scale-110 transition-transform" src="./images/12.webp"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SpecialRentalOffers -->
+<!-- BEGIN: TestimonialsAndFAQ -->
+<section class="py-14 bg-[#090B0E] border-b border-[#1A1F29]" id="faq">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Column: Testimonials Slider & Carousel -->
+<div class="lg:col-span-6 flex flex-col justify-between">
+<div>
+<div class="mb-6">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                What Our <span class="text-[#FF6B00]">Customers Say</span>
+</h2>
+</div>
+<!-- Customer Reviews Carousel Container -->
+<div class="relative">
+<!-- Cards Viewport -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 overflow-hidden" id="testimonialContainer">
+<!-- Testimonial 1 -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center space-x-3 mb-3">
+<img alt="Rohit K." class="w-10 h-10 rounded-full object-cover border border-[#374052]" src="./images/13.webp"/>
+<div>
+<h4 class="text-xs font-bold text-white">Rohit K.</h4>
+<div class="flex text-[#FF6B00] text-xs">★★★★★</div>
+</div>
+</div>
+<p class="text-xs text-gray-300 leading-relaxed italic">
+                      "The booking process was super easy and the car was in excellent condition. Had a great road trip experience!"
+                    </p>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center space-x-3 mb-3">
+<img alt="Ananya S." class="w-10 h-10 rounded-full object-cover border border-[#374052]" src="./images/14.webp"/>
+<div>
+<h4 class="text-xs font-bold text-white">Ananya S.</h4>
+<div class="flex text-[#FF6B00] text-xs">★★★★★</div>
+</div>
+</div>
+<p class="text-xs text-gray-300 leading-relaxed italic">
+                      "Very professional and reliable service. Transparent pricing and great support throughout my trip."
+                    </p>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-[#12151B] border border-[#232832] rounded-xl p-4 flex flex-col justify-between">
+<div>
+<div class="flex items-center space-x-3 mb-3">
+<img alt="Karthik M." class="w-10 h-10 rounded-full object-cover border border-[#374052]" src="./images/15.webp"/>
+<div>
+<h4 class="text-xs font-bold text-white">Karthik M.</h4>
+<div class="flex text-[#FF6B00] text-xs">★★★★★</div>
+</div>
+</div>
+<p class="text-xs text-gray-300 leading-relaxed italic">
+                      "Rented an SUV for a family trip. Clean car, smooth pickup and drop, and amazing support."
+                    </p>
+</div>
+</div>
+</div>
+<!-- Pagination and Arrows -->
+<div class="flex items-center justify-between mt-5 pt-2">
+<button aria-label="Previous Testimonial" class="w-8 h-8 rounded-full bg-[#141820] border border-[#262B35] text-gray-300 hover:text-white hover:border-[#FF6B00] flex items-center justify-center text-sm transition" type="button">
+                  ‹
+                </button>
+<!-- Dots -->
+<div class="flex items-center space-x-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-[#FF6B00]"></span>
+<span class="w-2 h-2 rounded-full bg-[#2F3644]"></span>
+<span class="w-2 h-2 rounded-full bg-[#2F3644]"></span>
+</div>
+<button aria-label="Next Testimonial" class="w-8 h-8 rounded-full bg-[#141820] border border-[#262B35] text-gray-300 hover:text-white hover:border-[#FF6B00] flex items-center justify-center text-sm transition" type="button">
+                  ›
+                </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Frequently Asked Questions Accordion -->
+<div class="lg:col-span-6">
+<div class="mb-6">
+<h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              Frequently <span class="text-[#FF6B00]">Asked Questions</span>
+</h2>
+</div>
+<!-- FAQ Accordion List -->
+<div class="space-y-2.5" id="faqAccordion">
+<!-- Item 1 -->
+<div class="border border-[#222733] bg-[#12151B] rounded-xl overflow-hidden">
+<button class="w-full px-4 py-3.5 text-left text-xs sm:text-sm font-semibold text-white flex items-center justify-between hover:text-[#FF6B00] transition" onclick="toggleFaq('faq1', 'icon1')" type="button">
+<span>What documents are required to rent a car?</span>
+<svg class="w-4 h-4 text-gray-400 transform transition-transform" fill="none" id="icon1" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="px-4 pb-3.5 text-xs text-gray-400 hidden leading-relaxed border-t border-[#1C202B] pt-2" id="faq1">
+                A valid original Driving License and government-issued ID proof (Aadhar Card, Passport, or Voter ID) are mandatory. International travelers need a valid passport and an International Driving Permit (IDP).
+              </div>
+</div>
+<!-- Item 2 -->
+<div class="border border-[#222733] bg-[#12151B] rounded-xl overflow-hidden">
+<button class="w-full px-4 py-3.5 text-left text-xs sm:text-sm font-semibold text-white flex items-center justify-between hover:text-[#FF6B00] transition" onclick="toggleFaq('faq2', 'icon2')" type="button">
+<span>Can I book a car for outstation travel?</span>
+<svg class="w-4 h-4 text-gray-400 transform transition-transform" fill="none" id="icon2" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="px-4 pb-3.5 text-xs text-gray-400 hidden leading-relaxed border-t border-[#1C202B] pt-2" id="faq2">
+                Yes, absolutely! All our vehicles have all-India commercial permits. You can drive freely across state borders with seamless toll &amp; FASTag connectivity.
+              </div>
+</div>
+<!-- Item 3 -->
+<div class="border border-[#222733] bg-[#12151B] rounded-xl overflow-hidden">
+<button class="w-full px-4 py-3.5 text-left text-xs sm:text-sm font-semibold text-white flex items-center justify-between hover:text-[#FF6B00] transition" onclick="toggleFaq('faq3', 'icon3')" type="button">
+<span>Is fuel included in the rental price?</span>
+<svg class="w-4 h-4 text-gray-400 transform transition-transform" fill="none" id="icon3" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="px-4 pb-3.5 text-xs text-gray-400 hidden leading-relaxed border-t border-[#1C202B] pt-2" id="faq3">
+                We operate on a standard "same-to-same" fuel policy. The car is handed over with a noted fuel level and simply needs to be returned at the same level.
+              </div>
+</div>
+<!-- Item 4 -->
+<div class="border border-[#222733] bg-[#12151B] rounded-xl overflow-hidden">
+<button class="w-full px-4 py-3.5 text-left text-xs sm:text-sm font-semibold text-white flex items-center justify-between hover:text-[#FF6B00] transition" onclick="toggleFaq('faq4', 'icon4')" type="button">
+<span>Can I modify or cancel my booking?</span>
+<svg class="w-4 h-4 text-gray-400 transform transition-transform" fill="none" id="icon4" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="px-4 pb-3.5 text-xs text-gray-400 hidden leading-relaxed border-t border-[#1C202B] pt-2" id="faq4">
+                Yes. Free cancellations are available up to 24 hours prior to scheduled pickup time with 100% full refund into your account.
+              </div>
+</div>
+<!-- Item 5 -->
+<div class="border border-[#222733] bg-[#12151B] rounded-xl overflow-hidden">
+<button class="w-full px-4 py-3.5 text-left text-xs sm:text-sm font-semibold text-white flex items-center justify-between hover:text-[#FF6B00] transition" onclick="toggleFaq('faq5', 'icon5')" type="button">
+<span>Do you provide self-drive cars?</span>
+<svg class="w-4 h-4 text-gray-400 transform transition-transform" fill="none" id="icon5" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="px-4 pb-3.5 text-xs text-gray-400 hidden leading-relaxed border-t border-[#1C202B] pt-2" id="faq5">
+                Yes, our entire fleet is configured for 100% self-drive rentals with unlimited freedom, complete privacy, zero speed governors, and comprehensive insurance coverage.
+              </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialsAndFAQ -->
+<!-- BEGIN: FinalCallToActionBanner -->
+<section class="relative py-16 lg:py-20 overflow-hidden border-b border-[#1A1F29]" style="background: radial-gradient(circle at 75% 50%, #201309 0%, #0c0e12 60%);">
+<!-- Visual background representing sunset highway road and car driving towards horizon -->
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="Sunset Highway" class="w-full h-full object-cover object-right" src="./images/16.webp"/>
+<div class="absolute inset-0 bg-gradient-to-r from-[#090B0E] via-[#090B0E]/90 to-transparent"></div>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="max-w-2xl space-y-4">
+<h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white uppercase italic tracking-tight">
+          Book Your Ride <span class="text-[#FF6B00]">Today</span>
+</h2>
+<p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-lg">
+          Choose your car, pick your dates and start your journey with complete freedom.
+        </p>
+<!-- 3 CTA Action Buttons -->
+<div class="pt-4 flex flex-wrap items-center gap-3">
+<!-- Book Now Button -->
+<a class="inline-flex items-center space-x-2 bg-[#FF6B00] hover:bg-[#FF7A00] text-white font-bold text-sm px-6 py-3 rounded-full custom-glow-btn transition-all" href="#booking-form">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Book Now</span>
+<span>→</span>
+</a>
+<!-- WhatsApp Enquiry Button -->
+<a class="inline-flex items-center space-x-2 bg-[#12151B] border border-[#25D366]/40 hover:border-[#25D366] text-white font-semibold text-sm px-6 py-3 rounded-full hover:bg-[#181D26] transition" href="https://wa.me/919876543210" rel="noopener noreferrer" target="_blank">
+<svg class="w-4 h-4 text-[#25D366]" fill="currentColor" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.316 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.818-.981z"></path></svg>
+<span>WhatsApp Enquiry</span>
+</a>
+<!-- Call Now Button -->
+<a class="inline-flex items-center space-x-2 bg-[#12151B] border border-[#2F3644] hover:border-gray-300 text-white font-semibold text-sm px-6 py-3 rounded-full hover:bg-[#181D26] transition" href="tel:+919876543210">
+<svg class="w-4 h-4 text-gray-300" fill="currentColor" viewbox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"></path></svg>
+<span>Call Now</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: FinalCallToActionBanner -->
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#07090C] py-12 border-t border-[#151922] text-xs text-gray-400">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+<!-- Col 1: Brand Info -->
+<div class="col-span-2 sm:col-span-1 space-y-3">
+<div class="flex items-center space-x-2">
+<div class="w-7 h-7 rounded-lg bg-[#FF6B00] flex items-center justify-center text-white font-extrabold text-sm">
+              ⚡
+            </div>
+<span class="text-base font-black tracking-tight text-white">DRIVE<span class="text-[#FF6B00]">FREEDOM</span></span>
+</div>
+<p class="text-gray-400 text-xs leading-relaxed">
+            Leading self-drive car rental agency providing seamless, clean, insured and transparent driving experiences across all major cities.
+          </p>
+</div>
+<!-- Col 2: Fleet -->
+<div>
+<h5 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Our Fleet</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-[#FF6B00] transition" href="#vehicles">Hatchback Cars</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#vehicles">Sedan Cars</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#vehicles">SUV &amp; 7 Seater</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#vehicles">Luxury Executive</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#vehicles">Electric EV Fleet</a></li>
+</ul>
+</div>
+<!-- Col 3: Quick Links -->
+<div>
+<h5 class="text-white font-bold text-xs uppercase tracking-wider mb-3">Quick Links</h5>
+<ul class="space-y-2">
+<li><a class="hover:text-[#FF6B00] transition" href="#packages">Daily &amp; Monthly Plans</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#deals">Weekend Offers</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#why-us">Why Choose Us</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#faq">FAQ &amp; Rental Policies</a></li>
+<li><a class="hover:text-[#FF6B00] transition" href="#">Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<!-- Col 4: Reach Us -->
+<div>
+<h5 class="text-white font-bold text-xs uppercase tracking-wider mb-3">24/7 Helpline</h5>
+<p class="text-gray-300 font-semibold mb-1">+91 98765 43210</p>
+<p class="text-gray-400 mb-3">support@drivefreedom.com</p>
+<div class="inline-flex items-center space-x-1 text-[11px] text-[#FF6B00] bg-[#FF6B00]/10 px-2.5 py-1 rounded-full border border-[#FF6B00]/20">
+<span class="w-1.5 h-1.5 rounded-full bg-[#FF6B00] animate-ping mr-1"></span>
+<span>All Hubs Open 24 Hours</span>
+</div>
+</div>
+</div>
+<!-- Copyright Bar -->
+<div class="pt-8 border-t border-[#161B24] flex flex-col sm:flex-row items-center justify-between text-gray-400 text-[11px]">
+<p>© 2025 DriveFreedom Self-Drive Rentals. All rights reserved.</p>
+<div class="flex space-x-4 mt-3 sm:mt-0">
+<a class="hover:text-white transition" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:text-white transition" href="#">Terms of Service</a>
+<span>•</span>
+<a class="hover:text-white transition" href="#">Security &amp; Insurance</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- BEGIN: InteractiveScripts -->
+<script data-purpose="faq-toggle">
+    // Interactive accordion mechanism for FAQs
+    function toggleFaq(id, iconId) {
+      const content = document.getElementById(id);
+      const icon = document.getElementById(iconId);
+      if (!content) return;
+
+      const isHidden = content.classList.contains('hidden');
+
+      // Close all first for accordion behavior
+      document.querySelectorAll('#faqAccordion > div > div').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('#faqAccordion svg').forEach(svg => svg.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        if (icon) icon.classList.add('rotate-180');
+      }
+    }
+  </script>
+<!-- END: InteractiveScripts -->
+</body></html>

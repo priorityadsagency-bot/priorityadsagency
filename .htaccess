@@ -1,0 +1,83 @@
+# Priority Ads Agency: security & performance config for Apache / LiteSpeed (Hostinger, cPanel, etc.)
+Options -Indexes -MultiViews
+ServerSignature Off
+DirectoryIndex index.html
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+FileETag MTime Size
+AddType application/manifest+json .webmanifest
+AddType text/plain .txt
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # 1. Force HTTPS and one canonical host (no www)
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://priorityadsagency.com%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTP_HOST} ^www\.priorityadsagency\.com$ [NC]
+  RewriteRule ^ https://priorityadsagency.com%{REQUEST_URI} [L,R=301]
+  # 2. Static site: only GET, HEAD and OPTIONS are allowed
+  RewriteCond %{REQUEST_METHOD} !^(GET|HEAD|OPTIONS)$
+  RewriteRule ^ - [F]
+  # 3. Hidden files and folders (.git, .env, .htaccess ...) except /.well-known/
+  RewriteRule "(^|/)\.(?!well-known/)" - [F]
+  RewriteRule "^_headers$" - [F]
+  # 4. Source, backup, archive, log and map files are never served
+  RewriteRule "\.(md|py|sh|bat|ps1|sql|sqlite|db|bak|old|orig|swp|tmp|log|ini|conf|env|lock|yml|yaml|toml|tar|zip|gz|7z|rar|map|gitattributes)$" - [F,NC]
+  # 5. Common attack probes and scanners
+  RewriteRule "^(wp-admin|wp-login\.php|wp-content|xmlrpc\.php|phpmyadmin|pma|admin\.php|cgi-bin|vendor/phpunit)" - [F,NC]
+  RewriteCond %{QUERY_STRING} "(<|%3C)[^>]*script" [NC,OR]
+  RewriteCond %{QUERY_STRING} "(\.\./|\.\.%2f|%2e%2e)" [NC,OR]
+  RewriteCond %{QUERY_STRING} "(union[^a-z]+select|information_schema|sleep\(|benchmark\(|load_file)" [NC,OR]
+  RewriteCond %{QUERY_STRING} "(etc/passwd|proc/self|base64_decode|javascript:)" [NC]
+  RewriteRule ^ - [F]
+  RewriteCond %{HTTP_USER_AGENT} "(sqlmap|nikto|acunetix|nessus|masscan|zgrab|nmap|wpscan|dirbuster|gobuster|havij)" [NC]
+  RewriteRule ^ - [F]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "accelerometer=(), camera=(), display-capture=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=(), browsing-topics=()"
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
+  Header always set X-Permitted-Cross-Domain-Policies "none"
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' https://www.googletagmanager.com https://connect.facebook.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://www.google-analytics.com https://*.google-analytics.com https://www.googletagmanager.com https://www.facebook.com; media-src 'self' blob:; frame-src 'self' https://www.facebook.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://www.facebook.com https://connect.facebook.net; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; frame-ancestors 'self'"
+  <If "%{REQUEST_URI} =~ m#^/templates/#">
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https:; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; connect-src 'self' https: data: blob:; worker-src 'self' blob:; frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me https://api.whatsapp.com; upgrade-insecure-requests; frame-ancestors 'self'"
+  </If>
+  # ---- caching ----
+  # HTML: always revalidate (ETag) so content updates show at once
+  <FilesMatch "\.(html|webmanifest)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(xml|txt)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+  # CSS / JS: 7 days, or 1 year when the link carries ?v=<hash> (see tools/update-cache-version.py)
+  <FilesMatch "\.(css|js|mjs|wasm)$">
+    Header set Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
+  </FilesMatch>
+  # Images, fonts, video: 30 days, refreshed in the background for a further week
+  <FilesMatch "\.(avif|webp|png|jpe?g|gif|svg|ico|woff2?|ttf|mp4|webm)$">
+    Header set Cache-Control "public, max-age=2592000, stale-while-revalidate=604800"
+  </FilesMatch>
+  <If "%{QUERY_STRING} =~ /(^|&)v=[0-9a-f]{6,}/">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+  # Template builds use content-hashed file names (index-AbC123xy.js): safe to keep for a year
+  <If "%{REQUEST_URI} =~ m#^/templates/.+-[A-Za-z0-9_-]{8}\.(js|css)$#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+  <Files "404.html">
+    Header set Cache-Control "no-store"
+  </Files>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml text/javascript application/javascript application/json application/xml image/svg+xml application/manifest+json
+</IfModule>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<script id="pa-ls-fix">try{for(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i),v=localStorage.getItem(k)||"";if(/images\.unsplash\.com|appmifile\.com|gsmarena\.com|framerusercontent\.com/.test(v))localStorage.removeItem(k)}}catch(e){}</script>
+<script>(function(){var d=location.pathname.replace(/[^\/]*$/,'');if(d==='/')return;document.write('<base href="'+d+'">');var O=location.origin;function fix(u){if(typeof u!=='string')return u;if(u.indexOf(O+'/')===0)u=u.slice(O.length);if(u[0]==='/'&&u[1]!=='/'&&u.indexOf(d)!==0)return d+u.slice(1);return u}var F=window.fetch;window.fetch=function(i,o){if(typeof i==='string'||i instanceof URL)i=fix(String(i));else if(i&&i.url){var n=fix(i.url);if(n!==i.url)i=new Request(n,i)}return F.call(this,i,o)};var X=XMLHttpRequest.prototype.open;XMLHttpRequest.prototype.open=function(m,u){arguments[1]=fix(String(u));return X.apply(this,arguments)};try{history.replaceState(history.state,'','/'+location.search+location.hash)}catch(e){}})();</script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="../../../assets/favicon-32.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ELECTROVA | Premium Electronics & Tech Hub</title>
+    <!-- Google Fonts for Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="assets/index-BP2cfTAP.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/index-C1Y9mb6k.css">
+  </head>
+  <body class="bg-[#ffffff] text-[#282c3f] antialiased selection:bg-[#ff3f6c] selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>

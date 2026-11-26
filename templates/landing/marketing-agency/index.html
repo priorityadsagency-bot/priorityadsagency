@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<script>/* muted when shown inside the Priority Ads Agency portfolio */(function(){try{if(window.top===window)return}catch(e){}var P=HTMLMediaElement.prototype,pl=P.play;P.play=function(){try{this.muted=true;this.volume=0}catch(e){}return pl.apply(this,arguments)};try{var d=Object.getOwnPropertyDescriptor(P,'muted');Object.defineProperty(P,'muted',{configurable:true,get:function(){return d.get.call(this)},set:function(){d.set.call(this,true)}})}catch(e){}['AudioContext','webkitAudioContext'].forEach(function(n){var A=window[n];if(!A)return;var M=function(){var c=new (Function.prototype.bind.apply(A,[null].concat([].slice.call(arguments))))();try{c.suspend()}catch(e){}c.resume=function(){return Promise.resolve()};return c};M.prototype=A.prototype;window[n]=M});document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('audio,video').forEach(function(m){m.muted=true})})})();</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AURA DIGITAL - Luxury Performance Marketing Agency</title>
+<!-- Inter & Plus Jakarta Sans Font for Luxury Modern Typography -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Forms & Container Plugins -->
+<link rel="stylesheet" href="tw.css">
+
+<!-- Custom Styles for Atmospheric Glow & Special Visual Effects -->
+<style data-purpose="custom-effects">
+    body {
+      background-color: #07070b;
+      color: #ffffff;
+      overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Ambient radial backdrops */
+    .hero-glow-radial {
+      background: radial-gradient(circle 380px at 70% 38%, rgba(138, 43, 226, 0.45) 0%, rgba(106, 13, 173, 0.2) 45%, transparent 75%);
+    }
+
+    .ambient-glow-bottom {
+      background: radial-gradient(circle 450px at 85% 95%, rgba(124, 58, 237, 0.25) 0%, transparent 70%);
+    }
+
+    /* Neon orbit line behind laptop */
+    .neon-arc-line {
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(192, 132, 252, 0.7);
+      box-shadow: 0 0 35px rgba(168, 85, 247, 0.55), inset 0 0 20px rgba(168, 85, 247, 0.35);
+      pointer-events: none;
+      filter: blur(0.5px);
+    }
+
+    .bottom-arc-line {
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(168, 85, 247, 0.5);
+      box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
+      pointer-events: none;
+    }
+
+    /* Glassmorphism styling */
+    .glass-card {
+      background: linear-gradient(135deg, rgba(23, 20, 36, 0.75) 0%, rgba(15, 13, 25, 0.92) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    }
+    
+    .glass-card:hover {
+      border-color: rgba(168, 85, 247, 0.35);
+      box-shadow: 0 20px 45px -10px rgba(147, 51, 234, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    }
+
+    /* Surface reflection underneath laptop */
+    .marble-surface {
+      background: radial-gradient(ellipse at 50% 0%, rgba(38, 30, 60, 0.6) 0%, rgba(10, 9, 16, 0.95) 75%),
+                  linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 40px;
+    }
+
+    /* Glow text */
+    .text-glow {
+      text-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
+    }
+
+    /* Custom scrollbar for inside dashboard */
+    .os-scroll::-webkit-scrollbar {
+      width: 4px;
+    }
+    .os-scroll::-webkit-scrollbar-thumb {
+      background: rgba(168, 85, 247, 0.3);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-purple-600 selection:text-white relative">
+<!-- BEGIN: Ambient Background Lighting & Decor -->
+<div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" data-purpose="ambient-lighting">
+<div class="hero-glow-radial absolute inset-0"></div>
+<div class="ambient-glow-bottom absolute inset-0"></div>
+</div>
+<!-- END: Ambient Background Lighting & Decor -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-50 bg-[#07070b]/80 backdrop-blur-md border-b border-zinc-800/40" data-purpose="site-navigation">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<!-- Brand Logo: AURA DIGITAL -->
+<a class="flex items-center gap-2.5 group" href="#hero">
+<div class="w-8 h-8 rounded-lg bg-purple-950/80 border border-purple-500/40 flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.35)] group-hover:shadow-[0_0_20px_rgba(168,85,247,0.6)] transition-all">
+<span class="text-purple-400 font-extrabold text-base filter drop-shadow-[0_0_6px_rgba(192,132,252,0.8)]">⚡</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-white flex items-center gap-1.5">
+  AURA <span class="text-xs text-purple-400 font-medium tracking-widest px-1.5 py-0.5 rounded bg-purple-950/70 border border-purple-500/30">DIGITAL</span>
+</span>
+</a>
+<!-- Navigation Menu Items -->
+<nav class="hidden md:flex items-center space-x-8 text-[13.5px] font-medium text-zinc-300">
+<a class="nav-item text-white relative font-semibold hover:text-white transition-colors py-1" href="#hero" id="nav-home">
+  Home
+  <span class="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-purple-400 to-indigo-500 rounded-full"></span>
+</a>
+<!-- Services with Dropdown -->
+<div class="relative group/dropdown py-1" id="nav-services-group">
+<a class="hover:text-white transition-colors flex items-center gap-1.5 text-zinc-300 group-hover/dropdown:text-white" href="#services">
+    Services
+    <svg class="w-3.5 h-3.5 opacity-70 group-hover/dropdown:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<!-- Dropdown Menu -->
+<div class="absolute left-0 mt-3 w-56 p-2 rounded-xl glass-card bg-[#110e1d]/95 border border-purple-500/25 shadow-2xl opacity-0 translate-y-2 pointer-events-none group-hover/dropdown:opacity-100 group-hover/dropdown:translate-y-0 group-hover/dropdown:pointer-events-auto transition-all duration-200 z-50">
+<a class="flex items-center gap-2.5 px-3 py-2 text-xs rounded-lg text-zinc-300 hover:text-white hover:bg-purple-900/30 transition-colors" href="#services">
+<span class="w-2 h-2 rounded-full bg-purple-400"></span> Digital Marketing
+    </a>
+<a class="flex items-center gap-2.5 px-3 py-2 text-xs rounded-lg text-zinc-300 hover:text-white hover:bg-purple-900/30 transition-colors" href="#services">
+<span class="w-2 h-2 rounded-full bg-indigo-400"></span> Search Engine Optimization
+    </a>
+<a class="flex items-center gap-2.5 px-3 py-2 text-xs rounded-lg text-zinc-300 hover:text-white hover:bg-purple-900/30 transition-colors" href="#services">
+<span class="w-2 h-2 rounded-full bg-pink-400"></span> Content &amp; Media Strategy
+    </a>
+<a class="flex items-center gap-2.5 px-3 py-2 text-xs rounded-lg text-zinc-300 hover:text-white hover:bg-purple-900/30 transition-colors" href="#services">
+<span class="w-2 h-2 rounded-full bg-violet-400"></span> Paid Performance Ads
+    </a>
+</div>
+</div>
+<a class="hover:text-white transition-colors text-zinc-300 py-1" href="#results">Work</a>
+<button class="hover:text-white transition-colors text-zinc-300 py-1 text-left" onclick="toggleDrawer('aboutModal')">About</button>
+<button class="hover:text-white transition-colors text-zinc-300 py-1 text-left" onclick="toggleDrawer('blogModal')">Blog</button>
+<a class="hover:text-white transition-colors text-zinc-300 py-1" href="#contact-section">Contact</a>
+</nav>
+<!-- Header CTA Button -->
+<div class="flex items-center">
+<a class="group text-[13px] font-medium text-white px-5 py-2.5 rounded-full border border-purple-500/40 bg-purple-950/20 hover:bg-purple-900/40 hover:border-purple-400/70 transition-all duration-300 flex items-center gap-2 shadow-[0_0_15px_rgba(147,51,234,0.15)]" href="#contact-section">
+<span>Get a Free Strategy</span>
+<svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- Main Content Container -->
+<main class="relative z-10">
+<!-- BEGIN: HeroSection -->
+<section class="max-w-7xl mx-auto px-6 pt-10 pb-16 lg:pt-14 lg:pb-24" data-purpose="hero-section" id="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Hero Column: Copy and Actions -->
+<div class="lg:col-span-6 space-y-7">
+<!-- Category Micro-Badge -->
+<div class="inline-flex items-center tracking-[0.22em] text-[11px] font-bold text-zinc-400 uppercase">
+            DIGITAL MARKETING AGENCY
+          </div>
+<!-- Main Bold Headline -->
+<h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-white tracking-tight leading-[1.12]">
+            Grow Your Brand Online with a <span class="bg-gradient-to-r from-purple-300 via-fuchsia-400 to-purple-500 bg-clip-text text-transparent italic font-semibold">Results-Driven</span> Marketing Agency
+          </h1>
+<!-- Body Description -->
+<p class="text-zinc-400 text-sm sm:text-base leading-relaxed max-w-lg">
+            We help ambitious brands scale with data-driven strategies, creative campaigns, and high-converting digital experiences.
+          </p>
+<!-- Buttons Group -->
+<div class="flex flex-wrap items-center gap-4 pt-1">
+<a class="px-7 py-3 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-700 hover:from-purple-500 hover:to-indigo-600 shadow-[0_0_30px_rgba(147,51,234,0.45)] transition-all duration-300 flex items-center gap-2 group" href="#contact-section">
+<span>Get a Free Strategy</span>
+<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+<a class="px-5 py-3 rounded-full text-sm font-medium text-zinc-300 hover:text-white border border-zinc-700 hover:border-purple-500/60 bg-zinc-900/60 hover:bg-zinc-800/80 transition-all duration-300 flex items-center gap-2.5" href="#results">
+<span class="w-6 h-6 rounded-full border border-zinc-400 flex items-center justify-center">
+<svg class="w-3 h-3 text-white fill-current ml-0.5" viewbox="0 0 24 24">
+<path d="M8 5v14l11-7z"></path>
+</svg>
+</span>
+<span>Watch Our Work</span>
+</a>
+</div>
+<!-- Feature Highlights / Value Props Row -->
+<div class="pt-6 grid grid-cols-3 gap-3 border-t border-zinc-800/80 max-w-lg text-xs font-semibold text-zinc-300">
+<!-- Lightning / Faster Growth -->
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<div class="leading-tight">
+<span>Faster<br/>Growth</span>
+</div>
+</div>
+<!-- Bar Chart / Higher Conversions -->
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<div class="leading-tight">
+<span>Higher<br/>Conversions</span>
+</div>
+</div>
+<!-- Target / Real Business Results -->
+<div class="flex items-center gap-2">
+<svg class="w-4 h-4 text-purple-400 shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9" stroke-width="2"></circle>
+<circle cx="12" cy="12" r="5" stroke-width="2"></circle>
+<circle cx="12" cy="12" fill="currentColor" r="2"></circle>
+</svg>
+<div class="leading-tight">
+<span>Real Business<br/>Results</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Hero Column: Laptop Mockup & Atmospheric Orbit -->
+<div class="lg:col-span-6 relative flex justify-center items-center select-none" data-purpose="hero-laptop-mockup">
+<!-- Neon Ring Glow Behind Laptop -->
+<div class="neon-arc-line -top-8 -right-4 sm:top-[-20px] sm:right-[10px]"></div>
+<!-- Decorative Ambient Plant Element in background right -->
+<div class="absolute -right-6 top-10 w-28 h-56 opacity-40 pointer-events-none hidden sm:block">
+<svg class="w-full h-full text-emerald-800" fill="none" viewbox="0 0 100 200">
+<path d="M50 200 Q40 120 70 80 Q90 50 100 10 Q60 50 50 90 Q30 50 5 20 Q20 80 45 120" fill="currentColor" fill-opacity="0.25"></path>
+</svg>
+</div>
+<!-- Laptop Chassis Container with Perspective Angle -->
+<div class="relative w-full max-w-[530px] z-10">
+<!-- Laptop Top Lid (Display) -->
+<div class="relative mx-auto rounded-t-2xl p-2.5 bg-gradient-to-b from-[#2a2936] to-[#12111c] border border-zinc-700/60 shadow-[0_25px_60px_rgba(0,0,0,0.9)]">
+<!-- Laptop Camera Notch -->
+<div class="absolute top-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-zinc-900 border border-zinc-700/80"></div>
+<!-- Inner Dashboard Screen UI -->
+<div class="bg-[#0c0a14] rounded-xl overflow-hidden border border-zinc-800/80 p-3.5 text-xs text-zinc-300 font-sans shadow-inner min-h-[265px] flex flex-col justify-between">
+<!-- Dashboard Top Bar -->
+<div class="flex items-center justify-between pb-3 border-b border-zinc-800/60">
+<div class="flex items-center gap-2">
+<span class="text-purple-400 font-extrabold text-sm tracking-tight flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded bg-purple-500 inline-block shadow-[0_0_8px_rgba(168,85,247,0.8)]"></span>
+                      AURA OS
+                    </span>
+</div>
+<div class="text-[10px] font-semibold text-zinc-400" id="dash-view-title">Campaign Performance</div>
+<div class="bg-zinc-900/90 border border-zinc-700/50 text-[10px] text-zinc-400 px-2.5 py-1 rounded flex items-center gap-1.5 cursor-pointer hover:border-purple-500/50">
+<span>Last 30 Days</span>
+<svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</div>
+<!-- Dashboard Content Grid -->
+<div class="grid grid-cols-12 gap-3 pt-3 flex-1">
+<!-- Left Mini Sidebar with Interactive Tabs -->
+<div class="col-span-3 space-y-1 text-[10px] text-zinc-400 border-r border-zinc-800/60 pr-2" id="laptop-tabs">
+<button class="os-tab w-full text-left bg-purple-600/30 text-purple-300 px-2 py-1.5 rounded flex items-center gap-1.5 font-medium transition-all" data-tab="dashboard">
+<div class="w-1.5 h-1.5 rounded-full bg-purple-400 indicator-dot"></div> Dashboard
+</button>
+<button class="os-tab w-full text-left px-2 py-1.5 rounded flex items-center gap-1.5 hover:text-zinc-200 transition-all" data-tab="campaigns">
+<div class="w-1.5 h-1.5 rounded-full bg-transparent indicator-dot"></div> Campaigns
+</button>
+<button class="os-tab w-full text-left px-2 py-1.5 rounded flex items-center gap-1.5 hover:text-zinc-200 transition-all" data-tab="analytics">
+<div class="w-1.5 h-1.5 rounded-full bg-transparent indicator-dot"></div> Analytics
+</button>
+<button class="os-tab w-full text-left px-2 py-1.5 rounded flex items-center gap-1.5 hover:text-zinc-200 transition-all" data-tab="audience">
+<div class="w-1.5 h-1.5 rounded-full bg-transparent indicator-dot"></div> Audience
+</button>
+<button class="os-tab w-full text-left px-2 py-1.5 rounded flex items-center gap-1.5 hover:text-zinc-200 transition-all" data-tab="reports">
+<div class="w-1.5 h-1.5 rounded-full bg-transparent indicator-dot"></div> Reports
+</button>
+</div>
+<!-- Right Dynamic Tab Panels -->
+<div class="col-span-9 relative" id="laptop-tab-content">
+<!-- 1. DASHBOARD PANEL (Active Default) -->
+<div class="tab-panel space-y-3 block" id="panel-dashboard">
+<div class="flex justify-end items-center">
+<div class="bg-purple-900/40 border border-purple-500/40 text-purple-200 text-[10px] px-2 py-0.5 rounded-md flex items-center gap-1 font-bold">
+<span>+148%</span>
+<span class="text-[9px] font-normal text-purple-300">Growth</span>
+</div>
+</div>
+<!-- Glowing Purple Wave Line Chart Visual -->
+<div class="relative h-20 w-full overflow-hidden flex items-end">
+<svg class="w-full h-full overflow-visible" fill="none" viewbox="0 0 300 80">
+<defs>
+<lineargradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#9333ea" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#9333ea" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<path d="M 0,70 Q 30,68 60,50 T 130,45 T 190,48 T 240,22 T 300,10 L 300,80 L 0,80 Z" fill="url(#chartGradient)"></path>
+<path d="M 0,70 Q 30,68 60,50 T 130,45 T 190,48 T 240,22 T 300,10" fill="none" filter="drop-shadow(0 0 6px rgba(192, 132, 252, 0.8))" stroke="#c084fc" stroke-width="2.5"></path>
+<circle cx="280" cy="14" fill="#ffffff" r="3.5" stroke="#9333ea" stroke-width="2"></circle>
+</svg>
+</div>
+<!-- Bottom 3 Metric Mini Cards -->
+<div class="grid grid-cols-3 gap-2 pt-1">
+<div class="bg-zinc-900/70 border border-zinc-800 rounded p-1.5 text-center">
+<div class="text-[9px] text-zinc-400">Total Reach</div>
+<div class="text-xs font-bold text-white">3.2M</div>
+<div class="text-[8px] text-emerald-400 font-semibold">↑ +120%</div>
+</div>
+<div class="bg-zinc-900/70 border border-zinc-800 rounded p-1.5 text-center">
+<div class="text-[9px] text-zinc-400">Conversions</div>
+<div class="text-xs font-bold text-white">48.6K</div>
+<div class="text-[8px] text-emerald-400 font-semibold">↑ +176%</div>
+</div>
+<div class="bg-zinc-900/70 border border-zinc-800 rounded p-1.5 text-center">
+<div class="text-[9px] text-zinc-400">ROI</div>
+<div class="text-xs font-bold text-white">520%</div>
+<div class="text-[8px] text-emerald-400 font-semibold">↑ +188%</div>
+</div>
+</div>
+</div>
+<!-- 2. CAMPAIGNS PANEL -->
+<div class="tab-panel space-y-2 hidden" id="panel-campaigns">
+<div class="flex justify-between items-center pb-1">
+<span class="text-[10px] text-zinc-400">3 Live Campaigns Active</span>
+<span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-950/60 border border-emerald-500/40 text-emerald-400">● Live Status</span>
+</div>
+<div class="space-y-1.5">
+<div class="p-1.5 rounded bg-zinc-900/80 border border-zinc-800/80 text-[10px]">
+<div class="flex justify-between items-center font-semibold text-white">
+<span>Omnichannel Growth Q4</span>
+<span class="text-emerald-400 font-mono text-[9px]">Active</span>
+</div>
+<div class="w-full bg-zinc-800 rounded-full h-1 mt-1">
+<div class="bg-purple-500 h-1 rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<div class="p-1.5 rounded bg-zinc-900/80 border border-zinc-800/80 text-[10px]">
+<div class="flex justify-between items-center font-semibold text-white">
+<span>Paid Search Scaling</span>
+<span class="text-purple-300 font-mono text-[9px]">+240% Target</span>
+</div>
+<div class="w-full bg-zinc-800 rounded-full h-1 mt-1">
+<div class="bg-indigo-500 h-1 rounded-full" style="width: 68%"></div>
+</div>
+</div>
+<div class="p-1.5 rounded bg-zinc-900/80 border border-zinc-800/80 text-[10px]">
+<div class="flex justify-between items-center font-semibold text-white">
+<span>Creative Velocity</span>
+<span class="text-pink-300 font-mono text-[9px]">94% Score</span>
+</div>
+<div class="w-full bg-zinc-800 rounded-full h-1 mt-1">
+<div class="bg-pink-500 h-1 rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. ANALYTICS PANEL -->
+<div class="tab-panel space-y-2.5 hidden" id="panel-analytics">
+<div class="text-[10px] text-zinc-400 flex justify-between items-center">
+<span>Traffic Channel Attribution</span>
+<span class="text-purple-300 font-mono text-[9px]">98.4% Accuracy</span>
+</div>
+<div class="space-y-1.5 text-[10px]">
+<div>
+<div class="flex justify-between text-zinc-300 mb-0.5">
+<span>Direct / High Intent</span>
+<span class="text-white font-mono">42%</span>
+</div>
+<div class="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-purple-500 rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-zinc-300 mb-0.5">
+<span>Organic Search &amp; SEO</span>
+<span class="text-white font-mono">31%</span>
+</div>
+<div class="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-indigo-500 rounded-full" style="width: 31%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-zinc-300 mb-0.5">
+<span>Paid Performance / Social</span>
+<span class="text-white font-mono">27%</span>
+</div>
+<div class="h-1.5 w-full bg-zinc-800 rounded-full overflow-hidden">
+<div class="h-full bg-fuchsia-400 rounded-full" style="width: 27%"></div>
+</div>
+</div>
+</div>
+<div class="pt-1 flex items-center justify-between text-[9px] text-zinc-400 border-t border-zinc-800/80">
+<span>Avg. Conversion: <strong class="text-emerald-400">4.82%</strong></span>
+<span>LTV Multiplier: <strong class="text-purple-300">3.4x</strong></span>
+</div>
+</div>
+<!-- 4. AUDIENCE PANEL -->
+<div class="tab-panel space-y-2 hidden" id="panel-audience">
+<div class="text-[10px] text-zinc-400 flex justify-between">
+<span>Segment Demographics</span>
+<span class="text-zinc-500">Global Reach</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[10px]">
+<div class="p-2 rounded bg-zinc-900/80 border border-zinc-800/80">
+<div class="text-zinc-400 text-[9px]">High-Intent B2B</div>
+<div class="text-sm font-bold text-purple-300">64%</div>
+<div class="text-[8px] text-zinc-500">C-Suite &amp; Founders</div>
+</div>
+<div class="p-2 rounded bg-zinc-900/80 border border-zinc-800/80">
+<div class="text-zinc-400 text-[9px]">Enterprise Tier</div>
+<div class="text-sm font-bold text-indigo-300">28%</div>
+<div class="text-[8px] text-zinc-500">$50M+ Revenue</div>
+</div>
+</div>
+<div class="p-1.5 rounded bg-zinc-900/60 border border-zinc-800 text-[9px] text-zinc-300 flex justify-around">
+<span>🇺🇸 US <strong>48%</strong></span>
+<span>🇪🇺 EU <strong>32%</strong></span>
+<span>🌏 APAC <strong>20%</strong></span>
+</div>
+</div>
+<!-- 5. REPORTS PANEL -->
+<div class="tab-panel space-y-2 hidden" id="panel-reports">
+<div class="text-[10px] text-zinc-400 flex justify-between items-center">
+<span>Automated ROI Reports</span>
+<span class="text-purple-400 text-[9px]">Q4 Updated</span>
+</div>
+<div class="space-y-1.5 text-[10px]">
+<div class="p-1.5 rounded bg-zinc-900/80 border border-zinc-800/80 flex items-center justify-between">
+<div>
+<div class="font-medium text-white text-[10px]">Q4 Performance Audit.pdf</div>
+<div class="text-[8px] text-emerald-400">Generated · Verified</div>
+</div>
+<button class="px-2 py-0.5 text-[9px] bg-purple-600/40 hover:bg-purple-600 text-purple-200 hover:text-white rounded border border-purple-500/40 transition-colors" onclick="alert('Downloading AURA Q4 Performance Audit PDF...')">
+          Download PDF
+        </button>
+</div>
+<div class="p-1.5 rounded bg-zinc-900/80 border border-zinc-800/80 flex items-center justify-between">
+<div>
+<div class="font-medium text-white text-[10px]">Conversion Funnel Deepdive.pdf</div>
+<div class="text-[8px] text-zinc-400">Monthly Snapshot</div>
+</div>
+<button class="px-2 py-0.5 text-[9px] bg-purple-600/40 hover:bg-purple-600 text-purple-200 hover:text-white rounded border border-purple-500/40 transition-colors" onclick="alert('Downloading AURA Conversion Funnel Report...')">
+          Download PDF
+        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Laptop Keyboard Base & Hinge -->
+<div class="relative h-3.5 bg-gradient-to-r from-zinc-700 via-zinc-400 to-zinc-700 rounded-b-xl shadow-2xl mx-[-18px]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-1 bg-zinc-800 rounded-b-md"></div>
+</div>
+<!-- Reflective Marble Base Surface Below Laptop -->
+<div class="h-10 w-[112%] -ml-[6%] marble-surface rounded-b-2xl border-t border-purple-500/20 shadow-[0_20px_50px_rgba(0,0,0,0.8)]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: TrustedByLogos -->
+<section class="max-w-7xl mx-auto px-6 py-6 border-y border-zinc-800/60" data-purpose="client-logos-strip">
+<div class="flex flex-wrap items-center justify-between gap-6 lg:gap-10">
+<!-- Left Label -->
+<div class="text-xs font-medium text-zinc-400 leading-snug">
+          Trusted by<br/>
+<span class="text-white font-semibold">Growing Brands</span>
+</div>
+<!-- Clean Brand Logos -->
+<div class="flex flex-wrap items-center justify-between flex-1 gap-6 sm:gap-10 md:gap-14 opacity-85">
+<!-- Spotify -->
+<div class="flex items-center gap-1.5 text-white font-bold tracking-tight text-base hover:opacity-100 transition-opacity">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.502 17.307c-.218.358-.682.473-1.04.254-2.853-1.743-6.444-2.138-10.672-1.171-.41.094-.816-.162-.91-.572-.094-.41.162-.816.572-.91 4.633-1.059 8.601-.611 11.79 1.341.358.218.473.682.254 1.041zm1.468-3.26c-.275.448-.865.592-1.313.316-3.266-2.008-8.243-2.59-12.106-1.417-.506.154-1.042-.136-1.196-.642-.154-.506.136-1.042.642-1.196 4.417-1.34 9.907-.692 13.657 1.618.448.275.592.865.316 1.313zm.126-3.41c-3.916-2.325-10.373-2.539-14.122-1.401-.601.182-1.238-.163-1.42-.764-.182-.601.163-1.238.764-1.42 4.305-1.306 11.433-1.051 15.932 1.62.541.321.718 1.025.397 1.566-.321.541-1.025.718-1.566.397z"></path>
+</svg>
+<span>Spotify</span>
+</div>
+<!-- Shopify -->
+<div class="flex items-center gap-1.5 text-white font-bold tracking-tight text-base hover:opacity-100 transition-opacity">
+<svg class="w-6 h-6 fill-current text-emerald-400" viewbox="0 0 24 24">
+<path d="M19.45 6.09c-.04-.2-.18-.36-.37-.41l-2.45-.63c-.1-.03-.2.01-.27.08l-1.45 1.48c-.08.08-.12.2-.1.31l1.19 8.24c.03.2.2.35.4.35h.06c.2-.03.35-.19.34-.39l-1.05-7.3 1.95.5 1.37 7.7c.04.2.2.35.4.35h.06c.2-.03.35-.19.34-.39l-1.42-9.89zm-5.75-2.26l-1.63-.42c-1.09-.28-2.22.37-2.5 1.46l-.37 1.43-1.8-.46c-.2-.05-.4.07-.46.27l-.09.35c-.05.2.07.4.27.46l1.8.46-3.03 11.83c-.05.2.07.4.27.46l4.24 1.09c.2.05.4-.07.46-.27l6.83-14.67-3.98-1.5zm-2.88 2.05c.16-.62.8-1 1.42-.84l1.24.32-1.74 6.78-1.24-.32c-.62-.16-1-.8-.84-1.42l.52-2.02.64-2.5z"></path>
+</svg>
+<span>shopify</span>
+</div>
+<!-- Slack -->
+<div class="flex items-center gap-1.5 text-white font-bold tracking-tight text-base hover:opacity-100 transition-opacity">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"></path>
+</svg>
+<span>slack</span>
+</div>
+<!-- Adobe -->
+<div class="flex items-center gap-1.5 text-white font-bold tracking-tight text-base hover:opacity-100 transition-opacity">
+<svg class="w-5 h-5 fill-current text-red-500" viewbox="0 0 24 24">
+<path d="M13.96 0H24v24L13.96 0zM0 0h10.04L0 24V0zm7.14 17.38h3.94l2.16 5.16h-3.32l-1.12-2.82H6.38L7.14 17.38z"></path>
+</svg>
+<span>Adobe</span>
+</div>
+<!-- Notion -->
+<div class="flex items-center gap-1.5 text-white font-bold tracking-tight text-base hover:opacity-100 transition-opacity">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+<path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.047-.327L17.848 1.92c-.42-.326-.98-.7-2.054-.607L3.013 2.34c-.466.046-.56.28-.373.466l1.819 1.402zm.7 3.498v13.526c0 .7.373 1.026 1.12 1.073l14.195-.793c.84-.047.886-.56.886-1.12V6.634c0-.606-.233-.886-.793-.84l-14.615.84c-.56.046-.793.373-.793.972zm11.758 1.493c.093.42 0 .84-.42.886l-.7.14v7.745c.466.233 1.12.373 1.586.373.28 0 .42-.14.42-.42V9.246c0-.374-.187-.56-.607-.56l-1.073.093zm-5.46.373l2.846 6.392v-5.692c0-.42-.233-.606-.653-.56l-.887.093v-.793l2.753-.187.047.84-.607.093c-.42.047-.513.233-.513.607v8.585l-1.727.093-3.126-6.906v6.066c0 .42.233.56.7.513l1.027-.093.046.793-2.94.187-.046-.793.7-.094c.42-.046.56-.28.56-.7V10.18c0-.42-.14-.56-.606-.513l-.934.093v-.793l2.714-.187.047.793z"></path>
+</svg>
+<span>Notion</span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TrustedByLogos -->
+<!-- BEGIN: ServicesSection -->
+<section class="max-w-7xl mx-auto px-6 py-20 scroll-mt-20" data-purpose="services-section" id="services">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Section Heading -->
+<div class="lg:col-span-4 space-y-4 pr-4">
+<div class="text-[11px] font-bold tracking-[0.2em] text-purple-400 uppercase">
+            OUR SERVICES
+          </div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            End-to-End Marketing Solutions to Grow Your Business
+          </h2>
+<p class="text-zinc-400 text-sm leading-relaxed pt-1">
+            From strategy to execution, we deliver performance-focused marketing services tailored to your goals.
+          </p>
+</div>
+<!-- Right 4 Service Cards Grid -->
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1: Digital Marketing -->
+<div class="glass-card rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between h-[230px] group cursor-pointer hover:-translate-y-1" data-purpose="service-card">
+<!-- Icon -->
+<div class="w-11 h-11 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.2)] group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Text Content -->
+<div>
+<h3 class="text-sm font-bold text-white mb-2">Digital Marketing</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">
+                Drive traffic, leads, and sales with data-backed campaigns.
+              </p>
+</div>
+</div>
+<!-- Card 2: SEO -->
+<div class="glass-card rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between h-[230px] group cursor-pointer hover:-translate-y-1" data-purpose="service-card">
+<!-- Icon -->
+<div class="w-11 h-11 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.2)] group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Text Content -->
+<div>
+<h3 class="text-sm font-bold text-white mb-2">SEO</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">
+                Rank higher and get discovered by your ideal audience.
+              </p>
+</div>
+</div>
+<!-- Card 3: Content Marketing -->
+<div class="glass-card rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between h-[230px] group cursor-pointer hover:-translate-y-1" data-purpose="service-card">
+<!-- Icon -->
+<div class="w-11 h-11 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.2)] group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M7 21a4 4 0 01-4-4 5 5 0 015-5h4a5 5 0 015 5 4 4 0 01-4 4H7zm7-14a3 3 0 11-6 0 3 3 0 016 0zm-7 8a2 2 0 100-4 2 2 0 000 4zm10 0a2 2 0 100-4 2 2 0 000 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Text Content -->
+<div>
+<h3 class="text-sm font-bold text-white mb-2">Content Marketing</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">
+                Create impactful content that builds trust and authority.
+              </p>
+</div>
+</div>
+<!-- Card 4: Paid Advertising -->
+<div class="glass-card rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between h-[230px] group cursor-pointer hover:-translate-y-1" data-purpose="service-card">
+<!-- Icon -->
+<div class="w-11 h-11 rounded-xl bg-purple-900/40 border border-purple-500/30 flex items-center justify-center text-purple-300 shadow-[0_0_15px_rgba(168,85,247,0.2)] group-hover:scale-105 transition-transform">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+<!-- Text Content -->
+<div>
+<h3 class="text-sm font-bold text-white mb-2">Paid Advertising</h3>
+<p class="text-xs text-zinc-400 leading-relaxed">
+                Maximize ROI with performance-driven ad campaigns.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ServicesSection -->
+<!-- BEGIN: RealResultsSection -->
+<section class="max-w-7xl mx-auto px-6 pt-6 pb-24 relative overflow-hidden scroll-mt-20" data-purpose="social-proof-results" id="results">
+<!-- Subtle Purple Neon Arc Glow on Bottom Right -->
+<div class="bottom-arc-line bottom-[-160px] right-[-60px]"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Left Team Visual Card -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-3xl overflow-hidden border border-purple-500/20 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group">
+<!-- Collaborative Team Image -->
+<img alt="Marketing Agency Team Collaborating" class="w-full h-[370px] sm:h-[400px] object-cover object-center filter contrast-105" src="./images/1.webp"/>
+<!-- Purple Tone Gradient Overlay Matching Reference UI -->
+<div class="absolute inset-0 bg-gradient-to-tr from-purple-950/70 via-indigo-950/30 to-purple-900/40 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#09080e] via-transparent to-transparent opacity-80"></div>
+</div>
+</div>
+<!-- Right Content & Metrics -->
+<div class="lg:col-span-6 space-y-7 lg:pl-6">
+<!-- Category Tag -->
+<div class="text-[11px] font-bold tracking-[0.2em] text-purple-400 uppercase">
+            REAL RESULTS
+          </div>
+<!-- Section Headline -->
+<h2 class="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white leading-tight">
+            Marketing That Delivers Measurable Growth
+          </h2>
+<!-- 3 Stats Columns -->
+<div class="grid grid-cols-3 gap-4 pt-2">
+<!-- Stat 1: Average ROI -->
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-purple-400 mb-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">+320%</div>
+<div class="text-xs text-zinc-400">Average ROI</div>
+</div>
+<!-- Stat 2: Lead Generation -->
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-purple-400 mb-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">+150%</div>
+<div class="text-xs text-zinc-400">Lead Generation</div>
+</div>
+<!-- Stat 3: Revenue Growth -->
+<div class="space-y-1">
+<div class="flex items-center gap-1.5 text-purple-400 mb-1">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">+180%</div>
+<div class="text-xs text-zinc-400">Revenue Growth</div>
+</div>
+</div>
+<!-- Bottom CTA Button -->
+<div class="pt-3">
+<a class="inline-flex items-center gap-2 px-7 py-3 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 shadow-[0_0_25px_rgba(147,51,234,0.4)] transition-all duration-300 group" href="#contact-section">
+<span>See Our Case Studies</span>
+<svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END: RealResultsSection -->
+<!-- BEGIN: Interactive Booking / Contact Section -->
+<section class="max-w-7xl mx-auto px-6 py-20 border-t border-zinc-800/80 scroll-mt-20" id="contact-section">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-5 space-y-4">
+<div class="text-[11px] font-bold tracking-[0.2em] text-purple-400 uppercase">START YOUR EXPANSION</div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+        Claim Your Tailored Growth Strategy Session
+      </h2>
+<p class="text-zinc-400 text-sm leading-relaxed">
+        Schedule a private 30-minute consultation with an AURA senior growth architect. We will audit your current acquisition funnel and deliver actionable ROI levers.
+      </p>
+<div class="space-y-3 pt-3">
+<div class="flex items-center gap-3 text-xs text-zinc-300">
+<div class="w-5 h-5 rounded-full bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-purple-300 text-[10px]">✓</div>
+<span>Comprehensive Full-Funnel Performance Audit</span>
+</div>
+<div class="flex items-center gap-3 text-xs text-zinc-300">
+<div class="w-5 h-5 rounded-full bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-purple-300 text-[10px]">✓</div>
+<span>Bespoke 90-Day Omnichannel Execution Blueprint</span>
+</div>
+<div class="flex items-center gap-3 text-xs text-zinc-300">
+<div class="w-5 h-5 rounded-full bg-purple-900/60 border border-purple-500/40 flex items-center justify-center text-purple-300 text-[10px]">✓</div>
+<span>Zero Obligation or Lock-in Contracts</span>
+</div>
+</div>
+</div>
+<!-- Booking Form Card -->
+<div class="lg:col-span-7">
+<div class="glass-card rounded-3xl p-8 border border-purple-500/20 shadow-2xl relative">
+<form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you! An AURA Growth Partner will contact you within 2 hours to confirm your strategy audit.');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5">Full Name</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-zinc-700/80 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-purple-400 transition-colors" placeholder="Alexander Wright" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5">Work Email</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-zinc-700/80 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-purple-400 transition-colors" placeholder="alex@company.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5">Company Website</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-zinc-700/80 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-purple-400 transition-colors" placeholder="https://yourbrand.com" required="" type="text"/>
+</div>
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5">Monthly Ad Budget</label>
+<select class="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-zinc-700/80 text-white text-xs focus:outline-none focus:border-purple-400 transition-colors">
+<option class="bg-zinc-900">$10,000 - $25,000 / mo</option>
+<option class="bg-zinc-900">$25,000 - $75,000 / mo</option>
+<option class="bg-zinc-900">$75,000 - $250,000+ / mo</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5">Primary Growth Objective</label>
+<input class="w-full px-4 py-2.5 rounded-xl bg-zinc-900/90 border border-zinc-700/80 text-white text-xs placeholder:text-zinc-500 focus:outline-none focus:border-purple-400 transition-colors" placeholder="e.g. Scaling customer acquisition from 500 to 2,500 units/mo" type="text"/>
+</div>
+<button class="w-full py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-700 hover:from-purple-500 hover:to-indigo-600 shadow-[0_0_30px_rgba(147,51,234,0.45)] transition-all duration-300 flex items-center justify-center gap-2" type="submit">
+<span>Lock In Free Strategy Blueprint</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Interactive Booking / Contact Section -->
+</main>
+<!-- Interactive About Modal / Drawer -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300" id="aboutModal">
+<div class="glass-card max-w-lg w-full rounded-2xl p-6 sm:p-8 border border-purple-500/30 relative shadow-2xl">
+<button class="absolute top-4 right-4 text-zinc-400 hover:text-white" onclick="toggleDrawer('aboutModal')">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="flex items-center gap-2 mb-3">
+<span class="text-purple-400 text-lg">⚡</span>
+<span class="text-sm font-bold tracking-widest text-purple-400 uppercase">ABOUT AURA DIGITAL</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-3">Engineering Unfair Market Advantages</h3>
+<p class="text-zinc-300 text-xs sm:text-sm leading-relaxed mb-4">
+      AURA DIGITAL is a premier growth agency bridging enterprise analytics with luxury brand aesthetics. We combine bespoke paid channel architectures, conversion science, and refined creative narratives to turn breakthrough concepts into category dominators.
+    </p>
+<div class="grid grid-cols-2 gap-3 text-center border-t border-zinc-800 pt-4">
+<div class="p-3 bg-zinc-900/60 rounded-xl border border-zinc-800">
+<div class="text-lg font-bold text-white">$140M+</div>
+<div class="text-[10px] text-zinc-400">Client Revenue Scaled</div>
+</div>
+<div class="p-3 bg-zinc-900/60 rounded-xl border border-zinc-800">
+<div class="text-lg font-bold text-purple-400">98.6%</div>
+<div class="text-[10px] text-zinc-400">Client Retention Rate</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Blog Modal / Drawer -->
+<div class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-all duration-300" id="blogModal">
+<div class="glass-card max-w-xl w-full rounded-2xl p-6 sm:p-8 border border-purple-500/30 relative shadow-2xl">
+<button class="absolute top-4 right-4 text-zinc-400 hover:text-white" onclick="toggleDrawer('blogModal')">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-purple-400 text-lg">⚡</span>
+<span class="text-sm font-bold tracking-widest text-purple-400 uppercase">AURA INSIGHTS &amp; PAPERS</span>
+</div>
+<h3 class="text-2xl font-bold text-white mb-4">Latest Research from the Lab</h3>
+<div class="space-y-3">
+<div class="p-3 rounded-xl bg-zinc-900/70 border border-zinc-800 hover:border-purple-500/50 transition-colors cursor-pointer" onclick="alert('Opening Article: The 2025 Algorithmic CAC Shift')">
+<div class="text-[10px] text-purple-400 font-mono">Performance Strategy · 5 min read</div>
+<h4 class="text-xs font-bold text-white mt-1">The 2025 Algorithmic CAC Shift: Why Creative Breadth Beats Bidding Hacks</h4>
+</div>
+<div class="p-3 rounded-xl bg-zinc-900/70 border border-zinc-800 hover:border-purple-500/50 transition-colors cursor-pointer" onclick="alert('Opening Article: Precision Retention Funnels')">
+<div class="text-[10px] text-purple-400 font-mono">Data &amp; Retention · 4 min read</div>
+<h4 class="text-xs font-bold text-white mt-1">Precision Retention: Scaling LTV Beyond 3.5x Through Automated Custom Audiences</h4>
+</div>
+</div>
+</div>
+</div>
+<!-- BEGIN: SiteFooter -->
+<footer class="border-t border-zinc-800/80 py-8 relative z-20 text-center text-xs text-zinc-500">
+<div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-2">
+<span class="text-purple-400 font-bold flex items-center gap-1">
+  ⚡ AURA DIGITAL
+</span>
+<span>© 2025 Luxury Digital Agency. All rights reserved.</span>
+</div>
+<div class="flex items-center space-x-6 text-zinc-400">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Cookie Settings</a>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+<!-- Interactive Scripts for Laptop Dashboard Tabs and Modals -->
+<script>
+  // Tab Switcher for Laptop Screen
+  const tabs = document.querySelectorAll('.os-tab');
+  const panels = document.querySelectorAll('.tab-panel');
+  const titleDisplay = document.getElementById('dash-view-title');
+
+  const titleMap = {
+    'dashboard': 'Campaign Performance',
+    'campaigns': 'Active Campaign Fleet',
+    'analytics': 'Traffic & Funnel Attribution',
+    'audience': 'Audience Intelligence',
+    'reports': 'Automated Intelligence Reports'
+  };
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+
+      // Update tabs styling
+      tabs.forEach(t => {
+        t.classList.remove('bg-purple-600/30', 'text-purple-300');
+        const dot = t.querySelector('.indicator-dot');
+        if (dot) dot.classList.replace('bg-purple-400', 'bg-transparent');
+      });
+
+      tab.classList.add('bg-purple-600/30', 'text-purple-300');
+      const activeDot = tab.querySelector('.indicator-dot');
+      if (activeDot) activeDot.classList.replace('bg-transparent', 'bg-purple-400');
+
+      // Update Panels
+      panels.forEach(p => {
+        p.classList.add('hidden');
+        p.classList.remove('block');
+      });
+      const activePanel = document.getElementById(`panel-${target}`);
+      if (activePanel) {
+        activePanel.classList.remove('hidden');
+        activePanel.classList.add('block');
+      }
+
+      // Update Screen Title
+      if (titleDisplay && titleMap[target]) {
+        titleDisplay.textContent = titleMap[target];
+      }
+    });
+  });
+
+  // Modal / Drawer toggle
+  function toggleDrawer(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+      el.classList.add('flex');
+    } else {
+      el.classList.add('hidden');
+      el.classList.remove('flex');
+    }
+  }
+
+  // Close modals on clicking outside
+  ['aboutModal', 'blogModal'].forEach(id => {
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) toggleDrawer(id);
+      });
+    }
+  });
+</script>
+</body></html>

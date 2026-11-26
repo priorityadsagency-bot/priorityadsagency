@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<script>/* muted when shown inside the Priority Ads Agency portfolio */(function(){try{if(window.top===window)return}catch(e){}var P=HTMLMediaElement.prototype,pl=P.play;P.play=function(){try{this.muted=true;this.volume=0}catch(e){}return pl.apply(this,arguments)};try{var d=Object.getOwnPropertyDescriptor(P,'muted');Object.defineProperty(P,'muted',{configurable:true,get:function(){return d.get.call(this)},set:function(){d.set.call(this,true)}})}catch(e){}['AudioContext','webkitAudioContext'].forEach(function(n){var A=window[n];if(!A)return;var M=function(){var c=new (Function.prototype.bind.apply(A,[null].concat([].slice.call(arguments))))();try{c.suspend()}catch(e){}c.resume=function(){return Promise.resolve()};return c};M.prototype=A.prototype;window[n]=M});document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('audio,video').forEach(function(m){m.muted=true})})})();</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxury Spa &amp; Beauty Salon</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<link rel="stylesheet" href="tw.css">
+<!-- Google Fonts: Playfair Display, Great Vibes, Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="../../_vendor/fontawesome/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+
+<style data-purpose="custom-styling">
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FAF7F2;
+      color: #374151;
+      overflow-x: hidden;
+    }
+    .font-serif-heading {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-cursive {
+      font-family: 'Great Vibes', cursive;
+    }
+    /* Smooth transition for hover effects */
+    .transition-all-standard {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    /* Subtle box shadows */
+    .custom-card-shadow {
+      box-shadow: 0 10px 25px -5px rgba(107, 22, 38, 0.04), 0 8px 10px -6px rgba(107, 22, 38, 0.04);
+    }
+    .elevated-card-shadow {
+      box-shadow: 0 20px 30px -10px rgba(84, 16, 30, 0.08);
+    }
+  </style>
+</head>
+<body class="bg-warmCream antialiased text-gray-800">
+<!-- BEGIN: TopAnnouncementBar -->
+<div class="bg-burgundy text-white text-xs sm:text-sm py-2 px-4" data-purpose="announcement-banner">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex-1 flex items-center justify-center space-x-3 text-center">
+<!-- Leaf/Lotus decorative icon -->
+<span class="inline-flex items-center text-rose-200">
+<i class="fa-solid fa-spa mr-1.5 text-sm"></i>
+          Pamper Yourself with Expert Beauty &amp; Spa Care
+        </span>
+<a class="hidden sm:inline-flex items-center bg-white text-burgundy font-medium px-3 py-0.5 rounded-full text-xs hover:bg-rose-50 transition-colors" href="#appointment">
+          Get a Free Consultation <i class="fa-solid fa-arrow-right ml-1 text-[10px]"></i>
+</a>
+</div>
+<button aria-label="Close notification" class="text-white/80 hover:text-white text-base leading-none focus:outline-none" type="button">
+        ×
+      </button>
+</div>
+</div>
+<!-- END: TopAnnouncementBar -->
+<!-- BEGIN: TopNavigation -->
+<header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-rose-100/60" data-purpose="main-navigation">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+<!-- Nav Links (Directly without Brand/Logo as instructed) -->
+<nav class="flex items-center space-x-6 lg:space-x-8 text-sm font-semibold text-gray-700" data-purpose="primary-links">
+<a class="text-burgundy border-b-2 border-burgundy pb-1" href="#home">Home</a>
+<a class="hover:text-burgundy transition-colors pb-1" href="#services">Services</a>
+<a class="hover:text-burgundy transition-colors pb-1" href="#packages">Packages</a>
+<a class="hover:text-burgundy transition-colors pb-1" href="#gallery">Gallery</a>
+<a class="hover:text-burgundy transition-colors pb-1" href="#reviews">Reviews</a>
+<a class="hover:text-burgundy transition-colors pb-1" href="#faq">FAQ</a>
+<a class="hover:text-burgundy transition-colors pb-1" href="#contact">Contact</a>
+</nav>
+<!-- Right Action Items (Phone, WhatsApp, Book Appointment) -->
+<div class="flex items-center space-x-3" data-purpose="header-actions">
+<!-- Call Button -->
+<a aria-label="Call Us" class="w-10 h-10 rounded-full bg-rose-50 border border-rose-100 flex items-center justify-center text-burgundy hover:bg-rose-100 transition-colors" href="tel:+1234567890">
+<i class="fa-solid fa-phone text-sm"></i>
+</a>
+<!-- WhatsApp Button -->
+<a aria-label="Chat on WhatsApp" class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-white hover:bg-emerald-600 transition-colors shadow-sm" href="https://whatsapp.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp text-lg"></i>
+</a>
+<!-- Book Appointment Button -->
+<a class="bg-burgundy text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-burgundy-700 transition-all flex items-center shadow-md hover:shadow-lg" href="#appointment">
+          Book Appointment <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+</a>
+</div>
+</div>
+</header>
+<!-- END: TopNavigation -->
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-8 pb-16 lg:py-16 overflow-hidden bg-gradient-to-b from-[#FDF9F6] via-[#FAF6F2] to-[#FAF7F2]" data-purpose="hero-banner" id="home">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+<!-- Left Content Column -->
+<div class="lg:col-span-5 z-10">
+<span class="text-xs uppercase tracking-widest font-semibold text-burgundy flex items-center space-x-2">
+<span>BEAUTY</span>
+<span class="text-[8px]">•</span>
+<span>SPA</span>
+<span class="text-[8px]">•</span>
+<span>WELLNESS</span>
+</span>
+<h1 class="text-4xl sm:text-5xl lg:text-[54px] leading-[1.15] font-serif-heading font-bold text-gray-900 mt-4">
+            Relax, Refresh &amp;<br/>
+            Rediscover <span class="text-burgundy font-cursive font-normal text-5xl sm:text-6xl lg:text-7xl lowercase italic inline-block transform -rotate-2 ml-1">Your Beauty</span>
+</h1>
+<p class="text-gray-600 mt-4 text-base sm:text-lg max-w-md font-normal leading-relaxed">
+            Professional salon and spa services to rejuvenate your look, body and mind.
+          </p>
+<!-- Action Buttons -->
+<div class="mt-7 flex flex-wrap items-center gap-4">
+<a class="bg-burgundy hover:bg-burgundy-700 text-white font-medium px-6 py-3 rounded-full text-sm flex items-center shadow-md transition-all" href="#appointment">
+              Book Appointment <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+</a>
+<button class="bg-white border border-gray-300 hover:border-burgundy text-gray-800 hover:text-burgundy font-medium px-5 py-3 rounded-full text-sm flex items-center transition-all shadow-sm" type="button">
+<i class="fa-solid fa-play text-burgundy text-xs mr-2"></i> Watch Our Story
+            </button>
+</div>
+<!-- Trust Badges -->
+<div class="grid grid-cols-4 gap-2 sm:gap-4 mt-10 pt-6 border-t border-rose-200/50">
+<div class="text-center">
+<div class="text-burgundy text-xl mb-1"><i class="fa-solid fa-spa"></i></div>
+<p class="text-[11px] sm:text-xs font-semibold text-gray-800 leading-tight">Expert Therapists</p>
+</div>
+<div class="text-center">
+<div class="text-burgundy text-xl mb-1"><i class="fa-solid fa-leaf"></i></div>
+<p class="text-[11px] sm:text-xs font-semibold text-gray-800 leading-tight">Premium Products</p>
+</div>
+<div class="text-center">
+<div class="text-burgundy text-xl mb-1"><i class="fa-solid fa-shield-halved"></i></div>
+<p class="text-[11px] sm:text-xs font-semibold text-gray-800 leading-tight">Hygienic &amp; Safe</p>
+</div>
+<div class="text-center">
+<div class="text-burgundy text-xl mb-1"><i class="fa-solid fa-gem"></i></div>
+<p class="text-[11px] sm:text-xs font-semibold text-gray-800 leading-tight">Personalised Care</p>
+</div>
+</div>
+</div>
+<!-- Center Image Visual Column -->
+<div class="lg:col-span-4 relative flex justify-center items-center">
+<div class="relative w-full max-w-sm sm:max-w-md lg:max-w-none">
+<!-- Warm decorative glow behind woman -->
+<div class="absolute inset-0 bg-gradient-to-tr from-amber-200/30 to-rose-200/30 rounded-3xl filter blur-xl transform scale-95 -z-10"></div>
+<img alt="Relaxed smiling woman lying down enjoying spa care" class="w-full h-[430px] lg:h-[490px] object-cover rounded-3xl shadow-xl" src="./images/1.webp"/>
+</div>
+</div>
+<!-- Right Appointment Booking Card -->
+<div class="lg:col-span-3" id="appointment">
+<div class="bg-white rounded-2xl p-5 sm:p-6 elevated-card-shadow border border-rose-100/60 relative">
+<div class="flex items-center space-x-2 text-burgundy mb-2">
+<i class="fa-regular fa-calendar-check text-xl"></i>
+<h2 class="text-xl font-bold font-serif-heading text-gray-900 leading-tight">Book Your<br/>Appointment</h2>
+</div>
+<p class="text-xs text-gray-500 mb-5 leading-normal">
+              Choose your service, date and time and let us take care of the rest.
+            </p>
+<form class="space-y-3.5" onsubmit="event.preventDefault();">
+<!-- Full Name -->
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 text-xs">
+<i class="fa-regular fa-user"></i>
+</span>
+<input class="w-full pl-9 pr-3 py-2 text-xs rounded-lg border border-gray-200 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none placeholder-gray-400 bg-gray-50/40" placeholder="Full Name *" required="" type="text"/>
+</div>
+<!-- Phone Number -->
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 text-xs">
+<i class="fa-solid fa-phone"></i>
+</span>
+<input class="w-full pl-9 pr-3 py-2 text-xs rounded-lg border border-gray-200 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none placeholder-gray-400 bg-gray-50/40" placeholder="Phone Number *" required="" type="tel"/>
+</div>
+<!-- Select Service -->
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 text-xs">
+<i class="fa-regular fa-calendar-days"></i>
+</span>
+<select class="w-full pl-9 pr-8 py-2 text-xs rounded-lg border border-gray-200 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none text-gray-600 bg-gray-50/40 appearance-none" required="">
+<option disabled="" selected="" value="">Select Service *</option>
+<option value="hair">Hair Styling &amp; Spa</option>
+<option value="facial">Glow Facial &amp; Cleanse</option>
+<option value="massage">Relaxation Massage</option>
+<option value="bridal">Bridal Makeup &amp; Care</option>
+<option value="nails">Manicure &amp; Pedicure</option>
+</select>
+<span class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400 text-xs">
+<i class="fa-solid fa-chevron-down text-[10px]"></i>
+</span>
+</div>
+<!-- Preferred Date & Time -->
+<div class="relative">
+<span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 text-xs">
+<i class="fa-regular fa-clock"></i>
+</span>
+<input class="w-full pl-9 pr-3 py-2 text-xs rounded-lg border border-gray-200 focus:border-burgundy focus:ring-1 focus:ring-burgundy outline-none placeholder-gray-400 bg-gray-50/40" onblur="(this.type='text')" onfocus="(this.type='datetime-local')" placeholder="Preferred Date &amp; Time *" required="" type="text"/>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-burgundy hover:bg-burgundy-700 text-white font-medium py-2.5 rounded-full text-xs shadow-md transition-all flex items-center justify-center mt-2" type="submit">
+                Book Appointment <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+</button>
+</form>
+<div class="mt-3.5 flex items-center justify-center space-x-1.5 text-[11px] text-gray-400">
+<i class="fa-solid fa-lock text-[10px]"></i>
+<span>Your information is secure.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: OurBeautyServicesSection -->
+<section class="py-14 bg-white" data-purpose="services-overview" id="services">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 gap-4">
+<div>
+<h2 class="text-3xl font-serif-heading font-bold text-burgundy">Our Beauty Services</h2>
+<p class="text-sm text-gray-500 mt-1">Complete beauty care for a more confident you.</p>
+</div>
+<a class="border border-burgundy/40 text-burgundy text-xs font-semibold px-4 py-2 rounded-full hover:bg-rose-50 transition-colors inline-flex items-center" href="#services">
+          View All Services <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+</a>
+</div>
+<!-- 6 Service Cards Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
+<!-- Card 1: Hair Styling -->
+<div class="bg-softPeach rounded-xl p-3 border border-rose-100/60 custom-card-shadow hover:-translate-y-1 transition-all duration-200">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Hair Styling" class="w-full h-full object-cover" src="./images/2.webp"/>
+<span class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center text-burgundy text-xs">
+<i class="fa-solid fa-scissors"></i>
+</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900 leading-snug">Hair Styling</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Trendy cuts, styling and hair care.</p>
+</div>
+<!-- Card 2: Hair Spa -->
+<div class="bg-softPeach rounded-xl p-3 border border-rose-100/60 custom-card-shadow hover:-translate-y-1 transition-all duration-200">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Hair Spa" class="w-full h-full object-cover" src="./images/3.webp"/>
+<span class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center text-burgundy text-xs">
+<i class="fa-solid fa-droplet"></i>
+</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900 leading-snug">Hair Spa</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Nourish, repair and revitalize your hair.</p>
+</div>
+<!-- Card 3: Facial -->
+<div class="bg-softPeach rounded-xl p-3 border border-rose-100/60 custom-card-shadow hover:-translate-y-1 transition-all duration-200">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Facial" class="w-full h-full object-cover" src="./images/4.webp"/>
+<span class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center text-burgundy text-xs">
+<i class="fa-regular fa-face-smile"></i>
+</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900 leading-snug">Facial</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Deep cleanse and natural glow.</p>
+</div>
+<!-- Card 4: Makeup -->
+<div class="bg-softPeach rounded-xl p-3 border border-rose-100/60 custom-card-shadow hover:-translate-y-1 transition-all duration-200">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Makeup" class="w-full h-full object-cover" src="./images/5.webp"/>
+<span class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center text-burgundy text-xs">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900 leading-snug">Makeup</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Professional makeup for every occasion.</p>
+</div>
+<!-- Card 5: Manicure -->
+<div class="bg-softPeach rounded-xl p-3 border border-rose-100/60 custom-card-shadow hover:-translate-y-1 transition-all duration-200">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Manicure" class="w-full h-full object-cover" src="./images/6.webp"/>
+<span class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center text-burgundy text-xs">
+<i class="fa-solid fa-paint-roller"></i>
+</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900 leading-snug">Manicure</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Nail care and relaxing hand spa.</p>
+</div>
+<!-- Card 6: Pedicure -->
+<div class="bg-softPeach rounded-xl p-3 border border-rose-100/60 custom-card-shadow hover:-translate-y-1 transition-all duration-200">
+<div class="relative w-full aspect-square rounded-lg overflow-hidden mb-3">
+<img alt="Pedicure" class="w-full h-full object-cover" src="./images/7.webp"/>
+<span class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-white shadow flex items-center justify-center text-burgundy text-xs">
+<i class="fa-solid fa-shoe-prints"></i>
+</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900 leading-snug">Pedicure</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-relaxed">Refresh and rejuvenate your feet.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: OurBeautyServicesSection -->
+<!-- BEGIN: SpaTreatmentsBanner -->
+<section class="py-10 bg-warmCream" data-purpose="spa-treatments-showcase">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 custom-card-shadow border border-rose-100/60">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<!-- Column 1: Ambient Spa Image -->
+<div class="md:col-span-4">
+<div class="rounded-2xl overflow-hidden shadow-md">
+<img alt="Spa ambiance candles and rolled towels" class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500" src="./images/8.webp"/>
+</div>
+</div>
+<!-- Column 2: Content & Button -->
+<div class="md:col-span-4 lg:px-2">
+<span class="text-xs uppercase tracking-wider font-semibold text-burgundy">SPA TREATMENTS</span>
+<h3 class="text-2xl sm:text-3xl font-serif-heading font-bold text-gray-900 mt-2 leading-tight">
+              Relaxation<br/>for Body &amp; Mind
+            </h3>
+<p class="text-xs sm:text-sm text-gray-500 mt-3 leading-relaxed">
+              Indulge in soothing spa therapies designed to reduce stress, relieve tension and restore your inner balance.
+            </p>
+<div class="mt-5">
+<a class="inline-flex items-center bg-burgundy hover:bg-burgundy-700 text-white text-xs font-semibold px-5 py-2.5 rounded-full transition-colors" href="#appointment">
+                Explore Spa Treatments <i class="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
+</a>
+</div>
+</div>
+<!-- Column 3: Feature Items -->
+<div class="md:col-span-4 space-y-4">
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-rose-50 border border-rose-100 flex-shrink-0 flex items-center justify-center text-burgundy">
+<i class="fa-solid fa-spa text-base"></i>
+</div>
+<div>
+<h4 class="font-serif-heading font-bold text-sm text-gray-900">Body Massage</h4>
+<p class="text-xs text-gray-500">Relieve stress and muscle tension.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-rose-50 border border-rose-100 flex-shrink-0 flex items-center justify-center text-burgundy">
+<i class="fa-solid fa-droplet text-base"></i>
+</div>
+<div>
+<h4 class="font-serif-heading font-bold text-sm text-gray-900">Aromatherapy</h4>
+<p class="text-xs text-gray-500">Relax and refresh with natural aromas.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-rose-50 border border-rose-100 flex-shrink-0 flex items-center justify-center text-burgundy">
+<i class="fa-solid fa-cubes-stacked text-base"></i>
+</div>
+<div>
+<h4 class="font-serif-heading font-bold text-sm text-gray-900">Relaxation Therapy</h4>
+<p class="text-xs text-gray-500">Calm your mind and restore inner peace.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SpaTreatmentsBanner -->
+<!-- BEGIN: PackagesAndWhyChooseUs -->
+<section class="py-12 bg-white" data-purpose="packages-and-features" id="packages">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Side: Special Packages (7 cols) -->
+<div class="lg:col-span-7">
+<div class="mb-6">
+<h2 class="text-2xl sm:text-3xl font-serif-heading font-bold text-gray-900">Special Packages</h2>
+<p class="text-xs sm:text-sm text-gray-500 mt-1">Curated packages for your special moments.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<!-- Bridal Package -->
+<div class="bg-softPeach rounded-2xl p-3 border border-rose-100/60 custom-card-shadow">
+<div class="rounded-xl overflow-hidden aspect-[4/3] mb-3">
+<img alt="Bridal Package" class="w-full h-full object-cover" src="./images/9.webp"/>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900">Bridal Package</h3>
+<p class="text-[11px] text-gray-500 mt-1">Complete pre-bridal &amp; bridal beauty care.</p>
+</div>
+<!-- Beauty Package -->
+<div class="bg-softPeach rounded-2xl p-3 border border-rose-100/60 custom-card-shadow">
+<div class="rounded-xl overflow-hidden aspect-[4/3] mb-3">
+<img alt="Beauty Package" class="w-full h-full object-cover" src="./images/10.webp"/>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900">Beauty Package</h3>
+<p class="text-[11px] text-gray-500 mt-1">A total beauty makeover for a fresh, radiant look.</p>
+</div>
+<!-- Couple Spa Package -->
+<div class="bg-softPeach rounded-2xl p-3 border border-rose-100/60 custom-card-shadow">
+<div class="rounded-xl overflow-hidden aspect-[4/3] mb-3">
+<img alt="Couple Spa Package" class="w-full h-full object-cover" src="./images/11.webp"/>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900">Couple Spa Package</h3>
+<p class="text-[11px] text-gray-500 mt-1">A relaxing and rejuvenating spa experience for two.</p>
+</div>
+</div>
+</div>
+<!-- Right Side: Why Choose Us (5 cols) -->
+<div class="lg:col-span-5 border-t lg:border-t-0 lg:border-l border-rose-100 lg:pl-8 pt-8 lg:pt-0">
+<div class="mb-6">
+<h2 class="text-2xl sm:text-3xl font-serif-heading font-bold text-gray-900">Why Choose Us</h2>
+<p class="text-xs sm:text-sm text-gray-500 mt-1">Because you deserve the best care and experience.</p>
+</div>
+<div class="relative">
+<div class="space-y-5 max-w-sm">
+<!-- Reason 1 -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-rose-50 border border-rose-100 flex-shrink-0 flex items-center justify-center text-burgundy">
+<i class="fa-solid fa-users text-sm"></i>
+</div>
+<div>
+<h4 class="font-serif-heading font-bold text-sm text-gray-900">Professional Staff</h4>
+<p class="text-xs text-gray-500 leading-snug">Skilled and experienced beauty &amp; spa experts.</p>
+</div>
+</div>
+<!-- Reason 2 -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-rose-50 border border-rose-100 flex-shrink-0 flex items-center justify-center text-burgundy">
+<i class="fa-solid fa-leaf text-sm"></i>
+</div>
+<div>
+<h4 class="font-serif-heading font-bold text-sm text-gray-900">Premium Products</h4>
+<p class="text-xs text-gray-500 leading-snug">High-quality, skin-friendly and safe products.</p>
+</div>
+</div>
+<!-- Reason 3 -->
+<div class="flex items-start space-x-3.5">
+<div class="w-10 h-10 rounded-full bg-rose-50 border border-rose-100 flex-shrink-0 flex items-center justify-center text-burgundy">
+<i class="fa-regular fa-heart text-sm"></i>
+</div>
+<div>
+<h4 class="font-serif-heading font-bold text-sm text-gray-900">Personalised Care</h4>
+<p class="text-xs text-gray-500 leading-snug">Tailored services to suit your unique needs.</p>
+</div>
+</div>
+</div>
+<!-- Right decorative cosmetic background element -->
+<div class="hidden sm:block absolute right-0 bottom-0 pointer-events-none opacity-90 transform translate-x-4">
+<img alt="Spa cosmetic bottles and greenery" class="w-28 h-auto rounded-xl" src="./images/12.webp"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: PackagesAndWhyChooseUs -->
+<!-- BEGIN: BeautyGallerySection -->
+<section class="py-12 bg-softPeach" data-purpose="gallery" id="gallery">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Gallery Header -->
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-7 gap-4">
+<div>
+<h2 class="text-2xl sm:text-3xl font-serif-heading font-bold text-gray-900">Our Beauty Gallery</h2>
+<p class="text-xs sm:text-sm text-gray-500 mt-1">A glimpse of our work and spa experience.</p>
+</div>
+<button class="border border-burgundy/40 text-burgundy text-xs font-semibold px-4 py-2 rounded-full hover:bg-rose-50 transition-colors inline-flex items-center" type="button">
+          View Gallery <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+</button>
+</div>
+<!-- 6 Photo Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3.5">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Silky hair styling back view" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="./images/13.webp"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Bridal makeup styling" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="./images/14.webp"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Facial mask glow care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="./images/15.webp"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Salon styling stations interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="./images/16.webp"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Serene spa massage bed" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="./images/17.webp"/>
+</div>
+<div class="aspect-square rounded-2xl overflow-hidden shadow-sm group">
+<img alt="Pink manicure polished nails" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="./images/18.webp"/>
+</div>
+</div>
+</div>
+</section>
+<!-- END: BeautyGallerySection -->
+<!-- BEGIN: WhatOurClientsSay -->
+<section class="py-12 bg-white" data-purpose="testimonials" id="reviews">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<!-- Section Title -->
+<div class="mb-8">
+<h2 class="text-2xl sm:text-3xl font-serif-heading font-bold text-gray-900">What Our Clients Say</h2>
+<p class="text-xs sm:text-sm text-gray-500 mt-1">Real experiences from our happy clients.</p>
+</div>
+<!-- 3 Testimonial Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+<!-- Review 1 -->
+<div class="bg-softPeach rounded-2xl p-5 border border-rose-100/60 custom-card-shadow flex items-start space-x-4">
+<img alt="Client 1" class="w-12 h-12 rounded-full object-cover flex-shrink-0 border-2 border-rose-100" src="./images/19.webp"/>
+<div class="flex-1">
+<span class="text-burgundy text-xl font-serif leading-none block mb-1">“</span>
+<p class="text-xs text-gray-700 leading-relaxed font-normal">
+              Amazing experience! The facial left my skin glowing and refreshed. Highly recommended!
+            </p>
+<div class="flex items-center space-x-1 text-accentGold text-[11px] mt-2.5">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-softPeach rounded-2xl p-5 border border-rose-100/60 custom-card-shadow flex items-start space-x-4">
+<img alt="Client 2" class="w-12 h-12 rounded-full object-cover flex-shrink-0 border-2 border-rose-100" src="./images/20.webp"/>
+<div class="flex-1">
+<span class="text-burgundy text-xl font-serif leading-none block mb-1">“</span>
+<p class="text-xs text-gray-700 leading-relaxed font-normal">
+              The staff is very professional and the ambience is so relaxing. Loved the spa treatment!
+            </p>
+<div class="flex items-center space-x-1 text-accentGold text-[11px] mt-2.5">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-softPeach rounded-2xl p-5 border border-rose-100/60 custom-card-shadow flex items-start space-x-4">
+<img alt="Client 3" class="w-12 h-12 rounded-full object-cover flex-shrink-0 border-2 border-rose-100" src="./images/21.webp"/>
+<div class="flex-1">
+<span class="text-burgundy text-xl font-serif leading-none block mb-1">“</span>
+<p class="text-xs text-gray-700 leading-relaxed font-normal">
+              Best salon in the area! Great service, friendly staff and excellent results.
+            </p>
+<div class="flex items-center space-x-1 text-accentGold text-[11px] mt-2.5">
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: WhatOurClientsSay -->
+<!-- BEGIN: OffersAndFAQ -->
+<section class="py-12 bg-warmCream" data-purpose="offers-and-faq" id="faq">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- Left Side: Special Offers (6 cols) -->
+<div class="lg:col-span-6">
+<div class="mb-6">
+<h2 class="text-2xl sm:text-3xl font-serif-heading font-bold text-gray-900">Special Offers</h2>
+<p class="text-xs sm:text-sm text-gray-500 mt-1">Limited-time deals you shouldn't miss.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Offer 1: Glow Facial -->
+<div class="bg-softPeach rounded-2xl p-3 border border-rose-100/60 custom-card-shadow flex flex-col justify-between">
+<div>
+<div class="rounded-xl overflow-hidden aspect-[4/3] mb-3 relative">
+<img alt="Glow Facial Offer" class="w-full h-full object-cover" src="./images/22.webp"/>
+<span class="absolute top-2 left-2 bg-burgundy text-white text-[10px] font-bold px-2 py-0.5 rounded">20% OFF</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900">Glow Facial Package</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-normal">Get a radiant glow with our signature facial.</p>
+</div>
+<div class="mt-4">
+<a class="inline-flex items-center bg-burgundy hover:bg-burgundy-700 text-white text-[11px] font-medium px-4 py-1.5 rounded-full transition-colors" href="#appointment">
+                  Book Now <i class="fa-solid fa-arrow-right ml-1.5 text-[9px]"></i>
+</a>
+</div>
+</div>
+<!-- Offer 2: Hair Spa -->
+<div class="bg-softPeach rounded-2xl p-3 border border-rose-100/60 custom-card-shadow flex flex-col justify-between">
+<div>
+<div class="rounded-xl overflow-hidden aspect-[4/3] mb-3 relative">
+<img alt="Hair Spa Package Offer" class="w-full h-full object-cover" src="./images/23.webp"/>
+<span class="absolute top-2 left-2 bg-burgundy text-white text-[10px] font-bold px-2 py-0.5 rounded">30% OFF</span>
+</div>
+<h3 class="font-serif-heading font-bold text-sm text-gray-900">Hair Spa Package</h3>
+<p class="text-[11px] text-gray-500 mt-1 leading-normal">Nourish, repair and add shine to your hair.</p>
+</div>
+<div class="mt-4">
+<a class="inline-flex items-center bg-burgundy hover:bg-burgundy-700 text-white text-[11px] font-medium px-4 py-1.5 rounded-full transition-colors" href="#appointment">
+                  Book Now <i class="fa-solid fa-arrow-right ml-1.5 text-[9px]"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side: FAQ Accordion (6 cols) -->
+<div class="lg:col-span-6">
+<div class="mb-6">
+<h2 class="text-2xl sm:text-3xl font-serif-heading font-bold text-gray-900">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-2.5">
+<!-- FAQ Item 1 -->
+<details class="group bg-white rounded-xl border border-rose-100/70 p-3.5 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer" open="">
+<summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-gray-800">
+<span>How do I book an appointment?</span>
+<span class="ml-2 text-burgundy text-sm transition-transform duration-200 group-open:rotate-45">
+<i class="fa-solid fa-plus"></i>
+</span>
+</summary>
+<p class="mt-2 text-xs text-gray-500 leading-relaxed">
+                You can easily book online using our appointment form above, call our reception directly, or reach out to us on WhatsApp.
+              </p>
+</details>
+<!-- FAQ Item 2 -->
+<details class="group bg-white rounded-xl border border-rose-100/70 p-3.5 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-gray-800">
+<span>Do you offer bridal and pre-bridal packages?</span>
+<span class="ml-2 text-burgundy text-sm transition-transform duration-200 group-open:rotate-45">
+<i class="fa-solid fa-plus"></i>
+</span>
+</summary>
+<p class="mt-2 text-xs text-gray-500 leading-relaxed">
+                Yes, we offer fully customized bridal, groom, and pre-bridal packages including skin treatments, hair styling, and trial makeup sessions.
+              </p>
+</details>
+<!-- FAQ Item 3 -->
+<details class="group bg-white rounded-xl border border-rose-100/70 p-3.5 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-gray-800">
+<span>Are your products safe for all skin types?</span>
+<span class="ml-2 text-burgundy text-sm transition-transform duration-200 group-open:rotate-45">
+<i class="fa-solid fa-plus"></i>
+</span>
+</summary>
+<p class="mt-2 text-xs text-gray-500 leading-relaxed">
+                Absolutely. We exclusively use dermatologist-tested, hypoallergenic, and organic professional spa formulations appropriate for sensitive skin.
+              </p>
+</details>
+<!-- FAQ Item 4 -->
+<details class="group bg-white rounded-xl border border-rose-100/70 p-3.5 [&amp;_summary::-webkit-details-marker]:hidden cursor-pointer">
+<summary class="flex items-center justify-between font-semibold text-xs sm:text-sm text-gray-800">
+<span>Can I reschedule or cancel my appointment?</span>
+<span class="ml-2 text-burgundy text-sm transition-transform duration-200 group-open:rotate-45">
+<i class="fa-solid fa-plus"></i>
+</span>
+</summary>
+<p class="mt-2 text-xs text-gray-500 leading-relaxed">
+                Yes, you can reschedule or cancel at no charge by notifying us at least 4 hours prior to your scheduled booking time.
+              </p>
+</details>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: OffersAndFAQ -->
+<!-- BEGIN: BottomFullWidthCtaBanner -->
+<footer class="bg-burgundy text-white relative overflow-hidden py-10" data-purpose="bottom-cta-banner" id="contact">
+<!-- Background Flower Watermark Accent -->
+<div class="absolute -left-10 -bottom-10 opacity-20 pointer-events-none">
+<i class="fa-solid fa-spa text-9xl text-rose-200"></i>
+</div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+<!-- Left Banner Headline -->
+<div class="text-center lg:text-left">
+<h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif-heading font-bold leading-tight">
+            Book Your Beauty<br/>Experience Today
+          </h2>
+</div>
+<!-- Center Divider & Subtext -->
+<div class="border-t lg:border-t-0 lg:border-l border-rose-300/30 pt-4 lg:pt-0 lg:pl-8 text-center lg:text-left max-w-sm">
+<p class="text-xs sm:text-sm text-rose-100 font-normal leading-relaxed">
+            Relax, rejuvenate and bring out your natural beauty with our expert care.
+          </p>
+</div>
+<!-- Right Quick Action Buttons -->
+<div class="flex flex-wrap items-center justify-center gap-4 pt-2 lg:pt-0">
+<a class="bg-[#FFF6F0] hover:bg-white text-burgundy font-semibold text-xs sm:text-sm px-6 py-3 rounded-full shadow-md transition-colors inline-flex items-center" href="#appointment">
+            Book Appointment <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+</a>
+<div class="flex items-center space-x-4 text-xs font-medium text-rose-100">
+<a class="hover:text-white flex items-center transition-colors" href="tel:+1234567890">
+<i class="fa-solid fa-phone mr-1.5 text-xs"></i> Call Now
+            </a>
+<span class="text-rose-400">|</span>
+<a class="hover:text-white flex items-center transition-colors" href="https://whatsapp.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-whatsapp mr-1.5 text-sm text-emerald-400"></i> WhatsApp
+            </a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: BottomFullWidthCtaBanner -->
+</body></html>
