@@ -1,0 +1,3 @@
+# Apache / Netlify config files are not needed on Vercel (vercel.json is used instead)
+.htaccess
+_headers
