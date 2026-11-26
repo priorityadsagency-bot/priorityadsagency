@@ -65,13 +65,8 @@ function reader(){ const v=speedPx(); if (!v) return "new visitor";
   if (coarse) return v>1600?"fast scroller":v>700?"steady scroller":"careful reader";
   return v>900?"quick skimmer":v>380?"browser":"careful reader"; }
 
-/* leaving the tab */
-const realTitle = document.title;
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden){ S.hiddenAt=performance.now(); S.leaves++; document.title="Come back to Priority Ads Agency"; }
-  else { document.title=realTitle; if (S.hiddenAt) toast("Welcome back!", `You were away ${Math.round((performance.now()-S.hiddenAt)/1000)} seconds. Customers leave mid-scroll too. Good ads bring them back.`); }
-});
-let tt; function toast(h,b){ const el=$("#toast"); el.innerHTML=`<b>${h}</b>${b}`; el.classList.add("show"); clearTimeout(tt); tt=setTimeout(()=>el.classList.remove("show"),5000); }
+/* leaving the tab: counted quietly for the receipt (no pop-ups, no title changes) */
+document.addEventListener("visibilitychange", () => { if (document.hidden) S.leaves++; });
 
 /* hero: soft dot ring from the logo's halftone, drawn toward the cursor */
 const vis=$("#visual"), cv=$("#field"), cx=cv.getContext("2d"), emb=$("#emb");
