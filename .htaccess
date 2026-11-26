@@ -8,6 +8,7 @@ AddDefaultCharset UTF-8
 FileETag MTime Size
 AddType application/manifest+json .webmanifest
 AddType text/plain .txt
+AddType "text/markdown; charset=utf-8" .md
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -17,13 +18,20 @@ AddType text/plain .txt
   RewriteRule ^ https://priorityadsagency.com%{REQUEST_URI} [L,R=301]
   RewriteCond %{HTTP_HOST} ^www\.priorityadsagency\.com$ [NC]
   RewriteRule ^ https://priorityadsagency.com%{REQUEST_URI} [L,R=301]
+  # Markdown for AI agents: "Accept: text/markdown" gets the page's Markdown version from /md/
+  RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+  RewriteRule ^(index\.html)?$ /md/index.md [L]
+  RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+  RewriteCond %{DOCUMENT_ROOT}/md/$1.md -f
+  RewriteRule ^(.+)\.html$ /md/$1.md [L]
   # 2. Static site: only GET, HEAD and OPTIONS are allowed
   RewriteCond %{REQUEST_METHOD} !^(GET|HEAD|OPTIONS)$
   RewriteRule ^ - [F]
   # 3. Hidden files and folders (.git, .env, .htaccess ...) except /.well-known/
   RewriteRule "(^|/)\.(?!well-known/)" - [F]
   RewriteRule "^_headers$" - [F]
-  # 4. Source, backup, archive, log and map files are never served
+  # 4. Source, backup, archive, log and map files are never served (the /md/ agent pages are allowed)
+  RewriteCond %{REQUEST_URI} !^/md/
   RewriteRule "\.(md|py|sh|bat|ps1|sql|sqlite|db|bak|old|orig|swp|tmp|log|ini|conf|env|lock|yml|yaml|toml|tar|zip|gz|7z|rar|map|gitattributes)$" - [F,NC]
   # 5. Common attack probes and scanners
   RewriteRule "^(wp-admin|wp-login\.php|wp-content|xmlrpc\.php|phpmyadmin|pma|admin\.php|cgi-bin|vendor/phpunit)" - [F,NC]
@@ -50,9 +58,18 @@ AddType text/plain .txt
   <If "%{REQUEST_URI} =~ m#^/templates/#">
     Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https:; img-src 'self' data: blob: https:; media-src 'self' data: blob: https:; connect-src 'self' https: data: blob:; worker-src 'self' blob:; frame-src 'self' https://www.google.com https://maps.google.com https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'self'; form-action 'self' https://wa.me https://api.whatsapp.com; upgrade-insecure-requests; frame-ancestors 'self'"
   </If>
+  # ---- agent discovery (RFC 8288 Link headers) ----
+  <FilesMatch "\.html$">
+    Header set Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\""
+    Header append Vary Accept
+  </FilesMatch>
+  <If "%{REQUEST_URI} =~ m#^/(index\.html)?$#">
+    Header set Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\", </md/index.md>; rel=\"alternate\"; type=\"text/markdown\""
+    Header append Vary Accept
+  </If>
   # ---- caching ----
   # HTML: always revalidate (ETag) so content updates show at once
-  <FilesMatch "\.(html|webmanifest)$">
+  <FilesMatch "\.(html|md|webmanifest)$">
     Header set Cache-Control "no-cache"
   </FilesMatch>
   <FilesMatch "\.(xml|txt)$">

@@ -1,0 +1,40 @@
+# Priority Ads Agency
+
+> Digital marketing agency in Bengaluru (Bangalore), India. Meta Ads, Google Ads, lead generation, WhatsApp marketing, social media, websites, apps and SEO for businesses that want genuine leads. Slogan: "Your Success Is Our Priority".
+
+- Phone / WhatsApp: +91 77606 65912 (https://wa.me/917760665912)
+- Email: ningappa@priorityadsagency.com
+- Office: No. 116, Gurunath Layout, opp. bus stop, Huralichikkanahalli, Hesaraghatta Main Road, Bengaluru 560090, Karnataka, India
+- Founder: Ningappa Sadashiv Pujari
+- Every page has a Markdown version (linked below). Pages also return Markdown when requested with `Accept: text/markdown`.
+- Content use: search=yes, ai-input=yes, ai-train=no (see robots.txt)
+
+## Main pages
+- [Home](https://priorityadsagency.com/md/index.md): Overview of the agency and its services
+- [About](https://priorityadsagency.com/md/about.md): The agency and its founder
+- [Contact](https://priorityadsagency.com/md/contact.md): Phone, WhatsApp, email, office address and enquiry form
+- [Portfolio](https://priorityadsagency.com/md/portfolio.md): All 16 services with examples of work
+- [Courses](https://priorityadsagency.com/md/courses.md): Digital marketing courses and mentorship
+
+## Services
+- [API Development & Integration Services in Bangalore](https://priorityadsagency.com/md/portfolio/api-development.md): API development and integration services in Bangalore. Secure, documented APIs that connect payments, WhatsApp, CRMs and your business tools.
+- [Mobile App Development Company in Bangalore](https://priorityadsagency.com/md/portfolio/app-development.md): Mobile app development company in Bangalore. Android and iOS apps with admin panels, built for speed and published on Play Store and App Store.
+- [Influencer & Content Creator Marketing in Bangalore](https://priorityadsagency.com/md/portfolio/content-creator-outreach.md): Influencer and content creator marketing in Bangalore. We find the right creators, manage collaborations and track results for your brand.
+- [Digital Marketing & Branding Agency in Bangalore](https://priorityadsagency.com/md/portfolio/digital-marketing-branding.md): Digital marketing and branding agency in Bangalore. Brand strategy, creatives, ads and content that build a strong brand and steady business growth.
+- [E-commerce Website Development in Bangalore](https://priorityadsagency.com/md/portfolio/e-commerce-websites.md): E-commerce website development in Bangalore. Online stores with UPI and card payments, product management, orders and a mobile-first design.
+- [Google Ads Agency in Bangalore](https://priorityadsagency.com/md/portfolio/google-ads.md): Google Ads agency in Bangalore. Search, Performance Max, YouTube and local campaigns that reach buyers at the moment they search for your service.
+- [Landing Page Design & Development in Bangalore](https://priorityadsagency.com/md/portfolio/landing-pages.md): Landing page design in Bangalore. High-converting landing pages for ads, with tracking, WhatsApp and form integrations, ready in days.
+- [Lead Generation Services in Bangalore](https://priorityadsagency.com/md/portfolio/lead-generation-services.md): Lead generation services in Bangalore. Ads, landing pages and follow-up systems that deliver genuine, qualified leads ready for your sales team.
+- [Logo Design Company in Bangalore](https://priorityadsagency.com/md/portfolio/logo-design.md): Logo design company in Bangalore. Unique, memorable logos and brand identity designed to look sharp on every screen, sign and print.
+- [Meta Ads Agency in Bangalore](https://priorityadsagency.com/md/portfolio/meta-ads.md): Meta Ads agency in Bangalore. Facebook and Instagram ad campaigns with reels, targeting and retargeting that bring genuine leads and sales for your business.
+- [Poster & Graphic Design Services in Bangalore](https://priorityadsagency.com/md/portfolio/poster-graphic-design.md): Poster and graphic design services in Bangalore. Social media posters, ad creatives, banners and brochures that make your brand stand out.
+- [Social Media Management Agency in Bangalore](https://priorityadsagency.com/md/portfolio/social-media-handling.md): Social media management agency in Bangalore. Instagram, Facebook, YouTube and LinkedIn posts, reels, scheduling and engagement handled for you.
+- [Telecalling Services in Bangalore](https://priorityadsagency.com/md/portfolio/telecalling-support.md): Telecalling services in Bangalore. Trained telecallers call your leads, qualify them, book appointments and follow up, with full backend support.
+- [Video Editing & AI Reels Services in Bangalore](https://priorityadsagency.com/md/portfolio/video-editing-ai-creative.md): Video editing and AI creative services in Bangalore. Scroll-stopping reels, ad videos and promos edited for Instagram, YouTube and ads.
+- [Website Development Company in Bangalore](https://priorityadsagency.com/md/portfolio/website-development.md): Website development company in Bangalore. Fast, mobile-friendly, SEO-ready business websites designed to turn visitors into enquiries.
+- [WhatsApp Marketing Services in Bangalore](https://priorityadsagency.com/md/portfolio/whatsapp-marketing.md): WhatsApp marketing services in Bangalore. Broadcasts, WhatsApp Business API, chatbots and click-to-WhatsApp ads that turn chats into customers.
+
+## Optional
+- [Privacy & cookies](https://priorityadsagency.com/md/privacy.md)
+- [Terms of use](https://priorityadsagency.com/md/terms.md)
+- [Sitemap](https://priorityadsagency.com/sitemap.xml)

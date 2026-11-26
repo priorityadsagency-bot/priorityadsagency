@@ -9,7 +9,7 @@ import hashlib, pathlib, re
 site = pathlib.Path(__file__).resolve().parent.parent
 pages = list(site.glob("*.html")) + list(site.glob("portfolio/*.html"))
 changed = 0
-for name in ("style.css", "main.js", "consent.js"):
+for name in ("style.css", "main.js", "consent.js", "webmcp.js"):
     v = hashlib.md5((site / "assets" / name).read_bytes()).hexdigest()[:10]
     pat = re.compile(r'(assets/' + re.escape(name) + r')(\?v=[0-9a-f]+)?(")')
     for p in pages:
